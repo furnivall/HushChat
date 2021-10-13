@@ -1,0 +1,103 @@
+\begin{thebibliography}{10}
+
+\bibitem{aditya2014android}
+{\sc Aditya, S.~K., and Karn, V.~K.}
+\newblock {\em Android sQLite essentials}.
+\newblock Packt Publishing, 2014.
+
+\bibitem{ardito2021evaluation}
+{\sc Ardito, L., Barbato, L., Coppola, R., and Valsesia, M.}
+\newblock Evaluation of rust code verbosity, understandability and complexity.
+\newblock {\em PeerJ Computer Science\/} (2021).
+
+\bibitem{ardito2020effectiveness}
+{\sc Ardito, L., Coppola, R., Malnati, G., and Torchiano, M.}
+\newblock Effectiveness of kotlin vs. java in android app development tasks.
+\newblock {\em Information and Software Technology 127\/} (2020), 106374.
+
+\bibitem{beck1999bad}
+{\sc Beck, K., Fowler, M., and Beck, G.}
+\newblock Bad smells in code.
+\newblock {\em Refactoring: Improving the design of existing code 1}, 1999
+  (1999), 75--88.
+
+\bibitem{de2018meaning}
+{\sc de~Amorim, A.~A., Hri{\c{t}}cu, C., and Pierce, B.~C.}
+\newblock The meaning of memory safety.
+\newblock In {\em International Conference on Principles of Security and
+  Trust\/} (2018), Springer, pp.~79--105.
+
+\bibitem{diffie1979privacy}
+{\sc Diffie, W., and Hellman, M.~E.}
+\newblock Privacy and authentication: An introduction to cryptography.
+\newblock {\em Proceedings of the IEEE 67}, 3 (1979), 397--427.
+
+\bibitem{garfinkel1995pgp}
+{\sc Garfinkel, S.}
+\newblock {\em PGP: pretty good privacy}.
+\newblock " O'Reilly Media, Inc.", 1995.
+
+\bibitem{hanenberg2014empirical}
+{\sc Hanenberg, S., Kleinschmager, S., Robbes, R., Tanter, {\'E}., and Stefik,
+  A.}
+\newblock An empirical study on the impact of static typing on software
+  maintainability.
+\newblock {\em Empirical Software Engineering 19}, 5 (2014), 1335--1382.
+
+\bibitem{jones1996garbage}
+{\sc Jones, R., and Lins, R.}
+\newblock {\em Garbage collection: algorithms for automatic dynamic memory
+  management}.
+\newblock John Wiley \& Sons, Inc., 1996.
+
+\bibitem{levy2015ownership}
+{\sc Levy, A., Andersen, M.~P., Campbell, B., Culler, D., Dutta, P., Ghena, B.,
+  Levis, P., and Pannuto, P.}
+\newblock Ownership is theft: Experiences building an embedded os in rust.
+\newblock In {\em Proceedings of the 8th Workshop on Programming Languages and
+  Operating Systems\/} (2015), pp.~21--26.
+
+\bibitem{mateus2019empirical}
+{\sc Mateus, B.~G., and Martinez, M.}
+\newblock An empirical study on quality of android applications written in
+  kotlin language.
+\newblock {\em Empirical Software Engineering 24}, 6 (2019), 3356--3393.
+
+\bibitem{matsakis2014rust}
+{\sc Matsakis, N.~D., and Klock, F.~S.}
+\newblock The rust language.
+\newblock {\em ACM SIGAda Ada Letters 34}, 3 (2014), 103--104.
+
+\bibitem{milanov2009rsa}
+{\sc Milanov, E.}
+\newblock The rsa algorithm.
+\newblock {\em RSA laboratories\/} (2009), 1--11.
+
+\bibitem{murphy2008busy}
+{\sc Murphy, M.~L.}
+\newblock {\em The busy coder's guide to Android development}.
+\newblock United States: CommonsWare, 2008., 2008.
+
+\bibitem{oord2016wavenet}
+{\sc Oord, A. v.~d., Dieleman, S., Zen, H., Simonyan, K., Vinyals, O., Graves,
+  A., Kalchbrenner, N., Senior, A., and Kavukcuoglu, K.}
+\newblock Wavenet: A generative model for raw audio.
+\newblock {\em arXiv preprint arXiv:1609.03499\/} (2016).
+
+\bibitem{owens2010sqlite}
+{\sc Owens, M., and Allen, G.}
+\newblock {\em SQLite}.
+\newblock Springer, 2010.
+
+\bibitem{pombrio2014resugaring}
+{\sc Pombrio, J., and Krishnamurthi, S.}
+\newblock Resugaring: Lifting evaluation sequences through syntactic sugar.
+\newblock In {\em Proceedings of the 35th ACM SIGPLAN Conference on Programming
+  Language Design and Implementation\/} (2014), pp.~361--371.
+
+\bibitem{tan2021survey}
+{\sc Tan, X., Qin, T., Soong, F., and Liu, T.-Y.}
+\newblock A survey on neural speech synthesis.
+\newblock {\em arXiv preprint arXiv:2106.15561\/} (2021).
+
+\end{thebibliography}

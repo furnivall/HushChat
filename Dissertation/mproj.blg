@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: mproj.aux
+The style file: acm.bst
+Database file #1: mproj.bib
+You've used 18 entries,
+            2253 wiz_defined-function locations,
+            632 strings with 6826 characters,
+and the built_in function-call counts, 6166 in all, are:
+= -- 577
+> -- 321
+< -- 0
++ -- 139
+- -- 114
+* -- 477
+:= -- 1017
+add.period$ -- 54
+call.type$ -- 18
+change.case$ -- 106
+chr.to.int$ -- 0
+cite$ -- 18
+duplicate$ -- 223
+empty$ -- 481
+format.name$ -- 114
+if$ -- 1263
+int.to.chr$ -- 0
+int.to.str$ -- 18
+missing$ -- 23
+newline$ -- 93
+num.names$ -- 36
+pop$ -- 125
+preamble$ -- 1
+purify$ -- 93
+quote$ -- 0
+skip$ -- 134
+stack$ -- 0
+substring$ -- 345
+swap$ -- 56
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 62
+warning$ -- 0
+while$ -- 58
+width$ -- 20
+write$ -- 180
