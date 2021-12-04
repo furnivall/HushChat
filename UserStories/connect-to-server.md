@@ -1,4 +1,4 @@
-#User Story - Connecting to the server #
+#User Story - Connecting to the server 
 
 **As a user I want to be able to connect to the server from the Kotlin application**
 
