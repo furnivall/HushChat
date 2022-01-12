@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">HushChat</string>
+    <string name="hushchat">HushChat</string>
+    <string name="your_text_here">Your Text Here</string>
+    <string name="set_username">Set Username</string>
+    <string name="send_message">Send Message</string>
+    <string name="refresh_users">Refresh Users</string>
+    <string name="item">Item</string>
+</resources>
