@@ -24,10 +24,28 @@
   <androidx.recyclerview.widget.RecyclerView
       android:id="@+id/recyclerview"
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
+      android:layout_height="wrap_content"
       tools:listitem="@layout/card_view_design"
       />
 
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/new_message_text"
+          android:layout_width="336dp"
+          android:layout_height="54dp"
+          android:layout_marginTop="36dp"
+          android:gravity="center_horizontal"
+          android:hint="@string/your_text_here"
+          app:layout_constraintTop_toBottomOf="@+id/recyclerview"
+          tools:layout_editor_absoluteX="37dp" />
+
+      <Button
+          android:id="@+id/send_message_button"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="128dp"
+          android:layout_marginTop="36dp"
+          android:text="Send Message"
+          app:layout_constraintLeft_toLeftOf="parent"/>
 
 
 </LinearLayout>

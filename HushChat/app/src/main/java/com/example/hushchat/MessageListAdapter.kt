@@ -1,5 +1,6 @@
 package com.example.hushchat
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import java.text.SimpleDateFormat
+import java.time.format.DateTimeFormatter
 
 class MessageListAdapter : ListAdapter<ChatMessage, MessageListAdapter.MessageViewHolder>(MessageComparator()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MessageViewHolder {
@@ -15,13 +18,21 @@ class MessageListAdapter : ListAdapter<ChatMessage, MessageListAdapter.MessageVi
 
     override fun onBindViewHolder(holder: MessageViewHolder, position: Int) {
         val current = getItem(position)
-        holder.bind(current.message)
+        holder.bind(current.message, current.timestamp, current.sender)
     }
 
     class MessageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val messageItemView: TextView = itemView.findViewById(R.id.textView)
-        fun bind(text: String?) {
+        private val messageTimeStampView: TextView = itemView.findViewById(R.id.timestamp)
+        private val messageItemView: TextView = itemView.findViewById(R.id.textView1)
+        fun bind(text: String?, timestamp:String, sender:String) {
             messageItemView.text = text
+            messageTimeStampView.text = timestamp
+            if (sender=="me") {
+                messageItemView.setBackgroundColor(Color.parseColor("#005EB8"))
+                messageItemView.setTextColor(Color.WHITE)
+                messageTimeStampView.setTextColor(Color.WHITE)
+                messageTimeStampView.setBackgroundColor(Color.parseColor("#005EB8"))
+            }
         }
 
         companion object {

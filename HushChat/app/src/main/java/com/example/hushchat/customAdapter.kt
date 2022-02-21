@@ -26,7 +26,7 @@ class CustomAdapter (private val mList: List<ItemsViewModel>) : RecyclerView.Ada
 
     inner class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
         val imageView: ImageView = itemView.findViewById(R.id.imageview)
-        val textView: TextView = itemView.findViewById(R.id.textView)
+        val textView: TextView = itemView.findViewById(R.id.textView1)
         init {
             itemView.setOnClickListener{
                 onItemClick?.invoke(mList[adapterPosition])
