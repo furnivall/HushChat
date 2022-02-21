@@ -10,6 +10,7 @@ class ChatMessage(
     @PrimaryKey(autoGenerate = true) val id: Int? = null,
     @ColumnInfo(name = "Message") val message: String,
     @ColumnInfo(name = "Sender") val sender: String,
+    @ColumnInfo(name="Recipient") val recipient: String,
     @ColumnInfo(name = "Timestamp") val timestamp: String
     ) {
     override

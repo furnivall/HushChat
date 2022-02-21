@@ -5,8 +5,11 @@ import kotlinx.coroutines.launch
 import java.lang.IllegalArgumentException
 
 class MessageViewModel(private val repository: MessageRepository) : ViewModel() {
-    val allMessages: LiveData<List<ChatMessage>> = repository.allMessages.asLiveData()
-//    val relevantMessages: LiveData<List<ChatMessage>> = repository.relevantMessages.asLiveData()
+//    val allMessages: LiveData<List<ChatMessage>> = repository.allMessages.asLiveData()
+    fun relevantMessages(sender:String): LiveData<List<ChatMessage>> {
+        return repository.getRelevantMessages(sender).asLiveData()
+    }
+//    val allMessages: LiveData<List<ChatMessage>> = repository.getRelevantMessages().asLiveData()
 
     fun insert(message: ChatMessage) = viewModelScope.launch {
         repository.insert(message)

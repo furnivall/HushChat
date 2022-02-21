@@ -12,7 +12,7 @@ interface ChatMessageDao {
     @Query("SELECT * FROM chat_messages ORDER BY timestamp ASC")
     fun getTimeSortedMessages() : Flow<List<ChatMessage>>
 
-    @Query("SELECT * FROM chat_messages WHERE sender = :sender ORDER BY timestamp ASC")
+    @Query("SELECT * FROM chat_messages WHERE sender = :sender OR recipient = :sender ORDER BY timestamp ASC")
     fun getMessagesFromSender(sender: String) : Flow<List<ChatMessage>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)

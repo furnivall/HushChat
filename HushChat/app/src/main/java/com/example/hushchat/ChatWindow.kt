@@ -17,7 +17,6 @@ import org.json.JSONArray
 import org.json.JSONObject
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
-import java.time.temporal.ChronoUnit
 
 class ChatWindow : AppCompatActivity() {
 
@@ -29,9 +28,6 @@ class ChatWindow : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         SocketHandler.establishConnection()
         val mSocket = SocketHandler.getSocket()
-
-
-
         supportActionBar?.hide()
         super.onCreate(savedInstanceState)
         val ChatUser = intent.getStringExtra("ChatUser")
@@ -49,17 +45,19 @@ class ChatWindow : AppCompatActivity() {
             send_message(textInput.text.toString(), ChatUser.toString())
             messageViewModel.insert(ChatMessage(message=textInput.text.toString(),
                 sender = "me",
+                recipient = ChatUser.toString(),
                 timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm")).toString()))
             closeKeyboard()
             textInput.text?.clear()
         }
-
         // add an observer on the LiveData returned by getAlphabetizedMessages.
         // The onChanged method fires when the observed data changes and the activity is in
         // the foreground.
-        messageViewModel.allMessages.observe(this, Observer { messages ->
-            messages?.let { adapter.submitList(it) }
-        })
+        if (ChatUser != null) {
+            messageViewModel.relevantMessages(ChatUser).observe(this, Observer { messages ->
+                messages?.let { adapter.submitList(it) }
+            })
+        }
 
     }
     fun recv_messages(socket: Socket) {
@@ -70,6 +68,7 @@ class ChatWindow : AppCompatActivity() {
             val now:String = LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm")).toString()
             messageViewModel.insert(ChatMessage(message=data.getString("message"),
                 sender = data.getString("sender"),
+                recipient = "me",
                 timestamp = now))
         }
     }
