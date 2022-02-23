@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     private val messageViewModel: MessageViewModel by viewModels {
         MessageViewModelFactory((application as MessagesApplication).repository)
     }
+    var notificationNumber = 1
 
     private fun createNotificationChannel() {
         // Create the NotificationChannel, but only on API 26+ because
@@ -142,24 +143,29 @@ class MainActivity : AppCompatActivity() {
                     timestamp = now
                 )
             )
-            val notifIntent = Intent(this, ChatWindow::class.java).apply {
+//            intent to allow us to immediately open the relevant chatWindow activity for the user who sent the message.
+            var notifIntent = Intent(this, ChatWindow::class.java).apply {
                 putExtra("ChatUser", sender)
             }
+//            the below code basically turns our intent into a "PendingIntent" and allows us
+//            to embed it within a notification as appropriate.
             val resultPendingIntent: PendingIntent? = TaskStackBuilder.create(this).run {
-                // Add the intent, which inflates the back stack
                 addNextIntentWithParentStack(notifIntent)
-                // Get the PendingIntent containing the entire back stack
-                getPendingIntent(0, PendingIntent.FLAG_IMMUTABLE)
+                getPendingIntent(0, PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT)
             }
+//            the below code is the builder object which allows us to send a notification on
+//            the notification channel outlined at the beginning of this file.
             var builder = NotificationCompat.Builder(this, "1")
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle(sender)
                 .setContentText(message)
                 .setContentIntent(resultPendingIntent)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
+//            actually send the notification.
             with(NotificationManagerCompat.from(this)) {
-                notify(1, builder.build())
+                notify(notificationNumber, builder.build())
             }
+            notificationNumber++
         }
     }
 
