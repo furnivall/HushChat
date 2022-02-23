@@ -6,4 +6,6 @@
     <string name="send_message">Send Message</string>
     <string name="refresh_users">Refresh Users</string>
     <string name="item">Item</string>
+    <string name="channel_name">notifChannel</string>
+    <string name="channel_description">main notification channel</string>
 </resources>
