@@ -40,7 +40,6 @@ class ChatWindow : AppCompatActivity() {
         header.text = ChatUser
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recv_messages(mSocket)
         sendMsgButton.setOnClickListener {
             send_message(textInput.text.toString(), ChatUser.toString())
             messageViewModel.insert(ChatMessage(message=textInput.text.toString(),
@@ -59,18 +58,6 @@ class ChatWindow : AppCompatActivity() {
             })
         }
 
-    }
-    fun recv_messages(socket: Socket) {
-        socket.on("chatmessage") {
-            Log.i("I", it[0].toString())
-            val data = it[0] as JSONObject
-            Log.i("i",data.getString("message"))
-            val now:String = LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm")).toString()
-            messageViewModel.insert(ChatMessage(message=data.getString("message"),
-                sender = data.getString("sender"),
-                recipient = "me",
-                timestamp = now))
-        }
     }
 
     fun send_message(message:String, recipient:String) {
