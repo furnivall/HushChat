@@ -22,9 +22,11 @@ import org.json.JSONObject
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import android.provider.Settings.Secure
+import com.example.hushchat.MessagesApplication.Companion.globalVar
 
 class MainActivity : AppCompatActivity() {
     val connected_users = ArrayList<String>()
+
     private val messageViewModel: MessageViewModel by viewModels {
         MessageViewModelFactory((application as MessagesApplication).repository)
     }
@@ -47,8 +49,14 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onPause() {
+        super.onPause()
+        globalVar = "//pause"
+    }
+
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
+        globalVar = "mainactivity"
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
         setContentView(R.layout.activity_main)
@@ -137,6 +145,7 @@ class MainActivity : AppCompatActivity() {
                 LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm")).toString()
             val sender = data.getString("sender")
             val message = data.getString("message")
+            Log.e("e", message)
             messageViewModel.insert(
                 ChatMessage(
                     message = message,
@@ -148,6 +157,9 @@ class MainActivity : AppCompatActivity() {
 //            intent to allow us to immediately open the relevant chatWindow activity for the user who sent the message.
             var notifIntent = Intent(this, ChatWindow::class.java).apply {
                 putExtra("ChatUser", sender)
+//                this boolean is added so that if we open a chat window from a push notification we
+//                can actually receive messages from the other user.
+                putExtra("notif", true)
             }
 //            the below code basically turns our intent into a "PendingIntent" and allows us
 //            to embed it within a notification as appropriate.
@@ -167,10 +179,16 @@ class MainActivity : AppCompatActivity() {
                 .setContentIntent(resultPendingIntent)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
 //            actually send the notification.
-            with(NotificationManagerCompat.from(this)) {
-                notify(notificationNumber, builder.build())
+
+//            TODO find a means to work out current active window
+
+            Log.e("e", "the current window is: $globalVar")
+            if (globalVar != sender) {
+                with(NotificationManagerCompat.from(this)) {
+                    notify(notificationNumber, builder.build())
+                }
+                notificationNumber++
             }
-            notificationNumber++
         }
     }
 

@@ -11,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.hushchat.SocketHandler.mSocket
 import org.json.JSONArray
 import kotlin.concurrent.fixedRateTimer
+import com.example.hushchat.MessagesApplication.Companion.globalVar
+
 
 class Contacts : AppCompatActivity() {
     private val messageViewModel: MessageViewModel by viewModels {
@@ -22,6 +24,7 @@ class Contacts : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         supportActionBar?.hide()
+        globalVar = "contacts"
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contacts)
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)

@@ -17,9 +17,11 @@
 
         <activity
             android:name=".ChatWindow"
+            android:parentActivityName=".Contacts"
             android:exported="false" />
         <activity
             android:name=".Contacts"
+            android:parentActivityName=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

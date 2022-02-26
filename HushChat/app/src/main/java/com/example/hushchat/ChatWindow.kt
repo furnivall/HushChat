@@ -12,11 +12,12 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.textfield.TextInputEditText
-import io.socket.client.Socket
 import org.json.JSONArray
-import org.json.JSONObject
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
+import com.example.hushchat.MessagesApplication.Companion.globalVar
+import io.socket.client.Socket
+import org.json.JSONObject
 
 class ChatWindow : AppCompatActivity() {
 
@@ -25,12 +26,20 @@ class ChatWindow : AppCompatActivity() {
         MessageViewModelFactory((application as MessagesApplication).repository)
     }
 
+
+    override fun onPause() {
+        super.onPause()
+        globalVar = "//pause"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         SocketHandler.establishConnection()
         val mSocket = SocketHandler.getSocket()
         supportActionBar?.hide()
         super.onCreate(savedInstanceState)
         val ChatUser = intent.getStringExtra("ChatUser")
+        val notif = intent.getBooleanExtra("notif", false)
+        globalVar = ChatUser.toString()
         setContentView(R.layout.activity_chat_window)
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
         val adapter = MessageListAdapter()
@@ -40,27 +49,57 @@ class ChatWindow : AppCompatActivity() {
         header.text = ChatUser
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
-        sendMsgButton.setOnClickListener {
-            send_message(textInput.text.toString(), ChatUser.toString())
-            messageViewModel.insert(ChatMessage(message=textInput.text.toString(),
-                sender = "me",
-                recipient = ChatUser.toString(),
-                timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm")).toString()))
-            closeKeyboard()
-            textInput.text?.clear()
+        if (notif){
+            recv_messages(mSocket)
         }
-        // add an observer on the LiveData returned by getAlphabetizedMessages.
-        // The onChanged method fires when the observed data changes and the activity is in
-        // the foreground.
         if (ChatUser != null) {
             messageViewModel.relevantMessages(ChatUser).observe(this, Observer { messages ->
                 messages?.let { adapter.submitList(it) }
             })
         }
 
+        sendMsgButton.setOnClickListener {
+            send_message(textInput.text.toString(), ChatUser.toString())
+            messageViewModel.insert(
+                ChatMessage(
+                    message = textInput.text.toString(),
+                    sender = "me",
+                    recipient = ChatUser.toString(),
+                    timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm"))
+                        .toString()
+                )
+            )
+            closeKeyboard()
+            textInput.text?.clear()
+        }
+        // add an observer on the LiveData returned by getAlphabetizedMessages.
+        // The onChanged method fires when the observed data changes and the activity is in
+        // the foreground.
+
     }
 
-    fun send_message(message:String, recipient:String) {
+    fun recv_messages(socket: Socket) {
+        socket.on("chatmessage") {
+            Log.i("I", it[0].toString())
+            val data = it[0] as JSONObject
+            Log.i("i", data.getString("message"))
+            val now: String =
+                LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm")).toString()
+            val sender = data.getString("sender")
+            val message = data.getString("message")
+            Log.e("e", message)
+            messageViewModel.insert(
+                ChatMessage(
+                    message = message,
+                    sender = sender,
+                    recipient = "me",
+                    timestamp = now
+                )
+            )
+        }
+    }
+
+    fun send_message(message: String, recipient: String) {
         val outputArray = arrayOf(recipient, message)
         SocketHandler.mSocket.emit("send_to_user", JSONArray(outputArray))
         runOnUiThread {
@@ -70,7 +109,8 @@ class ChatWindow : AppCompatActivity() {
     }
 
     fun closeKeyboard() {
-        val imm: InputMethodManager = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        val imm: InputMethodManager =
+            getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
         if (imm.isActive)
             imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)
     }
