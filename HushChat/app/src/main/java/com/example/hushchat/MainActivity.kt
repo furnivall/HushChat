@@ -14,7 +14,6 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.viewModels
-import androidx.compose.ui.graphics.Color
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.google.android.material.textfield.TextInputEditText
@@ -22,6 +21,7 @@ import io.socket.client.Socket
 import org.json.JSONObject
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
+import android.provider.Settings.Secure
 
 class MainActivity : AppCompatActivity() {
     val connected_users = ArrayList<String>()
@@ -55,33 +55,36 @@ class MainActivity : AppCompatActivity() {
         val text_reader = findViewById(R.id.text_reader) as TextView
         val text_input_username = findViewById(R.id.text_input_username) as TextInputEditText
         val set_username_button = findViewById(R.id.username_button) as Button
-        val send_msg_btn = findViewById(R.id.send_message_button) as Button
         createNotificationChannel()
         text_reader.movementMethod = ScrollingMovementMethod()
 
 
         SocketHandler.setSocket()
         SocketHandler.establishConnection()
+        val mSocket = SocketHandler.mSocket
         text_reader.text = text_reader.text.toString() + "\n*** Connection established. ***\n"
-
+        getUniqueId(mSocket)
         handle_initial_messages()
         handle_username_messages()
         handle_new_users()
-        val mSocket = SocketHandler.mSocket
+
         recv_messages(mSocket)
-        set_username_button.setOnClickListener {
-            val typedData = text_input_username.text.toString()
-            SocketHandler.send_Username(typedData)
-            text_input_username.text?.clear()
-            closeKeyboard()
-            set_username_button.visibility = View.GONE
-            text_input_username.visibility = View.GONE
-            text_reader.visibility = View.VISIBLE
-            send_msg_btn.visibility = View.VISIBLE
-            val intent = Intent(this, Contacts::class.java).apply {
-                putExtra("com.example.hushchat.message", "Message")
+
+        if (!existingUser(mSocket)) {
+            set_username_button.visibility = View.VISIBLE
+            text_input_username.visibility = View.VISIBLE
+            set_username_button.setOnClickListener {
+                val typedData = text_input_username.text.toString()
+                SocketHandler.send_Username(typedData)
+                text_input_username.text?.clear()
+                closeKeyboard()
+                set_username_button.visibility = View.GONE
+                text_input_username.visibility = View.GONE
+                val intent = Intent(this, Contacts::class.java).apply {
+                    putExtra("com.example.hushchat.message", "Message")
+                }
+                startActivity(intent)
             }
-            startActivity(intent)
         }
     }
 
@@ -118,7 +121,6 @@ class MainActivity : AppCompatActivity() {
                     var text_reader = findViewById(R.id.text_reader) as TextView
                     val old_text = text_reader.text.toString()
                     text_reader.text = old_text + args[0].toString()
-
                 }
 
             }
@@ -151,7 +153,10 @@ class MainActivity : AppCompatActivity() {
 //            to embed it within a notification as appropriate.
             val resultPendingIntent: PendingIntent? = TaskStackBuilder.create(this).run {
                 addNextIntentWithParentStack(notifIntent)
-                getPendingIntent(0, PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT)
+                getPendingIntent(
+                    0,
+                    PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
+                )
             }
 //            the below code is the builder object which allows us to send a notification on
 //            the notification channel outlined at the beginning of this file.
@@ -169,6 +174,25 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun getUniqueId(socket: Socket) {
+        val uniqueId = Secure.getString(contentResolver, Secure.ANDROID_ID)
+        Log.i("i", "UNIQUE ID = $uniqueId")
+        socket.emit("uid", "$uniqueId")
+    }
+
+    private fun existingUser(socket: Socket): Boolean {
+        socket.on("existingUserCheck") {
+            Log.i("i", it[0].toString())
+            if (it[0].equals("true")) {
+                Log.i("i", "user has already got an existing account")
+                val intent = Intent(this, Contacts::class.java).apply {
+                    putExtra("com.example.hushchat.message", "Message")
+                }
+                startActivity(intent)
+            }
+        }
+        return false
+    }
 
     fun closeKeyboard() {
         val imm: InputMethodManager =

@@ -34,6 +34,6 @@ object SocketHandler {
 
     @Synchronized
     fun send_Username(username: String) {
-        mSocket.emit("username", username)
+        mSocket.emit("newUsername", username)
     }
 }
