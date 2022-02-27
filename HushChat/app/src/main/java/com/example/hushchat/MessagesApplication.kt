@@ -8,7 +8,9 @@ class MessagesApplication : Application() {
     // uses by lazy so the db and repo are only created when they're needed rather than at app
     // start.
     companion object {
-        var globalVar = "mainactivity"
+        var activityName = "mainactivity"
+        var privateKey = ""
+        var publicKey = ""
     }
     val applicationScope = CoroutineScope(SupervisorJob())
     val database by lazy {MessageRoomDatabase.getDatabase(this, applicationScope)}

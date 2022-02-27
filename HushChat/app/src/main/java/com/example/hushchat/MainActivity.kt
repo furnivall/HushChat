@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.app.*
 import android.content.Context
 import android.content.Intent
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
@@ -22,7 +21,14 @@ import org.json.JSONObject
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import android.provider.Settings.Secure
-import com.example.hushchat.MessagesApplication.Companion.globalVar
+import com.example.hushchat.MessagesApplication.Companion.activityName
+import org.bouncycastle.jce.provider.BouncyCastleProvider
+import java.security.KeyPairGenerator
+import java.security.SecureRandom
+import java.security.Security
+import java.security.spec.ECGenParameterSpec
+import javax.crypto.Cipher
+import javax.crypto.KeyAgreement
 
 class MainActivity : AppCompatActivity() {
     val connected_users = ArrayList<String>()
@@ -35,28 +41,26 @@ class MainActivity : AppCompatActivity() {
     private fun createNotificationChannel() {
         // Create the NotificationChannel, but only on API 26+ because
         // the NotificationChannel class is new and not in the support library
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val name = getString(R.string.channel_name)
-            val descriptionText = getString(R.string.channel_description)
-            val importance = NotificationManager.IMPORTANCE_HIGH
-            val channel = NotificationChannel("1", name, importance).apply {
-                description = descriptionText
-            }
-            // Register the channel with the system
-            val notificationManager: NotificationManager =
-                getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-            notificationManager.createNotificationChannel(channel)
+        val name = getString(R.string.channel_name)
+        val descriptionText = getString(R.string.channel_description)
+        val importance = NotificationManager.IMPORTANCE_HIGH
+        val channel = NotificationChannel("1", name, importance).apply {
+            description = descriptionText
         }
+        // Register the channel with the system
+        val notificationManager: NotificationManager =
+            getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        notificationManager.createNotificationChannel(channel)
     }
 
     override fun onPause() {
         super.onPause()
-        globalVar = "//pause"
+        activityName = "//pause"
     }
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
-        globalVar = "mainactivity"
+        activityName = "mainactivity"
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
         setContentView(R.layout.activity_main)
@@ -82,6 +86,37 @@ class MainActivity : AppCompatActivity() {
             set_username_button.visibility = View.VISIBLE
             text_input_username.visibility = View.VISIBLE
             set_username_button.setOnClickListener {
+
+//              TODO write clearly about this:
+//               https://stackoverflow.com/questions/64776709/kotlin-ecc-encryption
+
+
+                val plaintext = "string"
+                val bytePlainText = plaintext.toByteArray()
+                Security.removeProvider("BC")
+                Security.addProvider(BouncyCastleProvider())
+                val keyPairGenerator = KeyPairGenerator.getInstance("ECDH")
+                keyPairGenerator.initialize(ECGenParameterSpec("secp521r1"))
+                val pair = keyPairGenerator.genKeyPair()
+
+                //encrypt
+                val cipherEnc = Cipher.getInstance("ECIES")
+                cipherEnc.init(Cipher.ENCRYPT_MODE, pair.public)
+                val cipherText = cipherEnc.doFinal(bytePlainText)
+                Log.e("e", "Encrypted text: ${cipherText.toString()}")
+
+                //decrypt
+                val cipherDec = Cipher.getInstance("ECIES")
+                cipherDec.init(Cipher.DECRYPT_MODE, pair.private)
+                val decryptedText = cipherDec.doFinal(cipherText)
+                Log.e("e", "Decrypted text: ${decryptedText.decodeToString()}")
+
+
+
+
+
+
+
                 val typedData = text_input_username.text.toString()
                 SocketHandler.send_Username(typedData)
                 text_input_username.text?.clear()
@@ -161,7 +196,7 @@ class MainActivity : AppCompatActivity() {
 //                can actually receive messages from the other user.
                 putExtra("notif", true)
             }
-//            the below code basically turns our intent into a "PendingIntent" and allows us
+//            the below code turns our intent into a "PendingIntent" and allows us
 //            to embed it within a notification as appropriate.
             val resultPendingIntent: PendingIntent? = TaskStackBuilder.create(this).run {
                 addNextIntentWithParentStack(notifIntent)
@@ -180,10 +215,8 @@ class MainActivity : AppCompatActivity() {
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
 //            actually send the notification.
 
-//            TODO find a means to work out current active window
-
-            Log.e("e", "the current window is: $globalVar")
-            if (globalVar != sender) {
+            Log.e("e", "the current window is: $activityName")
+            if (activityName != sender) {
                 with(NotificationManagerCompat.from(this)) {
                     notify(notificationNumber, builder.build())
                 }

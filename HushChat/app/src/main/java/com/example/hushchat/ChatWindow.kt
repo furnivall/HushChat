@@ -15,7 +15,7 @@ import com.google.android.material.textfield.TextInputEditText
 import org.json.JSONArray
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
-import com.example.hushchat.MessagesApplication.Companion.globalVar
+import com.example.hushchat.MessagesApplication.Companion.activityName
 import io.socket.client.Socket
 import org.json.JSONObject
 
@@ -29,7 +29,7 @@ class ChatWindow : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        globalVar = "//pause"
+        activityName = "//pause"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +39,7 @@ class ChatWindow : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val ChatUser = intent.getStringExtra("ChatUser")
         val notif = intent.getBooleanExtra("notif", false)
-        globalVar = ChatUser.toString()
+        activityName = ChatUser.toString()
         setContentView(R.layout.activity_chat_window)
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
         val adapter = MessageListAdapter()
@@ -47,9 +47,11 @@ class ChatWindow : AppCompatActivity() {
         val textInput = findViewById<TextInputEditText>(R.id.new_message_text)
         val sendMsgButton = findViewById<Button>(R.id.send_message_button)
         header.text = ChatUser
-        recyclerView.adapter = adapter
+        recyclerView.adapter = adaptertop
         recyclerView.layoutManager = LinearLayoutManager(this)
         if (notif){
+    //      this is an ugly hack to deal with the fact that I don't fully understand intents.
+    //      The issue is that I need to attach a backstack but can't seem to get it working.
             recv_messages(mSocket)
         }
         if (ChatUser != null) {

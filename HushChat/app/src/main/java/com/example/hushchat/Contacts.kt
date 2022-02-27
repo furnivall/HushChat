@@ -4,14 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hushchat.SocketHandler.mSocket
 import org.json.JSONArray
 import kotlin.concurrent.fixedRateTimer
-import com.example.hushchat.MessagesApplication.Companion.globalVar
+import com.example.hushchat.MessagesApplication.Companion.activityName
 
 
 class Contacts : AppCompatActivity() {
@@ -24,7 +23,7 @@ class Contacts : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         supportActionBar?.hide()
-        globalVar = "contacts"
+        activityName = "contacts"
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contacts)
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
