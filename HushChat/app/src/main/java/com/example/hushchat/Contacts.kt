@@ -31,12 +31,11 @@ class Contacts : AppCompatActivity() {
         val adapter = CustomAdapter(data)
         recyclerView.adapter = adapter
         val users:String
-        val mSocket = SocketHandler.mSocket
+//        val mSocket = SocketHandler.mSocket
         handleUsers()
         getContacts()
         val mytimer = fixedRateTimer("timer", true, 0, 2000){
             SocketHandler.mSocket.emit("getUsers", "")
-            Log.i("i","checking contact list")
         }
     }
 
@@ -59,7 +58,6 @@ class Contacts : AppCompatActivity() {
                 startActivity(intent)
             }
         }
-        Log.i("I", data.toString())
     }
 
 
