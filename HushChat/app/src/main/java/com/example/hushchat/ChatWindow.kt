@@ -123,7 +123,7 @@ class ChatWindow : AppCompatActivity() {
             val base64DecodedMessage = Base64.decode(message, Base64.DEFAULT)
             val otherSharedSecret = getSharedSecret(privateKey,pubKeyReturned)
             val responseAesKey = getAESKey(otherSharedSecret)
-            val decryptedMessage = decrypt(aesKey, base64DecodedMessage)
+            val decryptedMessage = decrypt(responseAesKey, base64DecodedMessage)
             messageViewModel.insert(
                 ChatMessage(
                     message = String(decryptedMessage, StandardCharsets.UTF_8),

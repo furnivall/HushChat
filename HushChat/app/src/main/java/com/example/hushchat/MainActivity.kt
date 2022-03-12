@@ -307,7 +307,6 @@ class MainActivity : AppCompatActivity() {
             val pubKeyReturned = keyFactory.generatePublic(keyspec)
             Log.e("e", "here is the initial public key"+publicKey.toString())
             Log.e("e", "here is the returned public key within mainactivity"+pubKeyReturned.toString())
-            Log.e("e", "WE HAVE REACHED STARTACTIVITY")
             senderPubKey = pubKeyReturned
         }
     }
@@ -318,7 +317,6 @@ class MainActivity : AppCompatActivity() {
             Security.addProvider(BouncyCastleProvider())
             Log.i("I", it[0].toString())
             val data = it[0] as JSONObject
-            Log.i("i", data.getString("message"))
             val now: String =
                 LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm")).toString()
             val sender = data.getString("sender")
@@ -372,7 +370,7 @@ class MainActivity : AppCompatActivity() {
             var builder = NotificationCompat.Builder(this, "1")
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle(sender)
-                .setContentText(message)
+                .setContentText(decryptedMessage)
                 .setContentIntent(resultPendingIntent)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
 //            actually send the notification.
