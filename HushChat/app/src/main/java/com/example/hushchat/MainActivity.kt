@@ -93,10 +93,6 @@ class MainActivity : AppCompatActivity() {
             set_username_button.visibility = View.VISIBLE
             text_input_username.visibility = View.VISIBLE
             set_username_button.setOnClickListener {
-
-
-
-
                 val typedData = text_input_username.text.toString()
                 SocketHandler.send_Username(typedData)
                 text_input_username.text?.clear()
@@ -110,6 +106,9 @@ class MainActivity : AppCompatActivity() {
 
                 startActivity(intent)
             }
+        }
+        else{
+           update_pub_key()
         }
     }
     private fun generateKeyPair(): KeyPair {
@@ -152,6 +151,16 @@ class MainActivity : AppCompatActivity() {
         val cipher = Cipher.getInstance("AES/GCM/NoPadding")
         cipher.init(Cipher.DECRYPT_MODE, secretKeySpec, gCMParameterSpec)
         return cipher.doFinal(ciphertext)
+    }
+
+    fun update_pub_key(){
+        val keyPair = generateKeyPair()
+        Security.removeProvider("BC")
+        Security.addProvider(BouncyCastleProvider())
+        privateKey = keyPair.private
+        publicKey = keyPair.public
+        val encodedPubKey = Base64.encode(publicKey.encoded, Base64.DEFAULT)
+        SocketHandler.mSocket.emit("update_pub_key", encodedPubKey)
     }
 
     fun send_pub_key() {
@@ -396,6 +405,7 @@ class MainActivity : AppCompatActivity() {
             Log.i("i", it[0].toString())
             if (it[0].equals("true")) {
                 Log.i("i", "user has already got an existing account")
+                update_pub_key()
                 val intent = Intent(this, Contacts::class.java).apply {
                     putExtra("com.example.hushchat.message", "Message")
                 }

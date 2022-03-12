@@ -14,9 +14,9 @@ import com.example.hushchat.MessagesApplication.Companion.activityName
 
 
 class Contacts : AppCompatActivity() {
-    private val messageViewModel: MessageViewModel by viewModels {
-        MessageViewModelFactory((application as MessagesApplication).repository)
-    }
+//    private val messageViewModel: MessageViewModel by viewModels {
+//        MessageViewModelFactory((application as MessagesApplication).repository)
+//    }
     val data = ArrayList<ItemsViewModel>()
 
 
@@ -30,8 +30,6 @@ class Contacts : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         val adapter = CustomAdapter(data)
         recyclerView.adapter = adapter
-        val users:String
-//        val mSocket = SocketHandler.mSocket
         handleUsers()
         getContacts()
         val mytimer = fixedRateTimer("timer", true, 0, 2000){

@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 
 // annotates class to be a room db with a table of chat messages
 @Database(entities = arrayOf(ChatMessage::class), version = 3, exportSchema = false)
-public abstract class MessageRoomDatabase : RoomDatabase() {
+abstract class MessageRoomDatabase : RoomDatabase() {
 
     abstract fun chatMessageDao() : ChatMessageDao
 
@@ -23,13 +23,7 @@ public abstract class MessageRoomDatabase : RoomDatabase() {
                     var messageDao = database.chatMessageDao()
                     // delete all content here
                     messageDao.deleteAll()
-                    // add sample messages
-//                    var message = ChatMessage(1, "Hello")
-//                    messageDao.insert(message)
-//                    message = ChatMessage(2, "Danny")
-//                    messageDao.insert(message)
-//                    message = ChatMessage(3, "Rona")
-//                    messageDao.insert(message)
+
                 }
             }
         }
