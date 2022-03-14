@@ -92,48 +92,6 @@ class MainActivity : AppCompatActivity() {
         }else {
             setContentView(R.layout.activity_get_duration)
         }
-
-//        var textInputUsername = findViewById<TextInputEditText>(R.id.text_input_username)
-//        var setUsernameButton = findViewById<Button>(R.id.username_button)
-//        setUsernameButton.isVisible = false
-//        textInputUsername.isVisible = false
-//        radioButtons.visibility = View.VISIBLE
-
-//
-//        createNotificationChannel()
-//        fixedRateTimer("timer", true, 0, 1000){
-//           deleteAccordingToTimeFrame(Date().time - deleteDuration)
-//        }
-//        SocketHandler.setSocket()
-//        SocketHandler.establishConnection()
-//        val mSocket = SocketHandler.mSocket
-//        getUniqueId(mSocket)
-//        handle_new_users()
-//        receivePubKey(mSocket)
-//        recv_messages(mSocket)
-//
-//        if (!existingUser(mSocket)) {
-//        val textInputUsername = findViewById<TextInputEditText>(R.id.text_input_username)
-//        val setUsernameButton = findViewById<Button>(R.id.username_button)
-////            setUsernameButton.visibility = View.VISIBLE
-////            textInputUsername.visibility = View.VISIBLE
-//            setUsernameButton.setOnClickListener {
-//                val typedData = textInputUsername.text.toString()
-//                SocketHandler.send_Username(typedData)
-//                textInputUsername.text?.clear()
-//                closeKeyboard()
-//                setUsernameButton.visibility = View.GONE
-//                textInputUsername.visibility = View.GONE
-//                send_pub_key()
-//                val intent = Intent(this, Contacts::class.java).apply {
-//                    putExtra("com.example.hushchat.message", "Message")
-//                }
-//                startActivity(intent)
-//            }
-//        }
-//        else{
-//           update_pub_key()
-//        }
     }
 
     fun afterDeleteDuration(){

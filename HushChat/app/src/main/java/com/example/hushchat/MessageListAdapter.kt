@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -25,11 +26,12 @@ class MessageListAdapter : ListAdapter<ChatMessage, MessageListAdapter.MessageVi
     class MessageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val messageTimeStampView: TextView = itemView.findViewById(R.id.timestamp)
         private val messageItemView: TextView = itemView.findViewById(R.id.textView1)
+        private val messageLinearLayout: LinearLayout = itemView.findViewById(R.id.chatLinearLayout)
         fun bind(text: String?, timestamp:String, sender:String) {
             messageItemView.text = text
             messageTimeStampView.text = timestamp
             if (sender=="me") {
-                messageItemView.setBackgroundColor(Color.parseColor("#005EB8"))
+                messageLinearLayout.setBackgroundColor(Color.parseColor("#005EB8"))
                 messageItemView.setTextColor(Color.WHITE)
                 messageTimeStampView.setTextColor(Color.WHITE)
                 messageTimeStampView.setBackgroundColor(Color.parseColor("#005EB8"))

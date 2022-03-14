@@ -3,11 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
+    android:layout_height="wrap_content"
     android:layout_margin="3dp"
+    app:cardCornerRadius="20dp"
     app:cardElevation="6dp">
 
     <LinearLayout
+        android:id="@+id/chatLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -21,9 +23,10 @@
             android:id="@+id/timestamp"
             android:layout_width="wrap_content"
             android:layout_marginStart="0dp"
+            android:fontFamily="sans-serif"
             android:text=""
             android:layout_height="wrap_content"
-            android:textSize="11sp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/textView1"
@@ -31,7 +34,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/item"
-            android:textSize="20sp"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif"
             android:textStyle="bold" />
 
     </LinearLayout>
