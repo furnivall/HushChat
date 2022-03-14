@@ -11,7 +11,8 @@ class ChatMessage(
     @ColumnInfo(name = "Message") val message: String,
     @ColumnInfo(name = "Sender") val sender: String,
     @ColumnInfo(name="Recipient") val recipient: String,
-    @ColumnInfo(name = "Timestamp") val timestamp: String
+    @ColumnInfo(name = "Timestamp") val timestamp: String,
+    @ColumnInfo(name = "messageTime") val messageTime: Long
     ) {
     override
     fun toString(): String {

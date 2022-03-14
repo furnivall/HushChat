@@ -4,13 +4,13 @@ import android.annotation.SuppressLint
 import android.app.*
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
 import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import android.widget.Button
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.core.app.NotificationCompat
@@ -22,6 +22,10 @@ import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import android.provider.Settings.Secure
 import android.util.Base64
+import android.widget.Button
+import android.widget.RadioButton
+import android.widget.RadioGroup
+import androidx.core.view.isVisible
 import com.example.hushchat.MessagesApplication.Companion.activityName
 import com.example.hushchat.MessagesApplication.Companion.privateKey
 import com.example.hushchat.MessagesApplication.Companion.publicKey
@@ -31,10 +35,13 @@ import java.nio.charset.StandardCharsets
 import java.security.*
 import java.security.spec.ECGenParameterSpec
 import java.security.spec.X509EncodedKeySpec
+import java.util.*
 import javax.crypto.Cipher
 import javax.crypto.KeyAgreement
 import javax.crypto.spec.GCMParameterSpec
 import javax.crypto.spec.SecretKeySpec
+import kotlin.collections.ArrayList
+import kotlin.concurrent.fixedRateTimer
 
 class MainActivity : AppCompatActivity() {
     val connected_users = ArrayList<String>()
@@ -43,6 +50,9 @@ class MainActivity : AppCompatActivity() {
         MessageViewModelFactory((application as MessagesApplication).repository)
     }
     var notificationNumber = 1
+    var deleteDuration = 0
+    lateinit var sharedPref:SharedPreferences
+
 
     private fun createNotificationChannel() {
         // Create the NotificationChannel, but only on API 26+ because
@@ -69,48 +79,137 @@ class MainActivity : AppCompatActivity() {
         activityName = "mainactivity"
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
-        setContentView(R.layout.activity_main)
-        val text_reader = findViewById(R.id.text_reader) as TextView
-        val text_input_username = findViewById(R.id.text_input_username) as TextInputEditText
-        val set_username_button = findViewById(R.id.username_button) as Button
+
+//        if(sharedPref.getInt("deleteDuration") != 0){
+//            setContentView(R.layout.activity_main)
+//        }
+        sharedPref = this.getPreferences(Context.MODE_PRIVATE)
+        deleteDuration = sharedPref.getInt("deleteDuration", 0)
+        Log.e("e", "Imported shared preference for delete duration: "+sharedPref.getInt("deleteDuration", 0).toString())
+        if(sharedPref.getInt("deleteDuration", 0) != 0){
+            setContentView(R.layout.activity_main)
+            afterDeleteDuration()
+        }else {
+            setContentView(R.layout.activity_get_duration)
+        }
+
+//        var textInputUsername = findViewById<TextInputEditText>(R.id.text_input_username)
+//        var setUsernameButton = findViewById<Button>(R.id.username_button)
+//        setUsernameButton.isVisible = false
+//        textInputUsername.isVisible = false
+//        radioButtons.visibility = View.VISIBLE
+
+//
+//        createNotificationChannel()
+//        fixedRateTimer("timer", true, 0, 1000){
+//           deleteAccordingToTimeFrame(Date().time - deleteDuration)
+//        }
+//        SocketHandler.setSocket()
+//        SocketHandler.establishConnection()
+//        val mSocket = SocketHandler.mSocket
+//        getUniqueId(mSocket)
+//        handle_new_users()
+//        receivePubKey(mSocket)
+//        recv_messages(mSocket)
+//
+//        if (!existingUser(mSocket)) {
+//        val textInputUsername = findViewById<TextInputEditText>(R.id.text_input_username)
+//        val setUsernameButton = findViewById<Button>(R.id.username_button)
+////            setUsernameButton.visibility = View.VISIBLE
+////            textInputUsername.visibility = View.VISIBLE
+//            setUsernameButton.setOnClickListener {
+//                val typedData = textInputUsername.text.toString()
+//                SocketHandler.send_Username(typedData)
+//                textInputUsername.text?.clear()
+//                closeKeyboard()
+//                setUsernameButton.visibility = View.GONE
+//                textInputUsername.visibility = View.GONE
+//                send_pub_key()
+//                val intent = Intent(this, Contacts::class.java).apply {
+//                    putExtra("com.example.hushchat.message", "Message")
+//                }
+//                startActivity(intent)
+//            }
+//        }
+//        else{
+//           update_pub_key()
+//        }
+    }
+
+    fun afterDeleteDuration(){
         createNotificationChannel()
-        text_reader.movementMethod = ScrollingMovementMethod()
-
-
+        fixedRateTimer("timer", true, 0, 1000){
+            deleteAccordingToTimeFrame(Date().time - deleteDuration * 1000)
+        }
         SocketHandler.setSocket()
         SocketHandler.establishConnection()
         val mSocket = SocketHandler.mSocket
-        text_reader.text = text_reader.text.toString() + "\n*** Connection established. ***\n"
         getUniqueId(mSocket)
-        handle_initial_messages()
-        handle_username_messages()
         handle_new_users()
-
         receivePubKey(mSocket)
         recv_messages(mSocket)
 
         if (!existingUser(mSocket)) {
-            set_username_button.visibility = View.VISIBLE
-            text_input_username.visibility = View.VISIBLE
-            set_username_button.setOnClickListener {
-                val typedData = text_input_username.text.toString()
+            val textInputUsername = findViewById<TextInputEditText>(R.id.text_input_username)
+            val setUsernameButton = findViewById<Button>(R.id.username_button)
+//            setUsernameButton.visibility = View.VISIBLE
+//            textInputUsername.visibility = View.VISIBLE
+            setUsernameButton.setOnClickListener {
+                val typedData = textInputUsername.text.toString()
                 SocketHandler.send_Username(typedData)
-                text_input_username.text?.clear()
+                textInputUsername.text?.clear()
                 closeKeyboard()
-                set_username_button.visibility = View.GONE
-                text_input_username.visibility = View.GONE
+                setUsernameButton.visibility = View.GONE
+                textInputUsername.visibility = View.GONE
                 send_pub_key()
                 val intent = Intent(this, Contacts::class.java).apply {
                     putExtra("com.example.hushchat.message", "Message")
                 }
-
                 startActivity(intent)
             }
         }
         else{
-           update_pub_key()
+            update_pub_key()
         }
     }
+
+    fun onRadioButtonClicked(view:View){
+        if(view is RadioButton){
+            val chosenOption = view.isChecked
+
+            when (view.getId()){
+                R.id.onemin ->
+                    if(chosenOption){
+                        deleteDuration = 60
+                    }
+                R.id.fivemins ->
+                    if(chosenOption){
+                        deleteDuration = 300
+                    }
+                R.id.thirtymins ->
+                    if(chosenOption){
+                        deleteDuration = 1800
+                    }
+                R.id.oneday ->
+                    if(chosenOption){
+                        deleteDuration = 86400
+                    }
+            }
+        }
+        Log.e("e", deleteDuration.toString())
+        with(sharedPref.edit()){
+            putInt("deleteDuration", deleteDuration)
+            commit()
+        }
+        setContentView(R.layout.activity_main)
+        afterDeleteDuration()
+    }
+
+    private fun deleteAccordingToTimeFrame(dateTime: Long){
+        messageViewModel.deleteAccordingToTimeFrame(dateTime)
+    }
+
+
     private fun generateKeyPair(): KeyPair {
         val keyPairGenerator = KeyPairGenerator.getInstance("EC")
         keyPairGenerator.initialize(ECGenParameterSpec("secp521r1"))
@@ -271,34 +370,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun handle_initial_messages() {
-        SocketHandler.mSocket.on("init_message") { args ->
-            if (args[0] != null) {
-                val counter = args[1].toString()
-                Log.i("I", counter)
-                runOnUiThread {
-                    var text_reader = findViewById(R.id.text_reader) as TextView
-                    val old_text = text_reader.text.toString()
-                    text_reader.text = old_text + args[0].toString()
-                }
-            }
-        }
-    }
-
-    fun handle_username_messages() {
-        SocketHandler.mSocket.on("username_message") { args ->
-            if (args.size > 0) {
-                Log.i("I", args[0].toString())
-                runOnUiThread {
-                    var text_reader = findViewById(R.id.text_reader) as TextView
-                    val old_text = text_reader.text.toString()
-                    text_reader.text = old_text + args[0].toString()
-                }
-
-            }
-        }
-    }
-
     fun requestPubKey(user: String) {
         SocketHandler.mSocket.emit("getPubKey", user)
     }
@@ -355,7 +426,8 @@ class MainActivity : AppCompatActivity() {
                     message = decryptedMessage,
                     sender = sender,
                     recipient = "me",
-                    timestamp = now
+                    timestamp = now,
+                    messageTime = Date().time
                 )
             )
 //            intent to allow us to immediately open the relevant chatWindow activity for the user who sent the message.

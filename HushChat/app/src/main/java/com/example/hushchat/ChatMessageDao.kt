@@ -20,4 +20,7 @@ interface ChatMessageDao {
 
     @Query("DELETE FROM chat_messages")
     suspend fun deleteAll()
+
+    @Query("DELETE FROM chat_messages WHERE messageTime < :deleteTimeFrame")
+    fun deleteMessagesAccordingToTimeFrame(deleteTimeFrame: Long)
 }

@@ -8,4 +8,5 @@
     <string name="item">Item</string>
     <string name="channel_name">notifChannel</string>
     <string name="channel_description">main notification channel</string>
+    <string name="durationExplanationText">Welcome to HushChat. The app will automatically delete messages after whichever time period you choose from the options below:</string>
 </resources>

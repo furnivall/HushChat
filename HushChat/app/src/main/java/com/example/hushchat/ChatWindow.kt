@@ -25,6 +25,8 @@ import org.json.JSONObject
 import java.nio.charset.StandardCharsets
 import java.security.*
 import java.security.spec.X509EncodedKeySpec
+import java.text.SimpleDateFormat
+import java.util.*
 import javax.crypto.Cipher
 import javax.crypto.KeyAgreement
 import javax.crypto.spec.GCMParameterSpec
@@ -87,7 +89,8 @@ class ChatWindow : AppCompatActivity() {
                     sender = "me",
                     recipient = ChatUser.toString(),
                     timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm"))
-                        .toString()
+                        .toString(),
+                    messageTime = Date().time
                 )
             )
             closeKeyboard()
@@ -99,6 +102,8 @@ class ChatWindow : AppCompatActivity() {
 
     }
 
+
+
     fun recv_messages(socket: Socket) {
         socket.on("chatmessage") {
             Security.removeProvider("BC")
@@ -106,7 +111,8 @@ class ChatWindow : AppCompatActivity() {
             Log.i("I", it[0].toString())
             val data = it[0] as JSONObject
             val now: String =
-                LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm")).toString()
+                LocalDateTime.now().toString()
+            Log.e("e", "Our localdatetime format is: $now")
             val sender = data.getString("sender")
             val message = data.getString("message")
             val pubkeyBase64 = data.getString("pubkey")
@@ -129,7 +135,8 @@ class ChatWindow : AppCompatActivity() {
                     message = String(decryptedMessage, StandardCharsets.UTF_8),
                     sender = sender,
                     recipient = "me",
-                    timestamp = now
+                    timestamp = now,
+                    messageTime = Date().time
                 )
             )
         }
