@@ -102,8 +102,6 @@ class ChatWindow : AppCompatActivity() {
 
     }
 
-
-
     fun recv_messages(socket: Socket) {
         socket.on("chatmessage") {
             Security.removeProvider("BC")

@@ -7,11 +7,9 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.method.ScrollingMovementMethod
 import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
@@ -24,8 +22,6 @@ import android.provider.Settings.Secure
 import android.util.Base64
 import android.widget.Button
 import android.widget.RadioButton
-import android.widget.RadioGroup
-import androidx.core.view.isVisible
 import com.example.hushchat.MessagesApplication.Companion.activityName
 import com.example.hushchat.MessagesApplication.Companion.privateKey
 import com.example.hushchat.MessagesApplication.Companion.publicKey
@@ -46,19 +42,26 @@ import kotlin.concurrent.fixedRateTimer
 class MainActivity : AppCompatActivity() {
     val connected_users = ArrayList<String>()
     private lateinit var senderPubKey:PublicKey
+//    initialises our viewModel, which is responsible for the storage and display of message data
     private val messageViewModel: MessageViewModel by viewModels {
         MessageViewModelFactory((application as MessagesApplication).repository)
     }
+//    initialises notificationNumber at 0, and will be incremented on each notification generation.
     var notificationNumber = 1
+//    initialises our delete/self destruct variable. This will be shepherded into a shared prefs
+//    file to provide persistence of this choice.
     var deleteDuration = 0
     lateinit var sharedPref:SharedPreferences
 
-
+    /**
+     * Create the NotificationChannel - I think this only works on API version 26+, so might
+     * potentially cause issues on older android versions
+     */
     private fun createNotificationChannel() {
-        // Create the NotificationChannel, but only on API 26+ because
-        // the NotificationChannel class is new and not in the support library
         val name = getString(R.string.channel_name)
         val descriptionText = getString(R.string.channel_description)
+//        ensures that the notifications will actually pop up for all users by default unless
+//        they've messed with their settings.
         val importance = NotificationManager.IMPORTANCE_HIGH
         val channel = NotificationChannel("1", name, importance).apply {
             description = descriptionText
@@ -69,20 +72,27 @@ class MainActivity : AppCompatActivity() {
         notificationManager.createNotificationChannel(channel)
     }
 
+    /**
+     * This allows the notification handler to work out when the user has minimised the app and send
+     *
+     */
     override fun onPause() {
         super.onPause()
         activityName = "//pause"
     }
 
+    /**
+     * Activity create method. If a new installation, prompts the user to select a message self-destruct
+     * duration. After this, or if there's already a shared preference indicating a duration has
+     * been selected, move to either the username selection content view or the contacts list if an
+     * existing user.
+     */
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         activityName = "mainactivity"
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
 
-//        if(sharedPref.getInt("deleteDuration") != 0){
-//            setContentView(R.layout.activity_main)
-//        }
         sharedPref = this.getPreferences(Context.MODE_PRIVATE)
         deleteDuration = sharedPref.getInt("deleteDuration", 0)
         Log.e("e", "Imported shared preference for delete duration: "+sharedPref.getInt("deleteDuration", 0).toString())
@@ -94,24 +104,37 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Handles the process after the deletion duration has been picked (or if a duration already
+     * exists in shared preferences. Initialises notification channel, creates the daemon process
+     * which deletes messages according to preferences.
+     */
     fun afterDeleteDuration(){
         createNotificationChannel()
+//        create daemon process which uses delete duration to automatically delete messages at
+//        appropriate time. Refreshes every second.
         fixedRateTimer("timer", true, 0, 1000){
             deleteAccordingToTimeFrame(Date().time - deleteDuration * 1000)
         }
+//        initialise socket connection
         SocketHandler.setSocket()
         SocketHandler.establishConnection()
         val mSocket = SocketHandler.mSocket
+//        dirty sleep call to make things work a bit smoother
+        Thread.sleep(50)
+//        send unique id to server
         getUniqueId(mSocket)
+//        manage new users when they log in
         handle_new_users()
+//        receive and handle sender pub key when appropriate
         receivePubKey(mSocket)
+//        handler for message receipt
         recv_messages(mSocket)
 
+//        deal with creation of user name, broadcast to server and move to contacts screen
         if (!existingUser(mSocket)) {
             val textInputUsername = findViewById<TextInputEditText>(R.id.text_input_username)
             val setUsernameButton = findViewById<Button>(R.id.username_button)
-//            setUsernameButton.visibility = View.VISIBLE
-//            textInputUsername.visibility = View.VISIBLE
             setUsernameButton.setOnClickListener {
                 val typedData = textInputUsername.text.toString()
                 SocketHandler.send_Username(typedData)
@@ -163,17 +186,26 @@ class MainActivity : AppCompatActivity() {
         afterDeleteDuration()
     }
 
+    /**
+     * manage self destruct message mechanism.
+     */
     private fun deleteAccordingToTimeFrame(dateTime: Long){
         messageViewModel.deleteAccordingToTimeFrame(dateTime)
     }
 
-
+    /**
+     * generates a new keypair when required
+     */
     private fun generateKeyPair(): KeyPair {
         val keyPairGenerator = KeyPairGenerator.getInstance("EC")
         keyPairGenerator.initialize(ECGenParameterSpec("secp521r1"))
         return keyPairGenerator.generateKeyPair()
     }
 
+    /**
+     * Generates a shared secret using elliptic curve diffie hellman algorithm from sender pub key
+     * and recipient priv key. This is the asymmetric component of the ECIES approach I'm using.
+     */
     private fun getSharedSecret(privateKey: PrivateKey, publicKey: PublicKey): ByteArray {
         val keyAgreement = KeyAgreement.getInstance("ECDH")
         keyAgreement.init(privateKey)
@@ -181,25 +213,21 @@ class MainActivity : AppCompatActivity() {
         return keyAgreement.generateSecret()
     }
 
+    /**
+     * Generates an AES key from a given shared secret. This is the symmetric component of the ECIES
+     * approach. The generated AES key is used to both encrypt and decrypt the message.
+     * The decrypt component is in the function below, and the encrypt is within ChatWindow.kt
+     */
     private fun getAESKey(sharedSecret: ByteArray): ByteArray {
         val digest = MessageDigest.getInstance("SHA-512")
         return digest.digest(sharedSecret).copyOfRange(0, 32)
     }
 
-    private fun encrypt(aesKey: ByteArray, plaintext: ByteArray): ByteArray {
-        val secretKeySpec = SecretKeySpec(aesKey, "AES")
-        val iv = ByteArray(12) // Create random IV, 12 bytes for GCM
-        SecureRandom().nextBytes(iv)
-        val gCMParameterSpec = GCMParameterSpec(128, iv)
-        val cipher = Cipher.getInstance("AES/GCM/NoPadding")
-        cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, gCMParameterSpec)
-        val ciphertext = cipher.doFinal(plaintext)
-        val ivCiphertext = ByteArray(iv.size + ciphertext.size) // Concatenate IV and ciphertext (the MAC is implicitly appended to the ciphertext)
-        System.arraycopy(iv, 0, ivCiphertext, 0, iv.size)
-        System.arraycopy(ciphertext, 0, ivCiphertext, iv.size, ciphertext.size)
-        return ivCiphertext
-    }
 
+    /**
+     * Takes in an aes key and the byte array containing the encrypted plain text. Decrypts the msg
+     * and returns a bytearray containing the final decrypted text.
+     */
     private fun decrypt(aesKey: ByteArray, ivCiphertext: ByteArray): ByteArray {
         val secretKeySpec = SecretKeySpec(aesKey, "AES")
         val iv = ivCiphertext.copyOfRange(0, 12) // Separate IV
@@ -210,6 +238,13 @@ class MainActivity : AppCompatActivity() {
         return cipher.doFinal(ciphertext)
     }
 
+    /**
+     * Generates a new keypair for a user that is reconnecting. This was a deliberate choice
+     * rather than storing public/private key locally. There is a means of storing keys securely in
+     * android (i.e. AndroidKeyStore) but it does not support ECDH keys. Generating a new pair on
+     * demand requires propagation throughout the system to the server and other clients, but allows
+     * greater flexibility.
+     */
     fun update_pub_key(){
         val keyPair = generateKeyPair()
         Security.removeProvider("BC")
@@ -220,6 +255,9 @@ class MainActivity : AppCompatActivity() {
         SocketHandler.mSocket.emit("update_pub_key", encodedPubKey)
     }
 
+    /**
+     * Generates a public/private keypair, then encodes in base 64 for sending to the server
+     */
     fun send_pub_key() {
         val keyPair = generateKeyPair()
         Security.removeProvider("BC")
@@ -228,95 +266,15 @@ class MainActivity : AppCompatActivity() {
         publicKey = keyPair.public
         val encodedPubKey = Base64.encode(publicKey.encoded, Base64.DEFAULT)
         SocketHandler.mSocket.emit("pubKey", encodedPubKey)
-        val decodedPubKey = Base64.decode(encodedPubKey, Base64.DEFAULT)
-        Log.e("e", "Check here for decodedPubKey"+decodedPubKey.toString())
-        val keyspec = X509EncodedKeySpec(decodedPubKey)
-        val keyFactory = KeyFactory.getInstance("EC")
-        val pubKeyReturned = keyFactory.generatePublic(keyspec)
-        Log.e("e", "here is the initial public key"+publicKey.toString())
-        Log.e("e", "here is the returned public key"+pubKeyReturned.toString())
-
     }
 
     fun send_pub_key_old() {
-//        TODO write clearly about this:
 //        https://stackoverflow.com/questions/64776709/kotlin-ecc-encryption
-        val plaintext = "string"
-//        // Generate Keys
-        val keyPairA = generateKeyPair()
-//        val keyPairB = generateKeyPair()
-//
-//// Generate shared secrets
-//        val sharedSecretA = getSharedSecret(keyPairA.private, keyPairB.public)
-//        val sharedSecretB = getSharedSecret(keyPairB.private, keyPairA.public)
-//
-//// Generate AES-keys
-//        val aesKeyA = getAESKey(sharedSecretA)
-//        val aesKeyB = getAESKey(sharedSecretB)
-//
-//// Encryption (WLOG by A)
-//        val plaintextA = "The quick brown fox jumps over the lazy dog".toByteArray(StandardCharsets.UTF_8)
-//        val ciphertextA = encrypt(aesKeyA, plaintextA)
-//
-//// Decryption (WLOG by B)
-//        val plaintextB = decrypt(aesKeyB, ciphertextA)
-//        Log.e("e", String(plaintextB, StandardCharsets.UTF_8))
-
-        val bytePlainText = plaintext.toByteArray(StandardCharsets.UTF_8)
-        Security.removeProvider("BC")
-        Security.addProvider(BouncyCastleProvider())
-        val keyPairGenerator = KeyPairGenerator.getInstance("ECDH")
-        keyPairGenerator.initialize(ECGenParameterSpec("secp521r1"))
-        val pair = keyPairGenerator.genKeyPair()
-
-        val encodedPubKey = Base64.encode(pair.public.encoded, Base64.DEFAULT)
-        Log.e("e", "Encoded base64 input $encodedPubKey")
-        Log.e("e", "Decoded base64 input ${Base64.decode(encodedPubKey, Base64.DEFAULT)}")
-        Log.e("e", "Stringified base64 decoded : ${Base64.decode(encodedPubKey, Base64.DEFAULT).toString(
-            Charset.defaultCharset())}")
-        Log.e("e", "--" + encodedPubKey + "--")
-        Log.e("e", pair.public.format)
-        SocketHandler.mSocket.emit("pubKey", encodedPubKey)
-        privateKey = pair.private
-        publicKey = pair.public
-        Log.e("e", "Public key transmitted to server: ${publicKey.encoded}")
-//
-//        //encrypt with second pub key
-//        val pair2 = keyPairGenerator.genKeyPair()
-//        val cipherOwn = Cipher.getInstance("ECIES")
-//        cipherOwn.init(Cipher.ENCRYPT_MODE, pair2.public)
-//        val cipherTextOwn = cipherOwn.doFinal(bytePlainText)
-//
-//        //decrypt with first priv key
-//        val decCipher = Cipher.getInstance("ECIES")
-//        decCipher.init(Cipher.DECRYPT_MODE, pair2.private)
-//        val decrypted_text = decCipher.doFinal(cipherTextOwn).toString(StandardCharsets.UTF_8)
-//        Log.i("e",decrypted_text)
-
-
-//        //encrypt
-//        val cipherEnc = Cipher.getInstance("ECIES")
-//        cipherEnc.init(Cipher.ENCRYPT_MODE, pair.public)
-//        val cipherText = cipherEnc.doFinal(bytePlainText)
-//        Log.e("e", "Encrypted text: ${cipherText.toString()}")
-//
-//        //decrypt
-//        val cipherDec = Cipher.getInstance("ECIES")
-//        cipherDec.init(Cipher.DECRYPT_MODE, pair.private)
-//        val decryptedText = cipherDec.doFinal(cipherText)
-//        Log.e("e", "Decrypted text: ${decryptedText.decodeToString()}")
-
     }
 
-    fun getPubKey(user: String) {
-        SocketHandler.mSocket.emit("getPubKey", user)
-        SocketHandler.mSocket.on("pubKeyResponse") {
-            Log.e("e", it[0].toString())
-        }
-    }
-
-
-
+    /**
+     * handle the connection of new users
+     */
     fun handle_new_users() {
         SocketHandler.mSocket.on("new_user") { args ->
             if (args[0] != null) {
@@ -328,13 +286,25 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * helper to request sender pub key
+     */
     fun requestPubKey(user: String) {
         SocketHandler.mSocket.emit("getPubKey", user)
     }
 
+    /**
+     * Gets the sender's serialised pub key for a given message and deserialises the content,
+     * reconstructs the key from the X509 key spec.
+     */
     fun receivePubKey(socket: Socket) {
+
+//    BouncyCastleProvider needs to be replaced with an improved version as Stock Android
+//    BouncyCastle provider does not support Elliptic Curve encryption. This is reflected in
+//    build.gradle.
         Security.removeProvider("BC")
         Security.addProvider(BouncyCastleProvider())
+//    event handler for receiving a public key
         socket.on("pubKeyResponse") {
             Log.e("e", "Received pubKeyResponse...")
             Log.e("e", it[0].toString())
@@ -349,36 +319,65 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * This is a fairly monstrous function, so I apologise to the reader.
+     * It handles the receipt of messages sent to the client from other users (via the server).
+     * There is a similar method within ChatWindow.kt which handles the situation when the user
+     * reaches this intent via a notification. This function takes an encrypted message from the
+     * server, and decrypts it locally using this device's private key.
+     */
     fun recv_messages(socket: Socket) {
+//            Event handler for receiving chat messages
         socket.on("chatmessage") {
+//            BouncyCastleProvider needs to be replaced with an improved version as Stock Android
+//            BouncyCastle provider does not support Elliptic Curve encryption. This is reflected in
+//            build.gradle
             Security.removeProvider("BC")
             Security.addProvider(BouncyCastleProvider())
-            Log.i("I", it[0].toString())
-            val data = it[0] as JSONObject
+
+//            generate timestamp
             val now: String =
                 LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm")).toString()
+
+//            deconstruct the json object sent by the server containing message & metadata
+            Log.i("I", it[0].toString())
+            val data = it[0] as JSONObject
             val sender = data.getString("sender")
             val pubkeyBase64 = data.getString("pubkey")
-            Log.e("e", "Public key in base 64 from message sender: $pubkeyBase64")
+            Log.i("i", "Public key in base 64 from message sender: $pubkeyBase64")
             val decodeBase64pubKey = Base64.decode(pubkeyBase64, Base64.DEFAULT)
-            Log.e("e", "initialb64: "+decodeBase64pubKey.toString())
-            Log.e("e", "our base64 key is of type: "+decodeBase64pubKey.javaClass.name)
+            Log.i("i", "initialb64: "+decodeBase64pubKey.toString())
+            Log.i("i", "our base64 key is of type: "+decodeBase64pubKey.javaClass.name)
+
+//            this is to deserialize the b64 encoded public key sent from the server
             val keyspec = X509EncodedKeySpec(decodeBase64pubKey)
             val keyFactory = KeyFactory.getInstance("EC")
             val pubKeyReturned = keyFactory.generatePublic(keyspec)
-            Log.e("e", "Our generated public key for the other user is:$pubKeyReturned")
+            Log.v("v", "Our generated public key for the other user is:$pubKeyReturned")
+
+//            get the public key of the sender from the server
             requestPubKey(sender)
+
+//            remove trailing newline that python loves to helpfully introduce
             val message = data.getString("message").trim()
-            Log.e("e", "The message below is the received message")
-            Log.e("e", "--"+message+"--")
+            Log.v("v", "The message below is the received message")
+            Log.v("v", "--"+message+"--")
+
+//            initial base 64 decoding to leave us with ECIES encrypted version of message
             val base64DecodedMessage = Base64.decode(message, Base64.DEFAULT)
 
-
+//            generate shared secret with sender's public key and recipient's priv key.
+//            This is then used to generate an AES key which can decrypt the message to plain text
             val sharedSecret = getSharedSecret(privateKey,pubKeyReturned)
             val responseAesKey = getAESKey(sharedSecret)
-            val decryptedMessage = decrypt(responseAesKey, base64DecodedMessage).toString(StandardCharsets.UTF_8)
-            Log.e("e", "Encrypted message: $message")
-            Log.e("e", "Decrypted text: $decryptedMessage")
+
+//            success! we've got our plain text response
+            val decryptedMessage = decrypt(responseAesKey, base64DecodedMessage)
+                .toString(StandardCharsets.UTF_8)
+            Log.i("i", "Encrypted message: $message")
+            Log.i("i", "Decrypted text: $decryptedMessage")
+
+//            add message to viewmodel
             messageViewModel.insert(
                 ChatMessage(
                     message = decryptedMessage,
@@ -395,8 +394,10 @@ class MainActivity : AppCompatActivity() {
 //                can actually receive messages from the other user.
                 putExtra("notif", true)
             }
-//            the below code turns our intent into a "PendingIntent" and allows us
+
+//            the below code turns the above intent into a "PendingIntent" and allows us
 //            to embed it within a notification as appropriate.
+
             val resultPendingIntent: PendingIntent? = TaskStackBuilder.create(this).run {
                 addNextIntentWithParentStack(notifIntent)
                 getPendingIntent(
@@ -404,6 +405,7 @@ class MainActivity : AppCompatActivity() {
                     PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
                 )
             }
+//
 //            the below code is the builder object which allows us to send a notification on
 //            the notification channel outlined at the beginning of this file.
             var builder = NotificationCompat.Builder(this, "1")
@@ -412,24 +414,35 @@ class MainActivity : AppCompatActivity() {
                 .setContentText(decryptedMessage)
                 .setContentIntent(resultPendingIntent)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
-//            actually send the notification.
 
+//            actually send the notification.
             Log.e("e", "the current window is: $activityName")
             if (activityName != sender) {
                 with(NotificationManagerCompat.from(this)) {
                     notify(notificationNumber, builder.build())
                 }
+//                counter needs to be incremented so we can use more than one
+//                notification if multiple messages come in from different users.
                 notificationNumber++
             }
         }
     }
 
+    /**
+     * gets a unique identifier for our device which is sent to server to allow distinction between
+     * users.
+     */
     private fun getUniqueId(socket: Socket) {
         val uniqueId = Secure.getString(contentResolver, Secure.ANDROID_ID)
         Log.i("i", "UNIQUE ID = $uniqueId")
         socket.emit("uid", "$uniqueId")
     }
 
+    /**
+     * event handler for managing client behaviour when server specifies whether this client has
+     * connected previously. If user has previously connected then we need to generate a new keypair
+     * and broadcast the public key to the server to allow communication
+     */
     private fun existingUser(socket: Socket): Boolean {
         socket.on("existingUserCheck") {
             Log.i("i", it[0].toString())
@@ -445,6 +458,10 @@ class MainActivity : AppCompatActivity() {
         return false
     }
 
+    /**
+     * helper function to close keyboard - imm.toggleSoftInput is soon to be deprecated
+     * functionality but the alternative didn't work quite as nicely.
+     */
     fun closeKeyboard() {
         val imm: InputMethodManager =
             getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
