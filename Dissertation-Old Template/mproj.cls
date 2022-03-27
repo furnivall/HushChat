@@ -12,24 +12,10 @@
 2009/09/16 Modified by Tim Storer <tws@dcs.gla.ac.uk> to support non pdf modes.%
 2011/02/15 Modified by Gregg Hamilton <hamiltgr@dcs.gla.ac.uk> for use in final year projects.%
 2012/02/21 Modified by Gethin Norman <gethin.norman@glasgow.ac.uk> for use in masters projects and proposals.%
-2021/11/17 Modified by Mark McGill <mark.mcgill@glasgow.ac.uk> to bring the latex template close in parity to the MSWord template (same margins, font, roughly same heading sizes)
 ]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
 \ProcessOptions
 \LoadClass[11pt,a4paper]{report}
-
-% Changes from MMG to bring the template in line with the MSWord equivalent. Changed the section title spacing and font to match.
-\usepackage{titlesec}
-\titlespacing\chapter{0pt}{0pt plus 2pt minus 2pt}{24pt plus 2pt minus 2pt}
-\titlespacing\section{0pt}{0pt plus 2pt minus 2pt}{0pt plus 2pt minus 2pt}
-\titlespacing\subsection{0pt}{0pt plus 2pt minus 2pt}{0pt plus 2pt minus 2pt}
-\titlespacing\subsubsection{0pt}{0pt plus 2pt minus 2pt}{0pt plus 2pt minus 2pt}
-\titlespacing*{\paragraph} {0pt}{0ex plus 1ex minus .2ex}{1em}
-\titlespacing*{\subparagraph} {\parindent}{0ex plus 1ex minus .2ex}{1em}
-
-\titleformat{\chapter}[hang] 
-{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter:}{1em}{} 
-
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{11pt plus 2pt}
@@ -37,16 +23,6 @@
 \addtolength\oddsidemargin{-0.50in}
 \addtolength\textheight{1.0in}
 \addtolength\topmargin{-0.5in}
-
-\usepackage[a4paper,
-bindingoffset=0.2in,
-left=3.18cm,
-right=3.18cm,
-top=2.54cm,
-bottom=2.54cm,
-footskip=.25in]{geometry}
-
-\usepackage{newcent}
 
 \renewcommand\maketitle{\begin{titlepage}%
 \let\footnotesize\small
