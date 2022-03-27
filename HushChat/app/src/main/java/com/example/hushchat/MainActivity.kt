@@ -40,17 +40,27 @@ import kotlin.collections.ArrayList
 import kotlin.concurrent.fixedRateTimer
 
 class MainActivity : AppCompatActivity() {
+//    list of currently connected users.
+//    Updates whenever new contacts are broadcast from the server
     val connected_users = ArrayList<String>()
+
+//    represents the public key of whoever sent the most recent message. Lateinit so it doesn't
+//    require initialisation value.
     private lateinit var senderPubKey:PublicKey
+
 //    initialises our viewModel, which is responsible for the storage and display of message data
     private val messageViewModel: MessageViewModel by viewModels {
         MessageViewModelFactory((application as MessagesApplication).repository)
     }
+
 //    initialises notificationNumber at 0, and will be incremented on each notification generation.
     var notificationNumber = 1
+
 //    initialises our delete/self destruct variable. This will be shepherded into a shared prefs
 //    file to provide persistence of this choice.
     var deleteDuration = 0
+
+//    shared prefs file mentioned above. Stores the self destruct duration.
     lateinit var sharedPref:SharedPreferences
 
     /**
@@ -61,7 +71,7 @@ class MainActivity : AppCompatActivity() {
         val name = getString(R.string.channel_name)
         val descriptionText = getString(R.string.channel_description)
 //        ensures that the notifications will actually pop up for all users by default unless
-//        they've messed with their settings.
+//        they've messed with their device settings.
         val importance = NotificationManager.IMPORTANCE_HIGH
         val channel = NotificationChannel("1", name, importance).apply {
             description = descriptionText
@@ -268,9 +278,6 @@ class MainActivity : AppCompatActivity() {
         SocketHandler.mSocket.emit("pubKey", encodedPubKey)
     }
 
-    fun send_pub_key_old() {
-//        https://stackoverflow.com/questions/64776709/kotlin-ecc-encryption
-    }
 
     /**
      * handle the connection of new users
@@ -308,8 +315,10 @@ class MainActivity : AppCompatActivity() {
         socket.on("pubKeyResponse") {
             Log.e("e", "Received pubKeyResponse...")
             Log.e("e", it[0].toString())
+//            decode base 64
             val byteArrayPubKey:ByteArray = it[0] as ByteArray
             val returnedBase64Decoded = Base64.decode(byteArrayPubKey, Base64.DEFAULT)
+//            deserialise and reconstruct the key from keyspec
             val keyspec = X509EncodedKeySpec(returnedBase64Decoded)
             val keyFactory = KeyFactory.getInstance("EC")
             val pubKeyReturned = keyFactory.generatePublic(keyspec)

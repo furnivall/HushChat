@@ -34,20 +34,33 @@ import javax.crypto.spec.SecretKeySpec
 
 class ChatWindow : AppCompatActivity() {
 
-    private val newMessageActivityRequestCode = 1
+//    messageViewmodel is responsible for storage and display of messages.
     private val messageViewModel: MessageViewModel by viewModels {
         MessageViewModelFactory((application as MessagesApplication).repository)
     }
+
+//    stores the recipient's (i.e. the other user) public key
     private lateinit var recipientPubKey:PublicKey
+
+//    shared secret variable to assist with creation of aeskey
     private lateinit var sharedSecret:ByteArray
+
+//    aeskey generated from shared secret
     private lateinit var aesKey:ByteArray
 
-
+    /**
+     * tells the app that our current activity is minimised so notifications will still be sent.
+     * If the chat window is opened we will not receive a notification.
+     */
     override fun onPause() {
         super.onPause()
         activityName = "//pause"
     }
 
+    /**
+     * Init method for activity. Initialises socket connection to the server. Gets recipient
+     * metadata from the intent used to enter the activity.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         SocketHandler.establishConnection()
         val mSocket = SocketHandler.getSocket()
@@ -57,17 +70,23 @@ class ChatWindow : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val ChatUser = intent.getStringExtra("ChatUser")
         val notif = intent.getBooleanExtra("notif", false)
+
+//        ensures that notifications are not sent if the message is received from the current
+//        recipient. If msg comes from another recipient, then the notification will still be sent.
         activityName = ChatUser.toString()
+
+//        creates content view and initialises views.
         setContentView(R.layout.activity_chat_window)
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
         val adapter = MessageListAdapter()
         val header = findViewById<TextView>(R.id.chatUserHeading)
         val textInput = findViewById<TextInputEditText>(R.id.new_message_text)
         val sendMsgButton = findViewById<Button>(R.id.send_message_button)
-
         header.text = ChatUser
+//        get recipient pub key from server
         requestPubKey(ChatUser.toString())
         receivePubKey()
+//        init recyclerview to show messages (and live update them as appropriate)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
         if (notif){
@@ -75,12 +94,15 @@ class ChatWindow : AppCompatActivity() {
     //      The issue is that I need to attach a backstack but can't seem to get it working.
             recv_messages(mSocket)
         }
+
+//        check that target user exists and populate recycler based on content of messageViewModel
         if (ChatUser != null) {
             messageViewModel.relevantMessages(ChatUser).observe(this, Observer { messages ->
                 messages?.let { adapter.submitList(it) }
             })
         }
 
+//        handle the process of sending messages
         sendMsgButton.setOnClickListener {
             send_message(textInput.text.toString(), ChatUser.toString())
             messageViewModel.insert(
@@ -93,15 +115,18 @@ class ChatWindow : AppCompatActivity() {
                     messageTime = Date().time
                 )
             )
+
+//            clean up after sent message
             closeKeyboard()
             textInput.text?.clear()
         }
-        // add an observer on the LiveData returned by getAlphabetizedMessages.
-        // The onChanged method fires when the observed data changes and the activity is in
-        // the foreground.
-
     }
 
+    /**
+     * Almost exactly the same as the recv_messages function within MainActivity.kt, but without the
+     * handling of notifications. This method exists so that if the user has reached this activity
+     * from the notification intent then receiving messages will still work fluidly.
+     */
     fun recv_messages(socket: Socket) {
         socket.on("chatmessage") {
             Security.removeProvider("BC")
@@ -140,10 +165,12 @@ class ChatWindow : AppCompatActivity() {
         }
     }
 
+//    ask server for the public key of the target user
     fun requestPubKey(user: String) {
         SocketHandler.mSocket.emit("getPubKey", user)
     }
 
+//    handle receipt of pub key from server. Almost exactly the same as the method in MainActivity
     fun receivePubKey() {
         Security.removeProvider("BC")
         Security.addProvider(BouncyCastleProvider())
@@ -163,6 +190,9 @@ class ChatWindow : AppCompatActivity() {
         }
     }
 
+    /**
+     * Same as method in MainActivity
+     */
     private fun getSharedSecret(privateKey: PrivateKey, publicKey: PublicKey): ByteArray {
         val keyAgreement = KeyAgreement.getInstance("ECDH")
         keyAgreement.init(privateKey)
@@ -170,6 +200,9 @@ class ChatWindow : AppCompatActivity() {
         return keyAgreement.generateSecret()
     }
 
+    /**
+     * Same as method in MainActivity
+     */
     private fun getAESKey(sharedSecret: ByteArray): ByteArray {
         val digest = MessageDigest.getInstance("SHA-512")
         return digest.digest(sharedSecret).copyOfRange(0, 32)
@@ -189,6 +222,9 @@ class ChatWindow : AppCompatActivity() {
         return ivCiphertext
     }
 
+    /**
+     * Same as method in MainActivity
+     */
     private fun decrypt(aesKey: ByteArray, ivCiphertext: ByteArray): ByteArray {
         val secretKeySpec = SecretKeySpec(aesKey, "AES")
         val iv = ivCiphertext.copyOfRange(0, 12) // Separate IV
@@ -199,21 +235,31 @@ class ChatWindow : AppCompatActivity() {
         return cipher.doFinal(ciphertext)
     }
 
+    /**
+     * This method is the big one. It uses client private key and target user's public key to
+     * generate a shared secret and then AES key. After this, our plain text message is encrypted
+     * using the AES key, then encoded to base64.
+     */
     fun send_message(message: String, recipient: String) {
         val encryptedMessage = encrypt(aesKey, message.toByteArray(StandardCharsets.UTF_8))
         val base64encryptedMessage = Base64.encodeToString(encryptedMessage, Base64.DEFAULT)
+//        generate an array (which will be translated to json) for the server to work with.
         val outputArray = arrayOf(recipient, base64encryptedMessage)
         Log.i("e", "The message below is the sent message:")
         Log.i("e", "--$base64encryptedMessage--")
+
+//        this debug function allows us to verify that the decrypted message is being correctly
+//        deserialised from base 64.
         val decryptedMessage = decrypt(aesKey, encryptedMessage)
         Log.e("e", "The decrypted debug version of the string is here:$decryptedMessage")
+
+//        Send the event to the server.
         SocketHandler.mSocket.emit("send_to_user", JSONArray(outputArray))
-        runOnUiThread {
-            var textReader = findViewById<TextView>(R.id.new_message_text)
-            val old_text = textReader.text.toString()
-        }
     }
 
+    /**
+     * helper method for closing keyboard
+     */
     fun closeKeyboard() {
         val imm: InputMethodManager =
             getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager

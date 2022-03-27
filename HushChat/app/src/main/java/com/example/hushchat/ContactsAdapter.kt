@@ -6,7 +6,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class CustomAdapter (private val mList: List<ItemsViewModel>) : RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
+/**
+ * Adapter class which is used to show the contact list on the Contacts activity.
+ * This class is redrawn every two seconds using the redrawUser daemon method within Contacts.kt
+ */
+class ContactsAdapter (private val mList: List<ItemsViewModel>) : RecyclerView.Adapter<ContactsAdapter.ViewHolder>() {
     var onItemClick: ((ItemsViewModel) -> Unit)? = null
 
     override fun onCreateViewHolder (parent: ViewGroup, viewType: Int): ViewHolder {

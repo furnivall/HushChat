@@ -9,4 +9,5 @@
     <string name="channel_name">notifChannel</string>
     <string name="channel_description">main notification channel</string>
     <string name="durationExplanationText">Welcome to HushChat. The app will automatically delete messages after whichever time period you choose from the options below:</string>
+    <string name="noUsersOnline">No users online. Please wait for other users to connect.</string>
 </resources>

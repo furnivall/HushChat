@@ -8,12 +8,22 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
-// annotates class to be a room db with a table of chat messages
+/**
+ * This class essentially represents our database. We are using the Room object relational mapper
+ */
+// annotation to tell class to be a room db with a table of chat messages
 @Database(entities = arrayOf(ChatMessage::class), version = 3, exportSchema = false)
 abstract class MessageRoomDatabase : RoomDatabase() {
 
+    /**
+     * declares our data access object which will have managed, limited access to the db and protect
+     * us from unwanted db access within the program logic
+     */
     abstract fun chatMessageDao() : ChatMessageDao
 
+    /**
+     * handles initialisation of db when nonexistent.
+     */
     private class MessageDatabaseCallback(
         private val scope:CoroutineScope) : RoomDatabase.Callback() {
         override fun onCreate(db: SupportSQLiteDatabase) {
@@ -21,14 +31,15 @@ abstract class MessageRoomDatabase : RoomDatabase() {
             INSTANCE?.let { database ->
                 scope.launch {
                     var messageDao = database.chatMessageDao()
-                    // delete all content here
                     messageDao.deleteAll()
-
                 }
             }
         }
         }
 
+    /**
+     * ensures db is a singleton
+     */
     companion object {
         // singleton prevents multiple instances
         @Volatile
