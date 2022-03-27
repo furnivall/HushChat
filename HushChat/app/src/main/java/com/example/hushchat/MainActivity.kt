@@ -26,7 +26,6 @@ import com.example.hushchat.MessagesApplication.Companion.activityName
 import com.example.hushchat.MessagesApplication.Companion.privateKey
 import com.example.hushchat.MessagesApplication.Companion.publicKey
 import org.bouncycastle.jce.provider.BouncyCastleProvider
-import java.nio.charset.Charset
 import java.nio.charset.StandardCharsets
 import java.security.*
 import java.security.spec.ECGenParameterSpec
@@ -39,6 +38,10 @@ import javax.crypto.spec.SecretKeySpec
 import kotlin.collections.ArrayList
 import kotlin.concurrent.fixedRateTimer
 
+/**
+ * Main activity class for the app. Handles all the startup complexity and also ongoing background
+ * transactions with the server.
+ */
 class MainActivity : AppCompatActivity() {
 //    list of currently connected users.
 //    Updates whenever new contacts are broadcast from the server
@@ -84,7 +87,7 @@ class MainActivity : AppCompatActivity() {
 
     /**
      * This allows the notification handler to work out when the user has minimised the app and send
-     *
+     * notifications as appropriate.
      */
     override fun onPause() {
         super.onPause()
