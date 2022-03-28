@@ -1,48 +1,17 @@
-This is BibTeX, Version 0.99d (TeX Live 2020)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: mproj.aux
-The style file: plain.bst
-I found no \citation commands---while reading file mproj.aux
-Database file #1: mproj.bib
-You've used 0 entries,
-            2118 wiz_defined-function locations,
-            496 strings with 3983 characters,
-and the built_in function-call counts, 18 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 7
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
-int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 1
-purify$ -- 0
-quote$ -- 0
-skip$ -- 1
-stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 2
-(There was 1 error message)
+[0] Config.pm:304> INFO - This is Biber 2.14
+[0] Config.pm:307> INFO - Logfile is 'mproj.blg'
+[62] biber-darwin:322> INFO - === Mon Mar 28, 2022, 00:14:35
+[74] Biber.pm:415> INFO - Reading 'mproj.bcf'
+[189] Biber.pm:943> INFO - Found 1 citekeys in bib section 0
+[201] Biber.pm:4256> INFO - Processing section 0
+[204] Utils.pm:75> INFO - Globbing data source 'mproj.bib'
+[204] Utils.pm:91> INFO - Globbed data source 'mproj.bib' to mproj.bib
+[213] Biber.pm:4455> INFO - Looking for bibtex format file 'mproj.bib' for section 0
+[213] bibtex.pm:1653> INFO - LaTeX decoding ...
+[216] bibtex.pm:1471> INFO - Found BibTeX data source 'mproj.bib'
+[242] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[242] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[242] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[242] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[243] bbl.pm:652> INFO - Writing 'mproj.bbl' with encoding 'UTF-8'
+[244] bbl.pm:755> INFO - Output to mproj.bbl

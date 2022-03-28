@@ -1,9 +1,18 @@
 \documentclass{mproj}
 \usepackage{graphicx}
-
+\usepackage[backend=biber,
+style=trad-abbrv]{biblatex}
+\addbibresource{mproj.bib}
 \usepackage{url}
 \usepackage{fancyvrb}
 \usepackage[final]{pdfpages}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,
+	urlcolor=blue}
+\usepackage{fancyhdr}
 
 % for alternative page numbering use the following package
 % and see documentation for commands
@@ -79,20 +88,24 @@ Secure messaging apps intro
 \subsection{Tradeoffs between security and usability features}
 
 \subsection{Nation state control}
+A few words
 
+\chapter{Requirements and Analysis}\label{analysis}
+here's some words to test
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Analysis/Requirements}\label{analysis}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Design \& Implementation}\label{design}
+\chapter{Design and Implementation}\label{design}
 
 \section{Tools Used}
 There are two primary components to the overall system - one or more clients applications which communicate with a central server.
 
 \subsection{Client}
 The final client application was written entirely in Kotlin (v1.6.10) using the Android Studio IDE.
+
+\subsubsection{Socket.io implementation}
+The Socket.io developers provide a native Java implementation of Socket.io. Due to Java's seamless interoperability with Kotlin, this did not cause any implementation problems with the version implemented (2.0.0).
+
 \subsubsection{BouncyCastle}
+
 
 \subsubsection{Room ORM}
 
@@ -104,7 +117,7 @@ The final client application was written entirely in Kotlin (v1.6.10) using the 
 \subsection{Report}
 This dissertation was written entirely using Vim with the VimTex plugin.
 \section{Encryption Implementation}\label{encryption}
-
+\cite{martinez2010comparison}Here is a placeholder for a piece of text about ECIES.
 \subsection{Asymmetric component}\label{asymmetric}
 
 \subsection{Symmetric component}\label{symmetric}
@@ -138,6 +151,6 @@ This dissertation was written entirely using Vim with the VimTex plugin.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % it is fine to change the bibliography style if you want
-\bibliographystyle{plain}
-\bibliography{mproj}
+\printbibliography
+
 \end{document}
