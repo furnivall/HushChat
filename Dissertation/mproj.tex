@@ -8,9 +8,6 @@ style=trad-abbrv]{biblatex}
 \usepackage[final]{pdfpages}
 \usepackage{hyperref}
 \hypersetup{
-	colorlinks=true,
-	linkcolor=blue,
-	filecolor=magenta,
 	urlcolor=blue}
 \usepackage{fancyhdr}
 
@@ -59,25 +56,50 @@ acknowledgements go here
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Introduction}\label{intro} \setcounter{page}{1} \pagenumbering{arabic}
-Secure messaging apps intro
+
+In an increasingly digital world, we are constantly producing data (and, of course, corresponding metadata). It's estimated that humanity created somewhere in the order of 2.5 exabytes of digital data per day in 2018\cite{baeza2022attention} and the growth of digital data creation by individuals is constantly accelerating. 
+
+As storage costs decrease over time\cite{walter2005kryder}, economic and political incentives have begun to develop for nation state actors and major organisations to develop profiling systems using large-scale data collection and mining (the much vaunted "Big Data"). These systems are already being used for targeted advertising\cite{farahat2012effective}, market segmentation\cite{pantelis2013understanding}, criminal investigations\cite{zawoad2015digital} and sentencing\cite{simmons2017big}. In the political sphere, these models have been used for increasingly effective traditional campaigning, \cite{kreiss2019arbiters} as well as (alleged) psychological manipulation\cite{berghel2018malice} and disinformation\cite{stocker2019facebook} campaigns.
+
+The question of whether the average individual is able to enjoy the fruits of such data collection is less clear. Do these large actors have the best interests of the subjects of their data in mind? If not, methods for obfuscating or hiding sensitive data become valuable considerations.
+
+In a pre-digital world, an individual could avoid eavesdropping or data collection by malicious entities by simply speaking in a hushed voice, shredding documents, moving quietly or looking over his or her shoulder. In the current landscape, it is much more difficult to avoid surveillance without eschewing technology entirely. Our mobile phones are constantly communicating our triangulated locations, and even if our web traffic is encrypted by default, browser or ISP metadata still contains useful profiling information.
+
+Secure messaging applications aim to allow individuals to communicate with each other individuals around the globe while avoiding the potential for eavesdropping. In theory, this means the user can enjoy the benefits of a globally connected world while preserving their privacy. However, in practice there are of course many implementation difficulties to be considered.
 
 \section{Why are secure chat applications needed?}
+Secure messaging applications provide a means of communication between individuals or groups across a network of some kind. This can take the form of text, audio or video messaging, document or file sharing.
 
-\subsection{Family \& friends}
+To begin to understand the users of secure chat applications, two important questions need to be answered:
+\begin{enumerate}
+	\item Who desires secure messaging?
+	\item Who are they aiming to protect their data from?
+\end{enumerate}
 
-\subsection{Whistleblowers \& journalists}
+There are many categories of potential users of such applications, and from wildly different settings. These can be mundane and innocuous, such as the organisation of a surprise party for a friend or family member. 
 
-\subsection{Political dissidents}
+However, another group of potential users are those who seek to hide criminal behaviour from law enforcement organisations. A high-profile example of this would be the EncroChat network of encrypted phones, predominantly used by organised crime, which was unveiled after a Europe-wide infiltration and investigation of the network by law enforcement groups (leading to several thousand arrests) \cite{sommer2022evidence}. 
 
-\subsection{Crime}
+Another group who may wish to evade police or law enforcement are political dissidents. In what has become known as the "Million Dollar Dissident" \cite{marczak2018hide} case, a dissident in the UAE, Ahmed Mansoor, was targeted by the NSO group (an Israeli cybersecurity firm which produces spyware for government use) and subsequently had his passport confiscated as well as being beaten, having his car stolen and finally imprisoned by the UAE authorities within a week of posting anti-government posts online \cite{mazzetti2019new}. There are many parallels here with other groups who benefit from secure messaging - whistleblowers sharing information with journalists, and police informants who need to share data secretly with law enforcement. 
 
-\subsection{Data security}
+In reality, there are plenty of reasons for \emph{everyone} to use secure messaging such as protecting data in case of device theft, avoiding embarrassment, limiting exposure to blackmail. Continuing the comparison to real-world communication - when speaking out loud, people don't tend to shout all the time, and tend to consciously limit and monitor who is listening to a conversation.
+
+It should be clear that although there are many potential categories of secure messaging users, there are also many potential adversaries for these kinds of platforms, which means the development of such services is a complex undertaking. There are major tradeoffs which need to be made between usability and data security - for example, how can we preserve security of messages while also storing them on a mobile device? 
+
+\section{Objectives}
+The primary development objective of this project was to develop an Android mobile application (and corresponding server) that used complex security features including End-to-end encryption (E2EE), pseudonymous identity and self-destructing messages. 
+
+During the development journey of this application, the intrinsic motivation was to come to a greater understanding of the complexities, assumptions and tradeoffs involved in creating these kinds of platforms. 
+
+\chapter{Requirements and \\ Analysis}\label{analysis}
+<Discussion should go here about Unger et al's paper and the three key challenges (Trust establishment, conversation security and transport privacy)\cite{unger2015sok}
 
 \section{Existing applications in this field}
-\section{Hello Thais}
+
 \subsection{Telegram}
 
 \subsection{Whatsapp}
+
 \subsection{Signal}
 
 \section{Issues}
@@ -87,34 +109,54 @@ Secure messaging apps intro
 \subsection{Tradeoffs between security and usability features}
 
 \subsection{Nation state control}
-A few words
 
-\chapter{Requirements and Analysis}\label{analysis}
-here's some words to test
 
-\chapter{Design and Implementation}\label{design}
+\section{Features}
+\subsection{Self-destructing messages}
+\subsection{End-to-end encryption}
 
-\section{Tools Used}
-There are two primary components to the overall system - one or more clients applications which communicate with a central server.
+DRAFT - potentially worth mentioning possible attacks on crypto chats and metadata e.g. message length attacks \cite{degabriele2021hiding}
+
+\chapter{Design and \\ Implementation}\label{design}
+
+\section{Development tooling}
+There are two primary components to the overall system - one or more Android mobile client applications which communicate with a central, deployed server.
 
 \subsection{Client}
 The final client application was written entirely in Kotlin (v1.6.10) using the Android Studio IDE.
 
-\subsubsection{Socket.io implementation}
-The Socket.io developers provide a native Java implementation of Socket.io. Due to Java's seamless interoperability with Kotlin, this did not cause any implementation problems with the version implemented (2.0.0).
+\subsubsection{Key Dependencies}
+\begin{itemize}
+	\item \href{https://github.com/socketio/socket.io-client-java}{Socket.io} - v2.0.0 - the developers of socket.io provide a native Java implementation. Due to Java's seamless interoperability with Kotlin, this did not cause any implementation problems with the version implemented.
+	\item \href{https://www.bouncycastle.org/}{BouncyCastle} - v1.67 - BouncyCastle is the cryptography API that performs a lot of the cryptographic operations within the application, including generation of elliptic curve keypairs. There is a built-in version of BouncyCastle which exists within the Android SDK, but this does not support ECC, which meant that the client application needed to replace the inbuilt library with a more updated version.
+	\item \href{https://github.com/furnivall/SEng_Final_Project}{Room ORM} - v2.4.0 - Room provides an object-relational mapping (ORM) over the SQLite database built into the Android SDK. When developing the application, the main data model to consider on the client side was that of an individual chat message, including metadata (e.g. recipient) and content. Working with Room allowed for a more streamlined development experience and reduction of boilerplate code, as it meant working directly with Kotlin (Java) entities instead of writing complex queries for inserting messages to our viewmodel. SQL queries were still used to capture relevant data to display to the user in chat windows. 
 
-\subsubsection{BouncyCastle}
-
-
-\subsubsection{Room ORM}
-
-\subsubsection{}
-
+\end{itemize}
 
 \subsection{Server}
+The server application was written in Python v3.9.1 in the PyCharm IDE and utilised several libraries which are highlighted below. 
 
-\subsection{Report}
-This dissertation was written entirely using Vim with the VimTex plugin.
+\subsubsection{Key Dependencies}
+\begin{itemize}
+	\item \href{https://python-socketio.readthedocs.io/en/latest/index.html}{python-socketio} - v5.5.0 - a Python server implementation of socket.io, funded by the original socket.io developers.
+	\item \href{https://docs.aiohttp.org/en/stable/}{aiohttp} - v3.8.1 - an asynchronous http server which (importantly) supports websockets. The socket.io process attaches itself to the aiohttp server which allows information to be transmitted and received from clients.
+\end{itemize}
+
+\subsubsection{Deployment}
+To allow users to message other users, it was necessary to deploy the server application on a static IP. To do this, a 1GB/1CPU Azure Virtual Machine instance was used, running Ubuntu 20.04 in the West Europe region. 
+
+\subsection{Final report}
+This dissertation was written entirely in LaTeX using Neovim v0.5.1 with the VimTex plugin. 
+
+\subsection{Version Control}
+Git was the version control solution used throughout the project. Discomfort with the idea of storing the written report with a private company (Overleaf) while writing meant that it was worth taking the step of compiling the document locally. This had the fortunate benefit of meaning the entire project could be stored in a single git repository (as well as an opportunity to learn a lot of new things). 
+
+The upstream repository host of choice for this project was GitHub, and the entirety of the project can be found at the following link: 
+
+\begin{center}
+\href{https://github.com/furnivall/SEng_Final_Project}{https://github.com/furnivall/SEng\_Final\_Project}
+\end{center}
+
 \section{Encryption Implementation}\label{encryption}
 \cite{martinez2010comparison}Here is a placeholder for a piece of text about ECIES.
 \subsection{Asymmetric component}\label{asymmetric}
@@ -125,13 +167,25 @@ This dissertation was written entirely using Vim with the VimTex plugin.
 
 \subsection{Storage of encryption keypair}
 
+\section{Design Patterns}
+
+\subsection{Dependency injection}
+
+\subsection{Command pattern}
+
+\subsection{Singleton pattern}
+
+\subsection{Observer pattern}
+
+\subsection{Adapter pattern}
+
+\subsection{Data Access Object pattern}
+
+
 \section{Persistence and storage considerations}
 \subsection{Storage of self-destruct duration}
 \subsection{Existing user persistence and reconnection flow}
 
-\section{}
-
-\section{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Evaluation \& Testing}\label{testing}
@@ -151,5 +205,4 @@ This dissertation was written entirely using Vim with the VimTex plugin.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % it is fine to change the bibliography style if you want
 \printbibliography
-
 \end{document}

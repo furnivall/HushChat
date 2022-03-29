@@ -1,17 +1,32 @@
 [0] Config.pm:304> INFO - This is Biber 2.14
 [0] Config.pm:307> INFO - Logfile is 'mproj.blg'
-[62] biber-darwin:322> INFO - === Mon Mar 28, 2022, 00:14:35
-[74] Biber.pm:415> INFO - Reading 'mproj.bcf'
-[189] Biber.pm:943> INFO - Found 1 citekeys in bib section 0
-[201] Biber.pm:4256> INFO - Processing section 0
-[204] Utils.pm:75> INFO - Globbing data source 'mproj.bib'
-[204] Utils.pm:91> INFO - Globbed data source 'mproj.bib' to mproj.bib
-[213] Biber.pm:4455> INFO - Looking for bibtex format file 'mproj.bib' for section 0
-[213] bibtex.pm:1653> INFO - LaTeX decoding ...
-[216] bibtex.pm:1471> INFO - Found BibTeX data source 'mproj.bib'
-[242] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[242] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[242] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[242] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[243] bbl.pm:652> INFO - Writing 'mproj.bbl' with encoding 'UTF-8'
-[244] bbl.pm:755> INFO - Output to mproj.bbl
+[60] biber-darwin:322> INFO - === Tue Mar 29, 2022, 00:39:09
+[75] Biber.pm:415> INFO - Reading 'mproj.bcf'
+[154] Biber.pm:943> INFO - Found 15 citekeys in bib section 0
+[165] Biber.pm:4256> INFO - Processing section 0
+[166] Utils.pm:75> INFO - Globbing data source 'mproj.bib'
+[166] Utils.pm:91> INFO - Globbed data source 'mproj.bib' to mproj.bib
+[174] Biber.pm:4455> INFO - Looking for bibtex format file 'mproj.bib' for section 0
+[175] bibtex.pm:1653> INFO - LaTeX decoding ...
+[191] bibtex.pm:1471> INFO - Found BibTeX data source 'mproj.bib'
+[245] Utils.pm:304> WARN - BibTeX subsystem: /var/folders/5p/rwpdqh2d0gd3lm1dlwl4rts40000gn/T/biber_tmp_qlrq/mproj.bib_16410.utf8, line 9, warning: 1 characters of junk seen at toplevel
+[245] Utils.pm:304> WARN - BibTeX subsystem: /var/folders/5p/rwpdqh2d0gd3lm1dlwl4rts40000gn/T/biber_tmp_qlrq/mproj.bib_16410.utf8, line 17, warning: 1 characters of junk seen at toplevel
+[245] Utils.pm:304> WARN - BibTeX subsystem: /var/folders/5p/rwpdqh2d0gd3lm1dlwl4rts40000gn/T/biber_tmp_qlrq/mproj.bib_16410.utf8, line 24, warning: 1 characters of junk seen at toplevel
+[245] Utils.pm:304> WARN - BibTeX subsystem: /var/folders/5p/rwpdqh2d0gd3lm1dlwl4rts40000gn/T/biber_tmp_qlrq/mproj.bib_16410.utf8, line 34, warning: 1 characters of junk seen at toplevel
+[245] Utils.pm:304> WARN - BibTeX subsystem: /var/folders/5p/rwpdqh2d0gd3lm1dlwl4rts40000gn/T/biber_tmp_qlrq/mproj.bib_16410.utf8, line 42, warning: 1 characters of junk seen at toplevel
+[245] Utils.pm:304> WARN - BibTeX subsystem: /var/folders/5p/rwpdqh2d0gd3lm1dlwl4rts40000gn/T/biber_tmp_qlrq/mproj.bib_16410.utf8, line 50, warning: 1 characters of junk seen at toplevel
+[245] Utils.pm:304> WARN - BibTeX subsystem: /var/folders/5p/rwpdqh2d0gd3lm1dlwl4rts40000gn/T/biber_tmp_qlrq/mproj.bib_16410.utf8, line 59, warning: 1 characters of junk seen at toplevel
+[245] Utils.pm:304> WARN - BibTeX subsystem: /var/folders/5p/rwpdqh2d0gd3lm1dlwl4rts40000gn/T/biber_tmp_qlrq/mproj.bib_16410.utf8, line 69, warning: 1 characters of junk seen at toplevel
+[245] Utils.pm:304> WARN - BibTeX subsystem: /var/folders/5p/rwpdqh2d0gd3lm1dlwl4rts40000gn/T/biber_tmp_qlrq/mproj.bib_16410.utf8, line 77, warning: 1 characters of junk seen at toplevel
+[245] Utils.pm:304> WARN - BibTeX subsystem: /var/folders/5p/rwpdqh2d0gd3lm1dlwl4rts40000gn/T/biber_tmp_qlrq/mproj.bib_16410.utf8, line 87, warning: 1 characters of junk seen at toplevel
+[245] Utils.pm:304> WARN - BibTeX subsystem: /var/folders/5p/rwpdqh2d0gd3lm1dlwl4rts40000gn/T/biber_tmp_qlrq/mproj.bib_16410.utf8, line 95, warning: 1 characters of junk seen at toplevel
+[245] Utils.pm:304> WARN - BibTeX subsystem: /var/folders/5p/rwpdqh2d0gd3lm1dlwl4rts40000gn/T/biber_tmp_qlrq/mproj.bib_16410.utf8, line 102, warning: 1 characters of junk seen at toplevel
+[245] Utils.pm:304> WARN - BibTeX subsystem: /var/folders/5p/rwpdqh2d0gd3lm1dlwl4rts40000gn/T/biber_tmp_qlrq/mproj.bib_16410.utf8, line 111, warning: 1 characters of junk seen at toplevel
+[245] Utils.pm:304> WARN - BibTeX subsystem: /var/folders/5p/rwpdqh2d0gd3lm1dlwl4rts40000gn/T/biber_tmp_qlrq/mproj.bib_16410.utf8, line 116, warning: 1 characters of junk seen at toplevel
+[262] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[262] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[262] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[262] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[273] bbl.pm:652> INFO - Writing 'mproj.bbl' with encoding 'UTF-8'
+[279] bbl.pm:755> INFO - Output to mproj.bbl
+[279] Biber.pm:128> INFO - WARNINGS: 14

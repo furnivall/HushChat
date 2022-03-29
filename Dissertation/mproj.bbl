@@ -19,6 +19,196 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{baeza2022attention}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=14e9e2c7e918f62ba13b9e040fb7f468}{%
+           family={Baeza-Yates},
+           familyi={B\bibinithyphendelim Y\bibinitperiod},
+           given={Ricardo},
+           giveni={R\bibinitperiod}}}%
+        {{hash=d72660528ebbfc30c6661be74afda5c2}{%
+           family={Fayyad},
+           familyi={F\bibinitperiod},
+           given={Usama\bibnamedelima M},
+           giveni={U\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer, Cham}%
+      }
+      \strng{namehash}{7f2be0e1cecf5f7c96feba92105eed2b}
+      \strng{fullhash}{7f2be0e1cecf5f7c96feba92105eed2b}
+      \strng{bibnamehash}{7f2be0e1cecf5f7c96feba92105eed2b}
+      \strng{authorbibnamehash}{7f2be0e1cecf5f7c96feba92105eed2b}
+      \strng{authornamehash}{7f2be0e1cecf5f7c96feba92105eed2b}
+      \strng{authorfullhash}{7f2be0e1cecf5f7c96feba92105eed2b}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Perspectives on Digital Humanism}
+      \field{title}{The Attention Economy and the Impact of Artificial Intelligence}
+      \field{year}{2022}
+      \field{pages}{123\bibrangedash 134}
+      \range{pages}{12}
+    \endentry
+    \entry{berghel2018malice}{article}{}
+      \name{author}{1}{}{%
+        {{hash=363760c2f0efb1290d39c9c07551a497}{%
+           family={Berghel},
+           familyi={B\bibinitperiod},
+           given={Hal},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{363760c2f0efb1290d39c9c07551a497}
+      \strng{fullhash}{363760c2f0efb1290d39c9c07551a497}
+      \strng{bibnamehash}{363760c2f0efb1290d39c9c07551a497}
+      \strng{authorbibnamehash}{363760c2f0efb1290d39c9c07551a497}
+      \strng{authornamehash}{363760c2f0efb1290d39c9c07551a497}
+      \strng{authorfullhash}{363760c2f0efb1290d39c9c07551a497}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer}
+      \field{number}{5}
+      \field{title}{Malice domestic: The Cambridge analytica dystopia}
+      \field{volume}{51}
+      \field{year}{2018}
+      \field{pages}{84\bibrangedash 89}
+      \range{pages}{6}
+    \endentry
+    \entry{degabriele2021hiding}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=1da1d7519dae1f336a281fcf89f9b34f}{%
+           family={Degabriele},
+           familyi={D\bibinitperiod},
+           given={Jean\bibnamedelima Paul},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{1da1d7519dae1f336a281fcf89f9b34f}
+      \strng{fullhash}{1da1d7519dae1f336a281fcf89f9b34f}
+      \strng{bibnamehash}{1da1d7519dae1f336a281fcf89f9b34f}
+      \strng{authorbibnamehash}{1da1d7519dae1f336a281fcf89f9b34f}
+      \strng{authornamehash}{1da1d7519dae1f336a281fcf89f9b34f}
+      \strng{authorfullhash}{1da1d7519dae1f336a281fcf89f9b34f}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2021 ACM SIGSAC Conference on Computer and Communications Security}
+      \field{title}{Hiding the Lengths of Encrypted Messages via Gaussian Padding}
+      \field{year}{2021}
+      \field{pages}{1549\bibrangedash 1565}
+      \range{pages}{17}
+    \endentry
+    \entry{farahat2012effective}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=bd3484973e87b5622ccd2710651ca56b}{%
+           family={Farahat},
+           familyi={F\bibinitperiod},
+           given={Ayman},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a54ad275d66c5411a899e53530d90323}{%
+           family={Bailey},
+           familyi={B\bibinitperiod},
+           given={Michael\bibnamedelima C},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ba4831a96414736218a9a90c0976a41}
+      \strng{fullhash}{6ba4831a96414736218a9a90c0976a41}
+      \strng{bibnamehash}{6ba4831a96414736218a9a90c0976a41}
+      \strng{authorbibnamehash}{6ba4831a96414736218a9a90c0976a41}
+      \strng{authornamehash}{6ba4831a96414736218a9a90c0976a41}
+      \strng{authorfullhash}{6ba4831a96414736218a9a90c0976a41}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 21st international conference on World Wide Web}
+      \field{title}{How effective is targeted advertising?}
+      \field{year}{2012}
+      \field{pages}{111\bibrangedash 120}
+      \range{pages}{10}
+    \endentry
+    \entry{kreiss2019arbiters}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c0d345a8052a86647f33a9221b273a5c}{%
+           family={Kreiss},
+           familyi={K\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=b51f1c33858548757c09c858a078d142}{%
+           family={McGregor},
+           familyi={M\bibinitperiod},
+           given={Shannon\bibnamedelima C},
+           giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{6f1d480ef05df8ab697d0ccc7b19712a}
+      \strng{fullhash}{6f1d480ef05df8ab697d0ccc7b19712a}
+      \strng{bibnamehash}{6f1d480ef05df8ab697d0ccc7b19712a}
+      \strng{authorbibnamehash}{6f1d480ef05df8ab697d0ccc7b19712a}
+      \strng{authornamehash}{6f1d480ef05df8ab697d0ccc7b19712a}
+      \strng{authorfullhash}{6f1d480ef05df8ab697d0ccc7b19712a}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Political Communication}
+      \field{number}{4}
+      \field{title}{The “arbiters of what our voters see”: Facebook and Google’s struggle with policy, process, and enforcement around political advertising}
+      \field{volume}{36}
+      \field{year}{2019}
+      \field{pages}{499\bibrangedash 522}
+      \range{pages}{24}
+    \endentry
+    \entry{marczak2018hide}{report}{}
+      \name{author}{5}{}{%
+        {{hash=c858a3bde002a10319eadd83095fe2f5}{%
+           family={Marczak},
+           familyi={M\bibinitperiod},
+           given={Bill},
+           giveni={B\bibinitperiod}}}%
+        {{hash=d12b7fa22a8d13603b63bc4c8590d7c0}{%
+           family={Scott-Railton},
+           familyi={S\bibinithyphendelim R\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=50e8aa73086ac1b09ea6287bf85dbdcd}{%
+           family={McKune},
+           familyi={M\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod}}}%
+        {{hash=df250a230143acfb44c0195f189b6312}{%
+           family={Abdul\bibnamedelima Razzak},
+           familyi={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Bahr},
+           giveni={B\bibinitperiod}}}%
+        {{hash=438aab7bd764de8c433fcb3eb9ae0e82}{%
+           family={Deibert},
+           familyi={D\bibinitperiod},
+           given={Ron},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ffa9224641f48e87048b2f8e839655b}
+      \strng{fullhash}{6ffa9224641f48e87048b2f8e839655b}
+      \strng{bibnamehash}{6ffa9224641f48e87048b2f8e839655b}
+      \strng{authorbibnamehash}{6ffa9224641f48e87048b2f8e839655b}
+      \strng{authornamehash}{6ffa9224641f48e87048b2f8e839655b}
+      \strng{authorfullhash}{6ffa9224641f48e87048b2f8e839655b}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{HIDE AND SEEK: Tracking NSO Group’s Pegasus Spyware to operations in 45 countries}
+      \field{type}{techreport}
+      \field{year}{2018}
+    \endentry
     \entry{martinez2010comparison}{inproceedings}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -52,6 +242,279 @@
       \field{year}{2010}
       \field{pages}{1\bibrangedash 4}
       \range{pages}{4}
+    \endentry
+    \entry{mazzetti2019new}{article}{}
+      \name{author}{4}{}{%
+        {{hash=5f673bf2547ee73e85ec7f04b4b08bed}{%
+           family={Mazzetti},
+           familyi={M\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+        {{hash=79c6c016db7215ab4a1e15c2d7f072d6}{%
+           family={Goldman},
+           familyi={G\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bd286a586fcd41f8ce57848ef5bf06e1}{%
+           family={Bergman},
+           familyi={B\bibinitperiod},
+           given={Ronen},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c695d5cbe36754c60e4d01b77df01a20}{%
+           family={Perlroth},
+           familyi={P\bibinitperiod},
+           given={Nicole},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{a07e08aa64db354e6eb1c338ec8d2b75}
+      \strng{fullhash}{a07e08aa64db354e6eb1c338ec8d2b75}
+      \strng{bibnamehash}{a07e08aa64db354e6eb1c338ec8d2b75}
+      \strng{authorbibnamehash}{a07e08aa64db354e6eb1c338ec8d2b75}
+      \strng{authornamehash}{a07e08aa64db354e6eb1c338ec8d2b75}
+      \strng{authorfullhash}{a07e08aa64db354e6eb1c338ec8d2b75}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The New York Times}
+      \field{title}{A new age of warfare: How internet mercenaries do battle for authoritarian governments}
+      \field{volume}{21}
+      \field{year}{2019}
+      \field{pages}{2019}
+      \range{pages}{1}
+    \endentry
+    \entry{pantelis2013understanding}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=4f9f1368f42213bd5ff901b06600c9bb}{%
+           family={Pantelis},
+           familyi={P\bibinitperiod},
+           given={Koutroumpis},
+           giveni={K\bibinitperiod}}}%
+        {{hash=3cb24666b9d1cb2fde57cb1a18758ee8}{%
+           family={Aija},
+           familyi={A\bibinitperiod},
+           given={Leiponen},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{51989e074386b11430d0884ba7755d1f}
+      \strng{fullhash}{51989e074386b11430d0884ba7755d1f}
+      \strng{bibnamehash}{51989e074386b11430d0884ba7755d1f}
+      \strng{authorbibnamehash}{51989e074386b11430d0884ba7755d1f}
+      \strng{authornamehash}{51989e074386b11430d0884ba7755d1f}
+      \strng{authorfullhash}{51989e074386b11430d0884ba7755d1f}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2013 IEEE International Conference on Big Data}
+      \field{title}{Understanding the value of (big) data}
+      \field{year}{2013}
+      \field{pages}{38\bibrangedash 42}
+      \range{pages}{5}
+    \endentry
+    \entry{simmons2017big}{article}{}
+      \name{author}{1}{}{%
+        {{hash=606fe28c5120c48dca547e20c94c1886}{%
+           family={Simmons},
+           familyi={S\bibinitperiod},
+           given={Ric},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {HeinOnline}%
+      }
+      \strng{namehash}{606fe28c5120c48dca547e20c94c1886}
+      \strng{fullhash}{606fe28c5120c48dca547e20c94c1886}
+      \strng{bibnamehash}{606fe28c5120c48dca547e20c94c1886}
+      \strng{authorbibnamehash}{606fe28c5120c48dca547e20c94c1886}
+      \strng{authornamehash}{606fe28c5120c48dca547e20c94c1886}
+      \strng{authorfullhash}{606fe28c5120c48dca547e20c94c1886}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ohio St. J. Crim. L.}
+      \field{title}{Big data and procedural justice: Legitimizing algorithms in the criminal justice system}
+      \field{volume}{15}
+      \field{year}{2017}
+      \field{pages}{573}
+      \range{pages}{1}
+    \endentry
+    \entry{sommer2022evidence}{article}{}
+      \name{author}{1}{}{%
+        {{hash=42a1c721771cad9dc0a7926fa808094d}{%
+           family={Sommer},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{42a1c721771cad9dc0a7926fa808094d}
+      \strng{fullhash}{42a1c721771cad9dc0a7926fa808094d}
+      \strng{bibnamehash}{42a1c721771cad9dc0a7926fa808094d}
+      \strng{authorbibnamehash}{42a1c721771cad9dc0a7926fa808094d}
+      \strng{authornamehash}{42a1c721771cad9dc0a7926fa808094d}
+      \strng{authorfullhash}{42a1c721771cad9dc0a7926fa808094d}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Forensic Science International: Digital Investigation}
+      \field{title}{Evidence from hacking: A few tiresome problems}
+      \field{volume}{40}
+      \field{year}{2022}
+      \field{pages}{301333}
+      \range{pages}{1}
+    \endentry
+    \entry{stocker2019facebook}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=231bf78a3e1bd5c8bbdf1b4c0eb387c6}{%
+           family={St{ö}cker},
+           familyi={S\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{231bf78a3e1bd5c8bbdf1b4c0eb387c6}
+      \strng{fullhash}{231bf78a3e1bd5c8bbdf1b4c0eb387c6}
+      \strng{bibnamehash}{231bf78a3e1bd5c8bbdf1b4c0eb387c6}
+      \strng{authorbibnamehash}{231bf78a3e1bd5c8bbdf1b4c0eb387c6}
+      \strng{authornamehash}{231bf78a3e1bd5c8bbdf1b4c0eb387c6}
+      \strng{authorfullhash}{231bf78a3e1bd5c8bbdf1b4c0eb387c6}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Multidisciplinary International Symposium on Disinformation in Open Online Media}
+      \field{title}{How facebook and google accidentally created a perfect ecosystem for targeted disinformation}
+      \field{year}{2019}
+      \field{pages}{129\bibrangedash 149}
+      \range{pages}{21}
+    \endentry
+    \entry{unger2015sok}{inproceedings}{}
+      \name{author}{7}{}{%
+        {{hash=c4240882f9248d680b14ac0bc0750814}{%
+           family={Unger},
+           familyi={U\bibinitperiod},
+           given={Nik},
+           giveni={N\bibinitperiod}}}%
+        {{hash=aeb3510e54ada25fc7ae6324a36a6006}{%
+           family={Dechand},
+           familyi={D\bibinitperiod},
+           given={Sergej},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e6eb78ec5f92eaff4e9d4b944aff4c9c}{%
+           family={Bonneau},
+           familyi={B\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1028844fea5de62386623e035ed1f307}{%
+           family={Fahl},
+           familyi={F\bibinitperiod},
+           given={Sascha},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3341989638ba9b51cd0c302132437966}{%
+           family={Perl},
+           familyi={P\bibinitperiod},
+           given={Henning},
+           giveni={H\bibinitperiod}}}%
+        {{hash=a023acc45498a4d8527462d2228654ee}{%
+           family={Goldberg},
+           familyi={G\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=892bcbf9fb91b1348837862cbf71f80f}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{b83404b2904f7cceaf6d3a5acdd4269f}
+      \strng{fullhash}{b83404b2904f7cceaf6d3a5acdd4269f}
+      \strng{bibnamehash}{b83404b2904f7cceaf6d3a5acdd4269f}
+      \strng{authorbibnamehash}{b83404b2904f7cceaf6d3a5acdd4269f}
+      \strng{authornamehash}{b83404b2904f7cceaf6d3a5acdd4269f}
+      \strng{authorfullhash}{b83404b2904f7cceaf6d3a5acdd4269f}
+      \field{sortinit}{U}
+      \field{sortinithash}{77a6935510e008adcf5b555e7b4f0711}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2015 IEEE Symposium on Security and Privacy}
+      \field{title}{SoK: secure messaging}
+      \field{year}{2015}
+      \field{pages}{232\bibrangedash 249}
+      \range{pages}{18}
+    \endentry
+    \entry{walter2005kryder}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9a42aa8371605aea475ee6ae7b978074}{%
+           family={Walter},
+           familyi={W\bibinitperiod},
+           given={Chip},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Scientific American, a division of Nature America, Inc.}%
+      }
+      \strng{namehash}{9a42aa8371605aea475ee6ae7b978074}
+      \strng{fullhash}{9a42aa8371605aea475ee6ae7b978074}
+      \strng{bibnamehash}{9a42aa8371605aea475ee6ae7b978074}
+      \strng{authorbibnamehash}{9a42aa8371605aea475ee6ae7b978074}
+      \strng{authornamehash}{9a42aa8371605aea475ee6ae7b978074}
+      \strng{authorfullhash}{9a42aa8371605aea475ee6ae7b978074}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Scientific American}
+      \field{number}{2}
+      \field{title}{Kryder’s law}
+      \field{volume}{293}
+      \field{year}{2005}
+      \field{pages}{32\bibrangedash 33}
+      \range{pages}{2}
+    \endentry
+    \entry{zawoad2015digital}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=2254fa811f946d914a8cbebf137225bc}{%
+           family={Zawoad},
+           familyi={Z\bibinitperiod},
+           given={Shams},
+           giveni={S\bibinitperiod}}}%
+        {{hash=283ab7917a9e25ffd6077f2064f2006a}{%
+           family={Hasan},
+           familyi={H\bibinitperiod},
+           given={Ragib},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{50bb114b097acd43c1b842c05d8b51c8}
+      \strng{fullhash}{50bb114b097acd43c1b842c05d8b51c8}
+      \strng{bibnamehash}{50bb114b097acd43c1b842c05d8b51c8}
+      \strng{authorbibnamehash}{50bb114b097acd43c1b842c05d8b51c8}
+      \strng{authornamehash}{50bb114b097acd43c1b842c05d8b51c8}
+      \strng{authorfullhash}{50bb114b097acd43c1b842c05d8b51c8}
+      \field{sortinit}{Z}
+      \field{sortinithash}{8f7b480688e809b50b6f6577b16f3db5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2015 IEEE 17th International Conference on High Performance Computing and Communications, 2015 IEEE 7th International Symposium on Cyberspace Safety and Security, and 2015 IEEE 12th International Conference on Embedded Software and Systems}
+      \field{title}{Digital forensics in the age of big data: Challenges, approaches, and opportunities}
+      \field{year}{2015}
+      \field{pages}{1320\bibrangedash 1325}
+      \range{pages}{6}
     \endentry
   \enddatalist
 \endrefsection
