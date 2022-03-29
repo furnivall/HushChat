@@ -133,6 +133,73 @@
       \field{pages}{111\bibrangedash 120}
       \range{pages}{10}
     \endentry
+    \entry{fette2011websocket}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=cdf249d29ccc7edcf24f6bfef0893ebd}{%
+           family={Fette},
+           familyi={F\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=8fa97ca9bca09f72482fe5f985ecef60}{%
+           family={Melnikov},
+           familyi={M\bibinitperiod},
+           given={Alexey},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {RFC 6455, December}%
+      }
+      \strng{namehash}{a413dbe318e95f69f8330db28642e805}
+      \strng{fullhash}{a413dbe318e95f69f8330db28642e805}
+      \strng{bibnamehash}{a413dbe318e95f69f8330db28642e805}
+      \strng{authorbibnamehash}{a413dbe318e95f69f8330db28642e805}
+      \strng{authornamehash}{a413dbe318e95f69f8330db28642e805}
+      \strng{authorfullhash}{a413dbe318e95f69f8330db28642e805}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The websocket protocol}
+      \field{year}{2011}
+    \endentry
+    \entry{herwig2015assessment}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=aa8a4c7dc35a2230190c48585a18a046}{%
+           family={Herwig},
+           familyi={H\bibinitperiod},
+           given={Volker},
+           giveni={V\bibinitperiod}}}%
+        {{hash=a0f5590f3c1b4fae6a2b8b6fecaae732}{%
+           family={Fischer},
+           familyi={F\bibinitperiod},
+           given={Ren{é}},
+           giveni={R\bibinitperiod}}}%
+        {{hash=08cf125105abb1846b6fa8059bd0c959}{%
+           family={Braun},
+           familyi={B\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{e15ca084ac54c42d3058c992b0b4ce18}
+      \strng{fullhash}{e15ca084ac54c42d3058c992b0b4ce18}
+      \strng{bibnamehash}{e15ca084ac54c42d3058c992b0b4ce18}
+      \strng{authorbibnamehash}{e15ca084ac54c42d3058c992b0b4ce18}
+      \strng{authornamehash}{e15ca084ac54c42d3058c992b0b4ce18}
+      \strng{authorfullhash}{e15ca084ac54c42d3058c992b0b4ce18}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2015 IEEE 8th International Conference on Intelligent Data Acquisition and Advanced Computing Systems: Technology and Applications (IDAACS)}
+      \field{title}{Assessment of rest and websocket in regards to their energy consumption for mobile applications}
+      \field{volume}{1}
+      \field{year}{2015}
+      \field{pages}{342\bibrangedash 347}
+      \range{pages}{6}
+    \endentry
     \entry{kreiss2019arbiters}{article}{}
       \name{author}{2}{}{%
         {{hash=c0d345a8052a86647f33a9221b273a5c}{%
@@ -166,6 +233,32 @@
       \field{year}{2019}
       \field{pages}{499\bibrangedash 522}
       \range{pages}{24}
+    \endentry
+    \entry{mallik2019man}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3cfb7839cef5b830ba34b9bd1de35c37}{%
+           family={Mallik},
+           familyi={M\bibinitperiod},
+           given={Avijit},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3cfb7839cef5b830ba34b9bd1de35c37}
+      \strng{fullhash}{3cfb7839cef5b830ba34b9bd1de35c37}
+      \strng{bibnamehash}{3cfb7839cef5b830ba34b9bd1de35c37}
+      \strng{authorbibnamehash}{3cfb7839cef5b830ba34b9bd1de35c37}
+      \strng{authornamehash}{3cfb7839cef5b830ba34b9bd1de35c37}
+      \strng{authorfullhash}{3cfb7839cef5b830ba34b9bd1de35c37}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cyberspace: Jurnal Pendidikan Teknologi Informasi}
+      \field{number}{2}
+      \field{title}{Man-in-the-middle-attack: Understanding in simple words}
+      \field{volume}{2}
+      \field{year}{2019}
+      \field{pages}{109\bibrangedash 134}
+      \range{pages}{26}
     \endentry
     \entry{marczak2018hide}{report}{}
       \name{author}{5}{}{%
@@ -243,6 +336,30 @@
       \field{pages}{1\bibrangedash 4}
       \range{pages}{4}
     \endentry
+    \entry{masse2011rest}{book}{}
+      \name{author}{1}{}{%
+        {{hash=d17b34343fbf45b0a0ec9962f1ac0431}{%
+           family={Masse},
+           familyi={M\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {" O'Reilly Media, Inc."}%
+      }
+      \strng{namehash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{fullhash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{bibnamehash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{authorbibnamehash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{authornamehash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{authorfullhash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{REST API design rulebook: designing consistent RESTful web service interfaces}
+      \field{year}{2011}
+    \endentry
     \entry{mazzetti2019new}{article}{}
       \name{author}{4}{}{%
         {{hash=5f673bf2547ee73e85ec7f04b4b08bed}{%
@@ -314,6 +431,30 @@
       \field{year}{2013}
       \field{pages}{38\bibrangedash 42}
       \range{pages}{5}
+    \endentry
+    \entry{rai2013socket}{book}{}
+      \name{author}{1}{}{%
+        {{hash=170acb849133d585a1116cf67ae07cd3}{%
+           family={Rai},
+           familyi={R\bibinitperiod},
+           given={Rohit},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Packt Publishing Ltd}%
+      }
+      \strng{namehash}{170acb849133d585a1116cf67ae07cd3}
+      \strng{fullhash}{170acb849133d585a1116cf67ae07cd3}
+      \strng{bibnamehash}{170acb849133d585a1116cf67ae07cd3}
+      \strng{authorbibnamehash}{170acb849133d585a1116cf67ae07cd3}
+      \strng{authornamehash}{170acb849133d585a1116cf67ae07cd3}
+      \strng{authorfullhash}{170acb849133d585a1116cf67ae07cd3}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Socket. IO Real-time Web Application Development}
+      \field{year}{2013}
     \endentry
     \entry{simmons2017big}{article}{}
       \name{author}{1}{}{%

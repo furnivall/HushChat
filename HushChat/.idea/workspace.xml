@@ -14,7 +14,21 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c70ae1a-9cd3-4e1e-bd74-b3da9d2e818a" name="Default Changelist" comment="" />
+    <list default="true" id="9c70ae1a-9cd3-4e1e-bd74-b3da9d2e818a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Dissertation/mproj.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../Dissertation/mproj.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dissertation/mproj.bbl" beforeDir="false" afterPath="$PROJECT_DIR$/../Dissertation/mproj.bbl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dissertation/mproj.bcf" beforeDir="false" afterPath="$PROJECT_DIR$/../Dissertation/mproj.bcf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dissertation/mproj.bib" beforeDir="false" afterPath="$PROJECT_DIR$/../Dissertation/mproj.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dissertation/mproj.blg" beforeDir="false" afterPath="$PROJECT_DIR$/../Dissertation/mproj.blg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dissertation/mproj.fdb_latexmk" beforeDir="false" afterPath="$PROJECT_DIR$/../Dissertation/mproj.fdb_latexmk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dissertation/mproj.fls" beforeDir="false" afterPath="$PROJECT_DIR$/../Dissertation/mproj.fls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dissertation/mproj.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Dissertation/mproj.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dissertation/mproj.out" beforeDir="false" afterPath="$PROJECT_DIR$/../Dissertation/mproj.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dissertation/mproj.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Dissertation/mproj.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dissertation/mproj.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../Dissertation/mproj.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dissertation/mproj.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../Dissertation/mproj.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dissertation/mproj.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../Dissertation/mproj.toc" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -2194,7 +2194,13 @@
     <bcf:citekey order="12">mazzetti2019new</bcf:citekey>
     <bcf:citekey order="13">unger2015sok</bcf:citekey>
     <bcf:citekey order="14">degabriele2021hiding</bcf:citekey>
-    <bcf:citekey order="15">martinez2010comparison</bcf:citekey>
+    <bcf:citekey order="15">masse2011rest</bcf:citekey>
+    <bcf:citekey order="16">fette2011websocket</bcf:citekey>
+    <bcf:citekey order="17">fette2011websocket</bcf:citekey>
+    <bcf:citekey order="18">herwig2015assessment</bcf:citekey>
+    <bcf:citekey order="19">rai2013socket</bcf:citekey>
+    <bcf:citekey order="20">mallik2019man</bcf:citekey>
+    <bcf:citekey order="21">martinez2010comparison</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

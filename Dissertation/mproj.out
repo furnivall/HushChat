@@ -6,36 +6,39 @@
 \BOOKMARK [2][-]{subsection.2.1.1}{Telegram}{section.2.1}% 6
 \BOOKMARK [2][-]{subsection.2.1.2}{Whatsapp}{section.2.1}% 7
 \BOOKMARK [2][-]{subsection.2.1.3}{Signal}{section.2.1}% 8
-\BOOKMARK [1][-]{section.2.2}{Issues}{chapter.2}% 9
-\BOOKMARK [2][-]{subsection.2.2.1}{Closed source}{section.2.2}% 10
-\BOOKMARK [2][-]{subsection.2.2.2}{Tradeoffs between security and usability features}{section.2.2}% 11
-\BOOKMARK [2][-]{subsection.2.2.3}{Nation state control}{section.2.2}% 12
-\BOOKMARK [1][-]{section.2.3}{Features}{chapter.2}% 13
-\BOOKMARK [2][-]{subsection.2.3.1}{Self-destructing messages}{section.2.3}% 14
-\BOOKMARK [2][-]{subsection.2.3.2}{End-to-end encryption}{section.2.3}% 15
-\BOOKMARK [0][-]{chapter.3}{Design and \040Implementation}{}% 16
-\BOOKMARK [1][-]{section.3.1}{Development tooling}{chapter.3}% 17
-\BOOKMARK [2][-]{subsection.3.1.1}{Client}{section.3.1}% 18
-\BOOKMARK [2][-]{subsection.3.1.2}{Server}{section.3.1}% 19
-\BOOKMARK [2][-]{subsection.3.1.3}{Final report}{section.3.1}% 20
-\BOOKMARK [2][-]{subsection.3.1.4}{Version Control}{section.3.1}% 21
-\BOOKMARK [1][-]{section.3.2}{Encryption Implementation}{chapter.3}% 22
-\BOOKMARK [2][-]{subsection.3.2.1}{Asymmetric component}{section.3.2}% 23
-\BOOKMARK [2][-]{subsection.3.2.2}{Symmetric component}{section.3.2}% 24
-\BOOKMARK [2][-]{subsection.3.2.3}{Difficulties}{section.3.2}% 25
-\BOOKMARK [2][-]{subsection.3.2.4}{Storage of encryption keypair}{section.3.2}% 26
-\BOOKMARK [1][-]{section.3.3}{Design Patterns}{chapter.3}% 27
-\BOOKMARK [2][-]{subsection.3.3.1}{Dependency injection}{section.3.3}% 28
-\BOOKMARK [2][-]{subsection.3.3.2}{Command pattern}{section.3.3}% 29
-\BOOKMARK [2][-]{subsection.3.3.3}{Singleton pattern}{section.3.3}% 30
-\BOOKMARK [2][-]{subsection.3.3.4}{Observer pattern}{section.3.3}% 31
-\BOOKMARK [2][-]{subsection.3.3.5}{Adapter pattern}{section.3.3}% 32
-\BOOKMARK [2][-]{subsection.3.3.6}{Data Access Object pattern}{section.3.3}% 33
-\BOOKMARK [1][-]{section.3.4}{Persistence and storage considerations}{chapter.3}% 34
-\BOOKMARK [2][-]{subsection.3.4.1}{Storage of self-destruct duration}{section.3.4}% 35
-\BOOKMARK [2][-]{subsection.3.4.2}{Existing user persistence and reconnection flow}{section.3.4}% 36
-\BOOKMARK [0][-]{chapter.4}{Evaluation \046 Testing}{}% 37
-\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 38
-\BOOKMARK [0][-]{appendix.A}{First appendix}{}% 39
-\BOOKMARK [1][-]{section.A.1}{Section of first appendix}{appendix.A}% 40
-\BOOKMARK [0][-]{appendix.B}{Second appendix}{}% 41
+\BOOKMARK [2][-]{subsection.2.1.4}{Comparison of existing applications}{section.2.1}% 9
+\BOOKMARK [1][-]{section.2.2}{Issues}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.1}{Closed source}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.2}{Tradeoffs between security and usability features}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.3}{Nation state control}{section.2.2}% 13
+\BOOKMARK [1][-]{section.2.3}{Features}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.3.1}{Self-destructing messages}{section.2.3}% 15
+\BOOKMARK [2][-]{subsection.2.3.2}{End-to-end encryption}{section.2.3}% 16
+\BOOKMARK [0][-]{chapter.3}{Design and \040Implementation}{}% 17
+\BOOKMARK [1][-]{section.3.1}{Architectural Design}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.2}{WebSockets vs REST API}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.3}{Encryption Implementation}{chapter.3}% 20
+\BOOKMARK [2][-]{subsection.3.3.1}{Asymmetric component}{section.3.3}% 21
+\BOOKMARK [2][-]{subsection.3.3.2}{Symmetric component}{section.3.3}% 22
+\BOOKMARK [2][-]{subsection.3.3.3}{Difficulties}{section.3.3}% 23
+\BOOKMARK [2][-]{subsection.3.3.4}{Storage of encryption keypair}{section.3.3}% 24
+\BOOKMARK [1][-]{section.3.4}{Design Patterns}{chapter.3}% 25
+\BOOKMARK [2][-]{subsection.3.4.1}{Dependency injection}{section.3.4}% 26
+\BOOKMARK [2][-]{subsection.3.4.2}{Command pattern}{section.3.4}% 27
+\BOOKMARK [2][-]{subsection.3.4.3}{Singleton pattern}{section.3.4}% 28
+\BOOKMARK [2][-]{subsection.3.4.4}{Observer pattern}{section.3.4}% 29
+\BOOKMARK [2][-]{subsection.3.4.5}{Adapter pattern}{section.3.4}% 30
+\BOOKMARK [2][-]{subsection.3.4.6}{Data Access Object pattern}{section.3.4}% 31
+\BOOKMARK [1][-]{section.3.5}{Persistence and storage considerations}{chapter.3}% 32
+\BOOKMARK [2][-]{subsection.3.5.1}{Storage of self-destruct duration}{section.3.5}% 33
+\BOOKMARK [2][-]{subsection.3.5.2}{Existing user persistence and reconnection flow}{section.3.5}% 34
+\BOOKMARK [1][-]{section.3.6}{Development tooling}{chapter.3}% 35
+\BOOKMARK [2][-]{subsection.3.6.1}{Client}{section.3.6}% 36
+\BOOKMARK [2][-]{subsection.3.6.2}{Server}{section.3.6}% 37
+\BOOKMARK [2][-]{subsection.3.6.3}{Final report}{section.3.6}% 38
+\BOOKMARK [2][-]{subsection.3.6.4}{Version Control}{section.3.6}% 39
+\BOOKMARK [0][-]{chapter.4}{Evaluation \046 Testing}{}% 40
+\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 41
+\BOOKMARK [0][-]{appendix.A}{First appendix}{}% 42
+\BOOKMARK [1][-]{section.A.1}{Section of first appendix}{appendix.A}% 43
+\BOOKMARK [0][-]{appendix.B}{Second appendix}{}% 44
