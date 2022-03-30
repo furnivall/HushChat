@@ -34,64 +34,46 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Design and \\ Implementation}{4}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Architectural Design}{4}{section.3.1}%
+\contentsline {section}{\numberline {3.1}High Level Architecture}{4}{section.3.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}WebSockets vs REST API}{4}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Encryption Implementation}{6}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Encryption Implementation}{5}{section.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}Asymmetric component}{7}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.4}Self-destructing Messages}{6}{section.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.2}Symmetric component}{7}{subsection.3.3.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.3}Difficulties}{7}{subsection.3.3.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.4}Storage of encryption keypair}{7}{subsection.3.3.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Design Patterns}{7}{section.3.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.1}Dependency injection}{7}{subsection.3.4.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.2}Command pattern}{7}{subsection.3.4.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.3}Singleton pattern}{7}{subsection.3.4.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.4}Observer pattern}{7}{subsection.3.4.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.5}Adapter pattern}{7}{subsection.3.4.5}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.6}Data Access Object pattern}{7}{subsection.3.4.6}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Persistence and storage considerations}{7}{section.3.5}%
+\contentsline {section}{\numberline {3.5}Persistence of users after disconnects}{7}{section.3.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.5.1}Storage of self-destruct duration}{7}{subsection.3.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.2}Existing user persistence and reconnection flow}{7}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}Message Propagation}{7}{section.3.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Development tooling}{7}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Design Patterns}{8}{section.3.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.1}Client}{7}{subsection.3.6.1}%
+\contentsline {section}{\numberline {3.8}Development tooling}{9}{section.3.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Development and debugging process}{7}{subsubsection*.2}%
+\contentsline {subsection}{\numberline {3.8.1}Client}{9}{subsection.3.8.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Key Dependencies}{8}{subsubsection*.3}%
+\contentsline {subsubsection}{Development and debugging process}{9}{subsubsection*.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.2}Server}{8}{subsection.3.6.2}%
+\contentsline {subsubsection}{Key Dependencies}{10}{subsubsection*.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Key Dependencies}{8}{subsubsection*.4}%
+\contentsline {subsection}{\numberline {3.8.2}Server}{10}{subsection.3.8.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Deployment}{9}{subsubsection*.5}%
+\contentsline {subsubsection}{Key Dependencies}{11}{subsubsection*.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.3}Final report}{9}{subsection.3.6.3}%
+\contentsline {subsubsection}{Deployment}{11}{subsubsection*.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.4}Version Control}{9}{subsection.3.6.4}%
+\contentsline {subsection}{\numberline {3.8.3}Final report}{11}{subsection.3.8.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Evaluation \& Testing}{10}{chapter.4}%
+\contentsline {subsection}{\numberline {3.8.4}Version Control}{11}{subsection.3.8.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Conclusion}{11}{chapter.5}%
+\contentsline {chapter}{\numberline {4}Evaluation \& Testing}{12}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}First appendix}{12}{appendix.A}%
+\contentsline {chapter}{\numberline {5}Conclusion}{13}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Section of first appendix}{12}{section.A.1}%
+\contentsline {chapter}{\numberline {A}First appendix}{14}{appendix.A}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Second appendix}{13}{appendix.B}%
+\contentsline {section}{\numberline {A.1}Section of first appendix}{14}{section.A.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Second appendix}{15}{appendix.B}%

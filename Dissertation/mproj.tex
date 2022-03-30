@@ -27,7 +27,7 @@ style=trad-abbrv]{biblatex}
 \pagenumbering{roman}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{A secure client-server mobile chat application implementing elliptic curve integrated encryption system (ECIES) and other security features.}
+\title{A secure client-server mobile chat application implementing an elliptic curve integrated encryption system (ECIES) and other security features.}
 \author{Daniel Furnivall}
 \date{1st April 2022}
 \maketitle
@@ -93,7 +93,7 @@ The primary development objective of this project was to develop an Android mobi
 During the development journey of this application, the intrinsic motivation was to come to a greater understanding of the complexities, assumptions and tradeoffs involved in creating these kinds of platforms. 
 
 \chapter{Requirements and \\ Analysis}\label{analysis}
-<Discussion should go here about Unger et al's paper and the three key challenges (Trust establishment, conversation security and transport privacy)\cite{unger2015sok}
+DRAFT: Discussion should go here about Unger et al's paper and the three key challenges (Trust establishment, conversation security and transport privacy)\cite{unger2015sok}
 
 \section{Existing applications in this field}
 \subsection{Telegram}
@@ -123,8 +123,8 @@ Possible fields: Encryption algorithm, Degree to which Open sourced, Self-destru
 DRAFT - potentially worth mentioning possible attacks on crypto chats and metadata e.g. message length attacks \cite{degabriele2021hiding}
 
 \chapter{Design and \\ Implementation}\label{design}
-\section{Architectural Design}
-Some of the key primary architectural considerations on this project are highlighted below:
+\section{High Level Architecture}
+Some of the primary architectural considerations on this project are highlighted below:
 \begin{enumerate}
 	\item Client-side encryption to allow messages to flow through the (untrusted) server.
 	\item Client-side self-destructing messages according to client-defined storage duration parameter.
@@ -156,6 +156,46 @@ Due to the comparative simplicity of bidirectional communication using WebSocket
 
 During the literature review of this topic, it became apparent that there was a way to achieve the best of both worlds. Socket.io\cite{rai2013socket} is a cross-platform library which initially attempts to create a WebSocket connection and, if not possible, falls back to HTTP polling. It also provides helpful additional features like automatic reconnection. It was determined that both client and server implementations existed in the desired languages (Python/Kotlin) and subsequently included in the system design.
 
+\section{Encryption Implementation}\label{encryption}
+As mentioned previously, the system was designed with the prevailing goal of having two clients who could communicate with each other through an insecure, untrusted environment (i.e. the server) without needing to worry about message being vulnerable to man-in-the-middle attacks\cite{mallik2019man}. The most attractive means of achieving this is to use state of the art encryption.
+
+Two of the most prevalent encryption approaches used in the modern world are asymmetric and symmetric encryption. Symmetric encryption is the simpler of the two - a secret key is used to alter the content of a piece of plain text in such a way that it's unreadable to anyone except someone who also has the secret key and can use it to decrypt the message. The major flaw with symmetric encryption is the need to share the secret key with the recipient. If the recipient does not have access to the secret key, they cannot decrypt the message. Similarly, if the secret key is intercepted during transport of the message, a bad actor can decrypt the message. A good example of the symmetric encryption approach is the Advanced Encryption Standard (AES), which is used in this project. The AES algorithm was designed by Vincent Rijmen and Joan Daemen in 1999 and defined as a standard by the United States Government in 2001.
+
+Asymmetric encryption is a little more complex - a key pair consisting of a public and a private key, which are separate but mathematically linked is used to encrypt and decrypt data. To send an encrypted message to the intended recipient, the sender must use their own private key and the recipient's public key. The recipient can then use their own private key and the sender's public key to decrypt the message at the other side. The primary issue with asymmetric encryption is that it's significantly more complex to implement than symmetric alternatives, and key generation is slower.
+
+Two of the most common types of asymmetric encryption are the Rivest Shamir Adleman (RSA) algorithm\cite{rivest2019method} and Elliptic Curve Cryptography (ECC)\cite{lopez2000overview}. The RSA algorithm has been in use for 45 years, and utilises the factorisation of prime numbers to produce a unique keypair. ECC is a more modern algorithm which uses the structure of elliptic curves to generate keypairs. The primary advantage of ECC over RSA is the computational requirements to generate unique keys - as the key size required for secure communication increases (i.e. when malicious actors are able to use greater computational power), the key generation process becomes prohibitively expensive. In a 2015 study, an Indian team found that RSA keypair generation was 471 times slower than the equivalent ECC keypair process when keys reached a certain size\cite{gobi2015comparative}.
+
+The approach taken on this project was to use a combination of both asymmetric and symmetric approaches, known as Elliptic Curve Integrated Encryption Scheme (ECIES)\cite{martinez2010comparison}. ECIES is a hybrid encryption system which was devised by Victor Shoup in 2001. It comprises of three key functions:
+\begin{enumerate}
+	\item A key agreement function to generate "shared secrets" from a user's public key and another user's private key.
+	\item A key derivation function which is able to produce a key from an input of some kind.
+	\item A symmetric encryption algorithm which is used with the shared secret as a key to encrypt the plain text.
+\end{enumerate}
+The advantage of ECIES is that it provides very strong encryption for secure communication within an untrusted/insecure channel while also having desirable properties for mobile devices such as much smaller keys than similar asymmetric/symmetric hybrid approaches (as shown by Martinez et al when comparing to RSA/AES hybrid systems\cite{martinezECIES})
+
+The ECIES implementation used in this project uses the following algorithms and approaches:
+\begin{itemize}
+	\item Elliptic Curve Diffie-Hellman\cite{maurer2000diffie} to generate a shared secret over an untrusted channel. 
+	\item The P-521 elliptic curve outlined by the National Institute of Standards and Technology (NIST)\cite{brown2001software}
+	\item The SHA-512 cryptographically secure hashing function, of which the first 32 bytes are used to generate the AES key for the key derivation function.
+	\item AES-256 for the symmetric component, generated from the shared secret.
+\end{itemize}
+
+\section{Self-destructing Messages}
+One of the features implemented in the application is self-destructing messages on a client device. This allows the user to define a duration to store received and sent messages on their device, after which the specific message is deleted. This feature was implemented by prompting the user on their first time starting the application to define a duration for message storage which is passed as a parameter to a daemon process (a background thread which runs at very low priority) which sends a parametrised SQL query to the database, deleting message objects based on their timestamp metadata. Discussion of how this duration is persisted after restarts can be found in the following section.
+
+\section{Persistence of users after disconnects}
+One of the most complex challenges faced during the development of the application was persisting clients after they disconnect and reconnect from the server. This was handled in the following manner:
+\begin{figure}[H]
+	\includegraphics[scale=0.6]{images/reconnection-flow.png}
+	\caption{Reconnection flow for user persistence}
+\end{figure}
+The complexity of this process comes down to an inherent limitation of Android's built-in cryptography libraries. The system design was predicated on the assumption that it would be possible to securely store public and private keys within the Android KeyStore\cite{cooijmans2014analysis}, a secure storage system within Android which is capable of storing public and private keys. However, the KeyStore does not currently support Elliptic Curve keypairs, which meant that the design had to be altered to accomodate this. What this means in practice is that a new keypair is generated on reconnection - the private key is stored locally and the public key is emitted to the server which replaces the existing stored key.
+
+\subsection{Storage of self-destruct duration}
+Although there is no secure key-value store that allowed for the storage of ECDH keypairs, there is a non-secure method for persistence of key-value data (not including the database) using ``SharedPreferences'' files. These are ideal for storing configuration properties which persist after closing the application. This means that the initial value prompted from the user to request self-destruct message duration is able to be persisted and a returning user will be able to maintain their configuration, while also maintaining separation of concerns and reducing excessive exposure to database operations.
+
+\section{Message Propagation}
 The figure below describes the entire journey of a message through the messaging system. The colour scheme for the various key stages is broadly represented by the following:
 \begin{enumerate}
 	\item Green: Initial message composition, server querying and local storage.
@@ -166,40 +206,32 @@ The figure below describes the entire journey of a message through the messaging
 
 \begin{figure}[H]
 \includegraphics[scale=0.5]{images/message-flow.png}
-\caption{Flowchart with high level view of entire lifecycle of a message}
+\caption{Flowchart of the journey of a message from one client to another}
 \end{figure}
 
-\section{Encryption Implementation}\label{encryption}
-As mentioned previously, the system was designed with the prevailing goal of having two clients who could communicate with each other through an insecure, untrusted environment (i.e. the server) without needing to worry about message being vulnerable to man-in-the-middle attacks\cite{mallik2019man}.
-
-Two of the most prevalent encryption approaches used in the modern world are asymmetric and symmetric encryption. Symmetric encryption is the simpler of the two options - a secret key is used to alter the content of a piece of plain text in such a way that it's unreadable to anyone except someone who also has the secret key and can use it to decrypt the message.
-
-\cite{martinez2010comparison}Here is a placeholder for a piece of text about ECIES.
-\subsection{Asymmetric component}\label{asymmetric}
-
-\subsection{Symmetric component}\label{symmetric}
-
-\subsection{Difficulties}\label{encryptionDifficulties}
-
-\subsection{Storage of encryption keypair}
-
 \section{Design Patterns}
-
-\subsection{Dependency injection}
-
-\subsection{Command pattern}
-
-\subsection{Singleton pattern}
-
-\subsection{Observer pattern}
-
-\subsection{Adapter pattern}
-
-\subsection{Data Access Object pattern}
-
-\section{Persistence and storage considerations}
-\subsection{Storage of self-destruct duration}
-\subsection{Existing user persistence and reconnection flow}
+During the development of this project, a concerted effort was made to follow established design patterns and best practice wherever possible. It is a testament to the design of the Android development environment and documentation that this was relatively trivial to achieve. The table below shows the design patterns which were deliberately utilised in the development of this project:
+\begin{center}
+\begin{tabular}{ |p{4cm}|p{4.5cm}|p{5.0cm}|}
+	\hline
+	Pattern & Concise Definition & Implementation\\
+	\hline
+	Command Pattern\cite{sarcar2020command} & Encapsulation of a request into an object  & Socket.io event handler objects in both client and server\\
+	\hline
+	Observer Pattern\cite{eales2005observer} & When one object changes state, dependents update accordingly & LiveData queries updating views as events occur (ChatWindow and Contacts)\\
+	\hline
+	Adapter Pattern\cite{harmes2008adapter} & Allow an interface of one class to be used as another interface & ContactsAdapter for RecyclerView and MessageListAdapter for displaying chat messages.\\
+	\hline
+	Builder Pattern\cite{sarcar2016builder} & Simplifies object creation step-by-step & Push notification builder object allows for customisable notifications.\\
+	\hline
+	DAO Pattern\cite{berger2005data} & Data Access Objects provide abstract interface for database, separating low level and high level operations & ChatMessageDAO allows us to specify the exact queries we can use on the database and prevents any other type of unplanned operations.\\
+	\hline
+	Singleton Pattern\cite{stencel2008implementation} & Restrict instantiation of class to exactly one instance & SocketHandler.kt in the client is an example of a class which should be (and is) a singleton.\\
+	\hline
+\end{tabular}
+\end{center}
+It is also worth mentioning that the Model-View-Viewmodel architectural style was adopted throughout the application, as it is the recommended architectural pattern recommended by the Android core development team\cite{androiddevelopers}. 
+This architectural style is most clearly seen in all interactions between the database, the repository, the data access object and the ViewModel which displays data in the ChatWindow.kt activity.
 
 
 \section{Development tooling}
@@ -212,9 +244,9 @@ The final client application was written entirely in Kotlin (v1.6.10) using the 
 \subsubsection{Development and debugging process}
 Traditional Android software development involves using the qEmu device emulator built into Android Studio to imitate the experience of a real user on their own device. 
 
-Debugging code during the HushChat development process was a complex endeavour, as the development machine had fairly limited RAM. As the purpose of the application was communication between two clients, it was important to be able to emulate two devices at the same time so messages could be exchanged. This was initially possible on the development machine, but became unfeasible over time as the complexity of the system grew and memory capacity became strained. 
+Debugging code during the HushChat development process was a complex endeavour, as the development machine had fairly limited RAM. As the purpose of the application was communication between two clients, it was important to be able to emulate two devices at the same time so messages could be exchanged. This was initially possible on the development machine, but became unfeasible over time as the complexity of the system grew and memory capacity became constrained. 
 
-The debugging environment eventually morphed into a single qEmu emulated device on the development machine combined with a physical android device (Google Pixel 4). This methodology became possible with the introduction of Android version 11 and Android Studio 'Bumblebee' (v2021.1), which allows the developer to run Android debugging tools (i.e the Android Debug Bridge, or ADB) wirelessly. This feature was extremely helpful in the development process, and it allowed for the introduction of further feature complexity that would not have been possible otherwise due to the technical limitations of the development machine. 
+The debugging environment eventually morphed into a single qEmu emulated device on the development machine combined with a physical android device (Google Pixel 4). This methodology became possible with the introduction of Android version 11 and Android Studio `Bumblebee' (v2021.1), which allows the developer to run Android debugging tools (i.e the Android Debug Bridge, or ADB) via WiFi connection. This feature was extremely helpful in the development process, and it allowed for the introduction of further feature complexity that would not have been possible otherwise due to the technical limitations of the development machine. 
 
 Running a WebSocket-based application locally also presented a minor challenge, as qEmu virtual devices use the traditional localhost/127.0.0.1 address to represent their own internal loopback interface rather than that of the host development machine. This meant that to communicate with the locally hosted server, the \href{https://developer.android.com/studio/run/emulator-networking.html}{special debugging address 10.0.2.2 was used.} After the development of the server side of the application was complete, this problem was solved by deploying the server to a static IP address (via a Azure Virtual Machine).
 
@@ -227,7 +259,7 @@ Running a WebSocket-based application locally also presented a minor challenge, 
 		Security.removeProvider("BC")
 		Security.addProvider(BouncyCastleProvider())
 		\end{verbatim}
-	\item \href{https://github.com/furnivall/SEng_Final_Project}{Room ORM} - v2.4.0 - Room provides an object-relational mapping (ORM) over the SQLite database built into the Android SDK. When developing the application, the main data model to consider on the client side was that of an individual chat message, including metadata (e.g. recipient) and content. Working with Room allowed for a more streamlined development experience and reduction of boilerplate code, as it meant working directly with Kotlin (Java) entities instead of writing complex queries for inserting messages to our viewmodel. SQL queries were still used to capture relevant data to display to the user in chat windows. 
+	\item \href{https://developer.android.com/jetpack/androidx/releases/room}{Room ORM} - v2.4.0 - Room provides an object-relational mapping (ORM) over the SQLite database built into the Android SDK. When developing the application, the main data model to consider on the client side was that of an individual chat message, including metadata (e.g. recipient) and content. Working with Room allowed for a more streamlined development experience and reduction of boilerplate code, as it meant working directly with Kotlin (Java) entities instead of writing complex queries for inserting messages to our viewmodel. SQL queries were still used to capture relevant data to display to the user in chat windows. 
 
 \end{itemize}
 
@@ -241,15 +273,15 @@ The server application was written in Python v3.9.1 in the PyCharm IDE and utili
 \end{itemize}
 
 \subsubsection{Deployment}
-To allow users to message other users, it was necessary to deploy the server application on a static IP. To do this, a 1GB/1CPU Virtual Machine instance was used, running Ubuntu 20.04 in the West Europe region of Microsoft Azure. 
+To allow users to message other users, it was necessary to deploy the server application on a static IP address. To do this, a 1GB/1CPU Virtual Machine instance was used, running Ubuntu 20.04 in the West Europe region of the Microsoft Azure cloud platform. 
 
 \subsection{Final report}
-This dissertation was written entirely in LaTeX using Neovim v0.5.1 with the VimTex plugin. 
+This dissertation was written entirely in LaTeX using Neovim v0.5.1 with the VimTex plugin and the Skim PDF reader. 
 
 \subsection{Version Control}
 Git was the version control solution used throughout the project. Mild discomfort with the idea of storing the written report with a private company (Overleaf) while writing meant that it was worth taking the step of compiling the document locally. This had the fortunate benefit of meaning the entire project could be stored in a single git repository (as well as an opportunity to learn a lot of new things). 
 
-The host of choice for the upstream repository on this project was GitHub, and the entirety of the project can be found at the following link: 
+The host of choice for the upstream repository on this project was GitHub, and the entirety of the project can be found at the following link. It is important to note that the commenting approach may appear excessive (and does not follow the ``Code tells you how, comments tell you why'' commenting practice) but this was done with the intention of assisting the marker to get through the code as quickly as possible.  
 
 \begin{center}
 \href{https://github.com/furnivall/SEng_Final_Project}{https://github.com/furnivall/SEng\_Final\_Project}
