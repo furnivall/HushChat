@@ -58,15 +58,15 @@ acknowledgements go here
 
 \chapter{Introduction}\label{intro} \setcounter{page}{1} \pagenumbering{arabic}
 
-In an increasingly digital world, we are constantly producing data (and, of course, corresponding metadata). It's estimated that humanity created somewhere in the order of 2.5 exabytes of digital data per day in 2018\cite{baeza2022attention} and the growth of digital data creation by individuals is constantly accelerating. 
+In an increasingly digital world, we are constantly producing data (and, of course, corresponding metadata). It's estimated that humanity created somewhere in the order of 2.5 exabytes of digital data per day in 2018\cite{baeza2022attention} and the growth of digital data creation by individuals is constantly accelerating.\cite{baeza2022attention} 
 
-As storage costs decrease over time\cite{walter2005kryder}, economic and political incentives have begun to develop for nation state actors and major organisations to develop profiling systems using large-scale data collection and mining (the much vaunted "Big Data"). These systems are already being used for targeted advertising\cite{farahat2012effective}, market segmentation\cite{pantelis2013understanding}, criminal investigations\cite{zawoad2015digital} and sentencing\cite{simmons2017big}. In the political sphere, these models have been used for increasingly effective traditional campaigning, \cite{kreiss2019arbiters} as well as (alleged) psychological manipulation\cite{berghel2018malice} and disinformation\cite{stocker2019facebook} campaigns.
+As storage costs decrease over time\cite{walter2005kryder}, economic and political incentives have begun to develop for nation state actors and major organisations to develop profiling systems using large-scale data collection and mining. These ``Big Data'' profiling systems are already being used for targeted advertising\cite{farahat2012effective}, market segmentation\cite{pantelis2013understanding}, criminal investigations\cite{zawoad2015digital} and sentencing\cite{simmons2017big}. In the political sphere, these models have been used for increasingly effective traditional campaigning, \cite{kreiss2019arbiters} as well as (alleged) mass psychological manipulation\cite{berghel2018malice} and disinformation\cite{stocker2019facebook} campaigns.
 
 The question of whether the average individual is able to enjoy the fruits of such data collection is less clear. Do these large actors have the best interests of the subjects of their data in mind? If not, methods for obfuscating or hiding sensitive data become valuable considerations.
 
-In a pre-digital world, an individual could avoid eavesdropping or data collection by malicious entities by simply speaking in a hushed voice, shredding documents, moving quietly or looking over his or her shoulder. In the current landscape, it is much more difficult to avoid surveillance without eschewing technology entirely. Our mobile phones are constantly communicating our triangulated locations, and even if our web traffic is encrypted by default, browser or ISP metadata still contains useful profiling information.
+In a pre-digital world, an individual could avoid eavesdropping or data collection by malicious entities by simply speaking in a hushed voice, shredding documents, moving quietly or looking over their shoulder. In the current landscape, it is much more difficult to avoid surveillance without eschewing technology entirely. Our mobile phones are constantly communicating our triangulated locations, and even if our web traffic is encrypted by default, browser or ISP metadata still contains useful profiling information.
 
-Secure messaging applications aim to allow individuals to communicate with each other individuals around the globe while avoiding the potential for eavesdropping. In theory, this means the user can enjoy the benefits of a globally connected world while preserving their privacy. However, in practice there are of course many implementation difficulties to be considered.
+Secure messaging applications aim to allow individuals to communicate with other individuals around the globe while avoiding the potential for eavesdropping. In theory, this means the user can enjoy the benefits of a globally connected world while preserving their own privacy. However, in practice there are of course many implementation difficulties to be considered.
 
 \section{Why are secure chat applications needed?}
 Secure messaging applications provide a means of communication between individuals or groups across a network of some kind. This can take the form of text, audio or video messaging, document or file sharing.
@@ -88,7 +88,7 @@ In reality, there are plenty of reasons for \emph{everyone} to use secure messag
 It should be clear that although there are many categories of potential secure messaging users, there are also many potential adversaries for these kinds of platforms, which means the development of such services is a complex undertaking. There are major tradeoffs which need to be made between usability and data security - for example, how can we preserve security of messages while also storing them on a mobile device? 
 
 \section{Objectives}
-The primary development objective of this project was to develop an Android mobile application (and corresponding server) that used complex security features including an end-to-end encryption solution that uses both asymmetric (Elliptic Curve Diffie-Hellman) and symmetric (AES) encryption approaches, pseudonymous identity and self-destructing messages. 
+The primary development objective of this project was to develop an Android mobile application (and corresponding server) that uses complex security features including an end-to-end encryption solution that uses both asymmetric (Elliptic Curve Diffie-Hellman) and symmetric (AES) encryption approaches, pseudonymous identity and self-destructing messages. 
 
 During the development journey of this application, the intrinsic motivation was to come to a greater understanding of the complexities, assumptions and tradeoffs involved in creating these kinds of platforms. 
 
@@ -108,16 +108,20 @@ DRAFT: Insert table here comparing signal, whatsapp and telegram.
 Possible fields: Encryption algorithm, Degree to which Open sourced, Self-destructing message implementation, group chats, video/audio chat, pseudonyms  
 
 \section{Issues}
-
 \subsection{Closed source}
-
 \subsection{Tradeoffs between security and usability features}
-
 \subsection{Nation state control}
 
+\section{User Personas}
+\emph{Thaïs} 
+\emph{Tzvi}
+\emph{Ewa}
 
 \section{Features}
+
 \subsection{Self-destructing messages}
+
+
 \subsection{End-to-end encryption}
 
 DRAFT - potentially worth mentioning possible attacks on crypto chats and metadata e.g. message length attacks \cite{degabriele2021hiding}
@@ -139,7 +143,7 @@ The figure below represents a very high level view of the system architecture, w
 \end{figure}
 
 \section{WebSockets vs REST API}
-One of the major decisions required for this project was which transport protocol to use for propagating messages through the system. The two major options considered were REST APIs\cite{masse2011rest} and WebSockets\cite{fette2011websocket}. 
+One of the major decisions required for this project was which transport protocol to use for propagating messages through the system. The two major options considered were a REST API via HTTP\cite{masse2011rest} and WebSockets\cite{fette2011websocket}. 
 
 REST (Representational State Transfer) is a set of design principles which allow us to develop web services which utilise a central server and is based on the twin concepts of request and response. A client will send a request to a server and receive a response based on the content of the request. REST APIs are heavily used across many industries and mostly (though not exclusively) use the HTTP protocol to communicate between client and server. The primary weakness of REST is that it is not optimal for circumstances where constant bi-directional communication is important between client and server. Indeed, the WebSocket Protocol Standards Track Document\cite{fette2011websocket} states the problem as such:
 
@@ -157,7 +161,7 @@ Due to the comparative simplicity of bidirectional communication using WebSocket
 During the literature review of this topic, it became apparent that there was a way to achieve the best of both worlds. Socket.io\cite{rai2013socket} is a cross-platform library which initially attempts to create a WebSocket connection and, if not possible, falls back to HTTP polling. It also provides helpful additional features like automatic reconnection. It was determined that both client and server implementations existed in the desired languages (Python/Kotlin) and subsequently included in the system design.
 
 \section{Encryption Implementation}\label{encryption}
-As mentioned previously, the system was designed with the prevailing goal of having two clients who could communicate with each other through an insecure, untrusted environment (i.e. the server) without needing to worry about message being vulnerable to man-in-the-middle attacks\cite{mallik2019man}. The most attractive means of achieving this is to use state of the art encryption.
+As mentioned previously, the system was designed with the prevailing goal of having two clients who could communicate with each other through an insecure, untrusted environment (i.e. the server) without needing to worry about messages being vulnerable to man-in-the-middle attacks\cite{mallik2019man}. The most attractive means of achieving this is to use state of the art encryption.
 
 Two of the most prevalent encryption approaches used in the modern world are asymmetric and symmetric encryption. Symmetric encryption is the simpler of the two - a secret key is used to alter the content of a piece of plain text in such a way that it's unreadable to anyone except someone who also has the secret key and can use it to decrypt the message. The major flaw with symmetric encryption is the need to share the secret key with the recipient. If the recipient does not have access to the secret key, they cannot decrypt the message. Similarly, if the secret key is intercepted during transport of the message, a bad actor can decrypt the message. A good example of the symmetric encryption approach is the Advanced Encryption Standard (AES), which is used in this project. The AES algorithm was designed by Vincent Rijmen and Joan Daemen in 1999 and defined as a standard by the United States Government in 2001.
 
@@ -165,7 +169,7 @@ Asymmetric encryption is a little more complex - a key pair consisting of a publ
 
 Two of the most common types of asymmetric encryption are the Rivest Shamir Adleman (RSA) algorithm\cite{rivest2019method} and Elliptic Curve Cryptography (ECC)\cite{lopez2000overview}. The RSA algorithm has been in use for 45 years, and utilises the factorisation of prime numbers to produce a unique keypair. ECC is a more modern algorithm which uses the structure of elliptic curves to generate keypairs. The primary advantage of ECC over RSA is the computational requirements to generate unique keys - as the key size required for secure communication increases (i.e. when malicious actors are able to use greater computational power), the key generation process becomes prohibitively expensive. In a 2015 study, an Indian team found that RSA keypair generation was 471 times slower than the equivalent ECC keypair process when keys reached a certain size\cite{gobi2015comparative}.
 
-The approach taken on this project was to use a combination of both asymmetric and symmetric approaches, known as Elliptic Curve Integrated Encryption Scheme (ECIES)\cite{martinez2010comparison}. ECIES is a hybrid encryption system which was devised by Victor Shoup in 2001. It comprises of three key functions:
+The approach taken on this project was to use a combination of both asymmetric and symmetric approaches - this combination means that the comparative speed of symmetric approaches can be harnessed for converting the plaintext to ciphertext, and the additional security provided by asymmetric encryption, ensuring that only the intended recipient can open the message as the symmetric key is independently generated by both sender and receiver from a shared secret.The implementation used is known as an Elliptic Curve Integrated Encryption Scheme (ECIES)\cite{martinez2010comparison}. ECIES is a hybrid encryption system which was devised by Victor Shoup in 2001. It comprises of three key functions:
 \begin{enumerate}
 	\item A key agreement function to generate "shared secrets" from a user's public key and another user's private key.
 	\item A key derivation function which is able to produce a key from an input of some kind.
@@ -210,7 +214,11 @@ The figure below describes the entire journey of a message through the messaging
 \end{figure}
 
 \section{Design Patterns}
-During the development of this project, a concerted effort was made to follow established design patterns and best practice wherever possible. It is a testament to the design of the Android development environment and documentation that this was relatively trivial to achieve. The table below shows the design patterns which were deliberately utilised in the development of this project:
+During the development of this project, a concerted effort was made to follow established design patterns and best practice wherever possible. It is a testament to the design of the Android development environment and documentation that this was relatively trivial to achieve. 
+In addition, wherever possible, adherence to DRY\cite{10.5555/320326}, SOLID\cite{martin2000design} and KISS principles was paramount.
+
+
+The table below shows the design patterns which were deliberately utilised in the development of this project:
 \begin{center}
 \begin{tabular}{ |p{4cm}|p{4.5cm}|p{5.0cm}|}
 	\hline
@@ -276,7 +284,7 @@ The server application was written in Python v3.9.1 in the PyCharm IDE and utili
 To allow users to message other users, it was necessary to deploy the server application on a static IP address. To do this, a 1GB/1CPU Virtual Machine instance was used, running Ubuntu 20.04 in the West Europe region of the Microsoft Azure cloud platform. 
 
 \subsection{Final report}
-This dissertation was written entirely in LaTeX using Neovim v0.5.1 with the VimTex plugin and the Skim PDF reader. 
+This dissertation was written entirely in LaTeX using Neovim v0.5.1 with the VimTex plugin and the Skim PDF reader (which automatically refreshes at compile time). 
 
 \subsection{Version Control}
 Git was the version control solution used throughout the project. Mild discomfort with the idea of storing the written report with a private company (Overleaf) while writing meant that it was worth taking the step of compiling the document locally. This had the fortunate benefit of meaning the entire project could be stored in a single git repository (as well as an opportunity to learn a lot of new things). 
@@ -289,10 +297,12 @@ The host of choice for the upstream repository on this project was GitHub, and t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Evaluation \& Testing}\label{testing}
-
+\section{User evaluations}
+\subsection{Methodology}
+\subsection{Demographics}
+\subsection{Issues highlighted}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Conclusion}\label{conclusion}
-
 \appendix % first appendix
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{First appendix}

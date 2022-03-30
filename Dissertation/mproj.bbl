@@ -443,6 +443,39 @@
       \field{pages}{342\bibrangedash 347}
       \range{pages}{6}
     \endentry
+    \entry{10.5555/320326}{book}{}
+      \name{author}{2}{}{%
+        {{hash=10383d05f32f2a21518b493a3c546e5c}{%
+           family={Hunt},
+           familyi={H\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b5eb4ac16368112932ff36772cb0b0b5}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Longman Publishing Co., Inc.}%
+      }
+      \strng{namehash}{6551e2d8a523620fdffb6fe4053ca3d5}
+      \strng{fullhash}{6551e2d8a523620fdffb6fe4053ca3d5}
+      \strng{bibnamehash}{6551e2d8a523620fdffb6fe4053ca3d5}
+      \strng{authorbibnamehash}{6551e2d8a523620fdffb6fe4053ca3d5}
+      \strng{authornamehash}{6551e2d8a523620fdffb6fe4053ca3d5}
+      \strng{authorfullhash}{6551e2d8a523620fdffb6fe4053ca3d5}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{020161622X}
+      \field{title}{The Pragmatic Programmer: From Journeyman to Master}
+      \field{year}{2000}
+    \endentry
     \entry{kreiss2019arbiters}{article}{}
       \name{author}{2}{}{%
         {{hash=c0d345a8052a86647f33a9221b273a5c}{%
@@ -573,6 +606,32 @@
       \field{title}{HIDE AND SEEK: Tracking NSO Group’s Pegasus Spyware to operations in 45 countries}
       \field{type}{techreport}
       \field{year}{2018}
+    \endentry
+    \entry{martin2000design}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6f41df64eb0dc4855be70172368604c2}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={Robert\bibnamedelima C},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{fullhash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{bibnamehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authorbibnamehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authornamehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authorfullhash}{6f41df64eb0dc4855be70172368604c2}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Object Mentor}
+      \field{number}{34}
+      \field{title}{Design principles and design patterns}
+      \field{volume}{1}
+      \field{year}{2000}
+      \field{pages}{597}
+      \range{pages}{1}
     \endentry
     \entry{martinez2010comparison}{inproceedings}{}
       \true{moreauthor}

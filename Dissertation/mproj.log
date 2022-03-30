@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.21)  30 MAR 2022 03:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.21)  30 MAR 2022 21:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -583,7 +583,7 @@ LaTeX Info: Redefining \nameref on input line 26.
 \@outlinefile=\write5
 \openout5 = `mproj.out'.
 
-<images/CompSci_colour.pdf, id=144, 340.27126pt x 49.18375pt>
+<images/CompSci_colour.pdf, id=164, 340.27126pt x 49.18375pt>
 File: images/CompSci_colour.pdf Graphic file (type pdf)
 <use images/CompSci_colour.pdf>
 Package pdftex.def Info: images/CompSci_colour.pdf  used on input line 35.
@@ -643,76 +643,76 @@ Overfull \hbox (25.63326pt too wide) in paragraph at lines 108--109
 Chapter 3.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 125.
+(hyperref)                removing `\\' on input line 129.
 
-<images/high-level-architecture.png, id=256, 653.44125pt x 214.8025pt>
+<images/high-level-architecture.png, id=282, 653.44125pt x 214.8025pt>
 File: images/high-level-architecture.png Graphic file (type png)
 <use images/high-level-architecture.png>
-Package pdftex.def Info: images/high-level-architecture.png  used on input line 137.
+Package pdftex.def Info: images/high-level-architecture.png  used on input line 141.
 (pdftex.def)             Requested size: 326.71982pt x 107.40099pt.
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 146.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 150.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ) [4
 
  <./images/high-level-architecture.png>] [5]
-LaTeX Font Info:    Trying to load font information for TS1+pnc on input line 178.
+LaTeX Font Info:    Trying to load font information for TS1+pnc on input line 182.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ts1pnc.fd
 File: ts1pnc.fd 2001/06/04 font definitions for TS1/pnc.
 ) [6]
-<images/reconnection-flow.png, id=305, 573.14125pt x 251.94125pt>
+<images/reconnection-flow.png, id=331, 573.14125pt x 251.94125pt>
 File: images/reconnection-flow.png Graphic file (type png)
 <use images/reconnection-flow.png>
-Package pdftex.def Info: images/reconnection-flow.png  used on input line 190.
+Package pdftex.def Info: images/reconnection-flow.png  used on input line 194.
 (pdftex.def)             Requested size: 343.8874pt x 151.16591pt.
  [7 <./images/reconnection-flow.png>]
-<images/message-flow.png, id=315, 762.85pt x 495.8525pt>
+<images/message-flow.png, id=341, 762.85pt x 495.8525pt>
 File: images/message-flow.png Graphic file (type png)
 <use images/message-flow.png>
-Package pdftex.def Info: images/message-flow.png  used on input line 208.
+Package pdftex.def Info: images/message-flow.png  used on input line 212.
 (pdftex.def)             Requested size: 381.42407pt x 247.92564pt.
 
-Underfull \hbox (badness 2875) in paragraph at lines 219--219
+Underfull \hbox (badness 2875) in paragraph at lines 227--227
 []\OT1/pnc/m/n/10.95 Encapsulation of a re-
  []
 
 
-Underfull \hbox (badness 5316) in paragraph at lines 219--220
+Underfull \hbox (badness 5316) in paragraph at lines 227--228
 \OT1/pnc/m/n/10.95 jects in both client and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--222
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
 []\OT1/pnc/m/n/10.95 LiveData queries up-dat-
  []
 
 
-Underfull \hbox (badness 1342) in paragraph at lines 223--224
+Underfull \hbox (badness 1342) in paragraph at lines 231--232
 []\OT1/pnc/m/n/10.95 ContactsAdapter for Re-cy-
  []
 
 
-Underfull \hbox (badness 2418) in paragraph at lines 223--224
+Underfull \hbox (badness 2418) in paragraph at lines 231--232
 \OT1/pnc/m/n/10.95 clerView and Mes-sage-Lis-
  []
 
 
-Underfull \hbox (badness 6300) in paragraph at lines 227--227
+Underfull \hbox (badness 6300) in paragraph at lines 235--235
 \OT1/pnc/m/n/10.95 vide ab-stract in-ter-face
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--230
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
 []\OT1/pnc/m/n/10.95 SocketHandler.kt in the
  []
 
 
-Underfull \hbox (badness 1067) in paragraph at lines 229--230
+Underfull \hbox (badness 1067) in paragraph at lines 237--238
 \OT1/pnc/m/n/10.95 client is an ex-am-ple of a
  []
 
 
-Overfull \hbox (18.0172pt too wide) in paragraph at lines 215--232
+Overfull \hbox (18.0172pt too wide) in paragraph at lines 223--240
  [] 
  []
 
@@ -734,98 +734,107 @@ Appendix B.
 
 ]
 
-./mproj.tex:308: Package inputenc Error: Unicode character ́ (U+0301)
+./mproj.tex:318: Package inputenc Error: Unicode character ́ (U+0301)
 (inputenc)                not set up for use with LaTeX.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.308 \end
+l.318 \end
           {document}
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-Overfull \hbox (30.03941pt too wide) in paragraph at lines 308--308
+Overfull \hbox (30.03941pt too wide) in paragraph at lines 318--318
 \OT1/pnc/m/it/10.95 man-tic-scholar. org/1b11/5f5253567964283e16081488daf6af4f5351. pdf.[[]Ultimo
  []
 
 
-Overfull \hbox (3.97308pt too wide) in paragraph at lines 308--308
+Overfull \hbox (3.97308pt too wide) in paragraph at lines 318--318
 \OT1/pnc/m/it/10.95 ceed-ings of the 21st in-ter-na-tional con-fer-ence on World Wide Web\OT1/pnc/m/n/10.95 , pages 111{
  []
 
 
-Overfull \hbox (8.99477pt too wide) in paragraph at lines 308--308
+Overfull \hbox (8.99477pt too wide) in paragraph at lines 318--318
 []\OT1/pnc/m/n/10.95 Guide to app ar-chi-tec-ture - an-droid de-vel-op-ers. \OT1/pnc/m/sc/10.95 url\OT1/pnc/m/n/10.95 : []$\OT1/pcr/m/n/10.95 https : / / developer .
+ []
+
+
+Overfull \hbox (2.63849pt too wide) in paragraph at lines 318--318
+\OT1/pnc/m/it/10.95 to Mas-ter\OT1/pnc/m/n/10.95 . Addison-Wesley Long-man Pub-lish-ing Co., Inc., USA, 2000. \OT1/pnc/m/sc/10.95 isbn\OT1/pnc/m/n/10.95 :
  []
 
 [16
 
 ]
+Overfull \hbox (15.07545pt too wide) in paragraph at lines 318--318
+[]\OT1/pnc/m/n/10.95 R. C. Mar-tin. De-sign prin-ci-ples and de-sign pat-terns. \OT1/pnc/m/it/10.95 Ob-ject Men-tor\OT1/pnc/m/n/10.95 , 1(34):597,
+ []
 
-./mproj.tex:308: Package inputenc Error: Unicode character ́ (U+0301)
+
+./mproj.tex:318: Package inputenc Error: Unicode character ́ (U+0301)
 (inputenc)                not set up for use with LaTeX.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.308 \end
+l.318 \end
           {document}
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-Overfull \hbox (5.50876pt too wide) in paragraph at lines 308--308
+Overfull \hbox (5.50876pt too wide) in paragraph at lines 318--318
 []\OT1/pnc/m/n/10.95 V. Sar-car. Builder pat-terns. In \OT1/pnc/m/it/10.95 Java De-sign Pat-terns\OT1/pnc/m/n/10.95 , pages 89{95. Springer,
  []
 
 
-./mproj.tex:308: LaTeX Error: Command \k unavailable in encoding OT1.
+./mproj.tex:318: LaTeX Error: Command \k unavailable in encoding OT1.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.308 \end
+l.318 \end
           {document}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (2.52113pt too wide) in paragraph at lines 308--308
+Overfull \hbox (2.52113pt too wide) in paragraph at lines 318--318
 \OT1/pnc/m/it/10.95 po-sium on Dis-in-for-ma-tion in Open On-line Me-dia\OT1/pnc/m/n/10.95 , pages 129{149. Springer,
  []
 
 [17]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 308.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 318.
  [18]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 308.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 318.
  (./mproj.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 308.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 308.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 318.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 318.
 Package rerunfilecheck Info: File `mproj.out' has not changed.
-(rerunfilecheck)             Checksum: 2C812C650B1B2EE4A2B2D277098400B1;2359.
+(rerunfilecheck)             Checksum: 7F18C8A031B17D50E2757673048A6BBE;2685.
 Package logreq Info: Writing requests to 'mproj.run.xml'.
 \openout1 = `mproj.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 14978 strings out of 480608
- 259177 string characters out of 5903630
- 925923 words of memory out of 5000000
- 30540 multiletter control sequences out of 15000+600000
+ 14996 strings out of 480608
+ 259587 string characters out of 5903630
+ 926041 words of memory out of 5000000
+ 30551 multiletter control sequences out of 15000+600000
  552314 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,8n,45p,955b,1346s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on mproj.pdf (24 pages, 244206 bytes).
+Output written on mproj.pdf (24 pages, 246451 bytes).
 PDF statistics:
- 440 PDF objects out of 1000 (max. 8388607)
- 399 compressed objects within 4 object streams
- 113 named destinations out of 1000 (max. 500000)
- 301 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 472 PDF objects out of 1000 (max. 8388607)
+ 430 compressed objects within 5 object streams
+ 120 named destinations out of 1000 (max. 500000)
+ 341 words of extra memory for PDF output out of 10000 (max. 10000000)
 

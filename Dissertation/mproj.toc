@@ -26,11 +26,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.3}Nation state control}{3}{subsection.2.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Features}{3}{section.2.3}%
+\contentsline {section}{\numberline {2.3}User Personas}{3}{section.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}Self-destructing messages}{3}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.4}Features}{3}{section.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.2}End-to-end encryption}{3}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.4.1}Self-destructing messages}{3}{subsection.2.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.2}End-to-end encryption}{3}{subsection.2.4.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Design and \\ Implementation}{4}{chapter.3}%
 \defcounter {refsection}{0}\relax 
@@ -40,13 +42,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.3}Encryption Implementation}{5}{section.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Self-destructing Messages}{6}{section.3.4}%
+\contentsline {section}{\numberline {3.4}Self-destructing Messages}{7}{section.3.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.5}Persistence of users after disconnects}{7}{section.3.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.5.1}Storage of self-destruct duration}{7}{subsection.3.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Message Propagation}{7}{section.3.6}%
+\contentsline {section}{\numberline {3.6}Message Propagation}{8}{section.3.6}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.7}Design Patterns}{8}{section.3.7}%
 \defcounter {refsection}{0}\relax 
@@ -69,6 +71,14 @@
 \contentsline {subsection}{\numberline {3.8.4}Version Control}{11}{subsection.3.8.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Evaluation \& Testing}{12}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}User evaluations}{12}{section.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.1}Methodology}{12}{subsection.4.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.2}Demographics}{12}{subsection.4.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.3}Issues highlighted}{12}{subsection.4.1.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Conclusion}{13}{chapter.5}%
 \defcounter {refsection}{0}\relax 
