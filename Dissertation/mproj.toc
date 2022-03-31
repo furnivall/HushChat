@@ -10,80 +10,68 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Existing applications in this field}{3}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.1}Telegram}{3}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Issues in existing applications}{5}{section.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.2}Whatsapp}{3}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.3}User Personas}{5}{section.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.3}Signal}{3}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.4}Requirements}{6}{section.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.4}Comparison of existing applications}{3}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.4.1}MoSCoW table}{6}{subsection.2.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Issues}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.5}User stories}{7}{section.2.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Closed source}{3}{subsection.2.2.1}%
+\contentsline {chapter}{\numberline {3}Design and \\ Implementation}{9}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}Tradeoffs between security and usability features}{3}{subsection.2.2.2}%
+\contentsline {section}{\numberline {3.1}High Level Architecture}{9}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.3}Nation state control}{3}{subsection.2.2.3}%
+\contentsline {section}{\numberline {3.2}WebSockets vs REST API}{9}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}User Personas}{3}{section.2.3}%
+\contentsline {section}{\numberline {3.3}Encryption Implementation}{10}{section.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Features}{3}{section.2.4}%
+\contentsline {section}{\numberline {3.4}Self-destructing Messages}{12}{section.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.1}Self-destructing messages}{3}{subsection.2.4.1}%
+\contentsline {section}{\numberline {3.5}Persistence of users after disconnects}{12}{section.3.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.2}End-to-end encryption}{3}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {3.5.1}Storage of self-destruct duration}{13}{subsection.3.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Design and \\ Implementation}{4}{chapter.3}%
+\contentsline {section}{\numberline {3.6}Message Propagation}{13}{section.3.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}High Level Architecture}{4}{section.3.1}%
+\contentsline {section}{\numberline {3.7}Design Patterns}{14}{section.3.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}WebSockets vs REST API}{4}{section.3.2}%
+\contentsline {section}{\numberline {3.8}User Interface and Visual Design}{15}{section.3.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Encryption Implementation}{5}{section.3.3}%
+\contentsline {section}{\numberline {3.9}Development tooling}{15}{section.3.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Self-destructing Messages}{7}{section.3.4}%
+\contentsline {subsection}{\numberline {3.9.1}Client}{15}{subsection.3.9.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Persistence of users after disconnects}{7}{section.3.5}%
+\contentsline {subsubsection}{Development and debugging process}{16}{subsubsection*.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.1}Storage of self-destruct duration}{7}{subsection.3.5.1}%
+\contentsline {subsubsection}{Key Dependencies}{16}{subsubsection*.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Message Propagation}{8}{section.3.6}%
+\contentsline {subsection}{\numberline {3.9.2}Server}{17}{subsection.3.9.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.7}Design Patterns}{8}{section.3.7}%
+\contentsline {subsubsection}{Key Dependencies}{17}{subsubsection*.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.8}Development tooling}{9}{section.3.8}%
+\contentsline {subsubsection}{Deployment}{17}{subsubsection*.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.8.1}Client}{9}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.9.3}Final report}{17}{subsection.3.9.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Development and debugging process}{9}{subsubsection*.2}%
+\contentsline {subsection}{\numberline {3.9.4}Version Control}{17}{subsection.3.9.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Key Dependencies}{10}{subsubsection*.3}%
+\contentsline {chapter}{\numberline {4}Evaluation \& Testing}{18}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.8.2}Server}{10}{subsection.3.8.2}%
+\contentsline {section}{\numberline {4.1}User evaluations}{18}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Key Dependencies}{11}{subsubsection*.4}%
+\contentsline {subsection}{\numberline {4.1.1}Methodology}{18}{subsection.4.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Deployment}{11}{subsubsection*.5}%
+\contentsline {subsection}{\numberline {4.1.2}Demographics}{18}{subsection.4.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.8.3}Final report}{11}{subsection.3.8.3}%
+\contentsline {subsection}{\numberline {4.1.3}Issues highlighted}{18}{subsection.4.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.8.4}Version Control}{11}{subsection.3.8.4}%
+\contentsline {chapter}{\numberline {5}Conclusion}{19}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Evaluation \& Testing}{12}{chapter.4}%
+\contentsline {chapter}{\numberline {A}First appendix}{20}{appendix.A}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}User evaluations}{12}{section.4.1}%
+\contentsline {section}{\numberline {A.1}Section of first appendix}{20}{section.A.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Methodology}{12}{subsection.4.1.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Demographics}{12}{subsection.4.1.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.3}Issues highlighted}{12}{subsection.4.1.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Conclusion}{13}{chapter.5}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}First appendix}{14}{appendix.A}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Section of first appendix}{14}{section.A.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Second appendix}{15}{appendix.B}%
+\contentsline {chapter}{\numberline {B}Second appendix}{21}{appendix.B}%
