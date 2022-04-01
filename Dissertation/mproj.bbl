@@ -18,78 +18,7 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global}
-    \entry{alwen2019double}{inproceedings}{}
-      \name{author}{3}{}{%
-        {{hash=3ee993388b23738b0ebba708ee0c9fdf}{%
-           family={Alwen},
-           familyi={A\bibinitperiod},
-           given={Jo{ë}l},
-           giveni={J\bibinitperiod}}}%
-        {{hash=4b608b6ed2b83da239ee2fdd3cb7c124}{%
-           family={Coretti},
-           familyi={C\bibinitperiod},
-           given={Sandro},
-           giveni={S\bibinitperiod}}}%
-        {{hash=21ac2ee1e3dbf5809549b834bf94ba2e}{%
-           family={Dodis},
-           familyi={D\bibinitperiod},
-           given={Yevgeniy},
-           giveni={Y\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{42474b56ac813c2792a971b6a2f8bd3a}
-      \strng{fullhash}{42474b56ac813c2792a971b6a2f8bd3a}
-      \strng{bibnamehash}{42474b56ac813c2792a971b6a2f8bd3a}
-      \strng{authorbibnamehash}{42474b56ac813c2792a971b6a2f8bd3a}
-      \strng{authornamehash}{42474b56ac813c2792a971b6a2f8bd3a}
-      \strng{authorfullhash}{42474b56ac813c2792a971b6a2f8bd3a}
-      \field{sortinit}{A}
-      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Annual International Conference on the Theory and Applications of Cryptographic Techniques}
-      \field{title}{The double ratchet: security notions, proofs, and modularization for the signal protocol}
-      \field{year}{2019}
-      \field{pages}{129\bibrangedash 158}
-      \range{pages}{30}
-    \endentry
-    \entry{apvrille2005secure}{article}{}
-      \name{author}{2}{}{%
-        {{hash=f3e8371f4599bc6dc64b48bfa7c3a86d}{%
-           family={Apvrille},
-           familyi={A\bibinitperiod},
-           given={Axelle},
-           giveni={A\bibinitperiod}}}%
-        {{hash=7dc5310188aa3dd5fb90d51a6dede10b}{%
-           family={Pourzandi},
-           familyi={P\bibinitperiod},
-           given={Makan},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{b1dd4a8355b244884e4d4a3755f5e1d0}
-      \strng{fullhash}{b1dd4a8355b244884e4d4a3755f5e1d0}
-      \strng{bibnamehash}{b1dd4a8355b244884e4d4a3755f5e1d0}
-      \strng{authorbibnamehash}{b1dd4a8355b244884e4d4a3755f5e1d0}
-      \strng{authornamehash}{b1dd4a8355b244884e4d4a3755f5e1d0}
-      \strng{authorfullhash}{b1dd4a8355b244884e4d4a3755f5e1d0}
-      \field{sortinit}{A}
-      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Security \& Privacy}
-      \field{number}{4}
-      \field{title}{Secure software development by example}
-      \field{volume}{3}
-      \field{year}{2005}
-      \field{pages}{10\bibrangedash 17}
-      \range{pages}{8}
-    \endentry
+  \datalist[entry]{none/global//global/global}
     \entry{baeza2022attention}{incollection}{}
       \name{author}{2}{}{%
         {{hash=14e9e2c7e918f62ba13b9e040fb7f468}{%
@@ -112,8 +41,8 @@
       \strng{authorbibnamehash}{7f2be0e1cecf5f7c96feba92105eed2b}
       \strng{authornamehash}{7f2be0e1cecf5f7c96feba92105eed2b}
       \strng{authorfullhash}{7f2be0e1cecf5f7c96feba92105eed2b}
-      \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Perspectives on Digital Humanism}
@@ -122,171 +51,34 @@
       \field{pages}{123\bibrangedash 134}
       \range{pages}{12}
     \endentry
-    \entry{berghel2018malice}{article}{}
+    \entry{walter2005kryder}{article}{}
       \name{author}{1}{}{%
-        {{hash=363760c2f0efb1290d39c9c07551a497}{%
-           family={Berghel},
-           familyi={B\bibinitperiod},
-           given={Hal},
-           giveni={H\bibinitperiod}}}%
+        {{hash=9a42aa8371605aea475ee6ae7b978074}{%
+           family={Walter},
+           familyi={W\bibinitperiod},
+           given={Chip},
+           giveni={C\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
-        {IEEE}%
+        {Scientific American, a division of Nature America, Inc.}%
       }
-      \strng{namehash}{363760c2f0efb1290d39c9c07551a497}
-      \strng{fullhash}{363760c2f0efb1290d39c9c07551a497}
-      \strng{bibnamehash}{363760c2f0efb1290d39c9c07551a497}
-      \strng{authorbibnamehash}{363760c2f0efb1290d39c9c07551a497}
-      \strng{authornamehash}{363760c2f0efb1290d39c9c07551a497}
-      \strng{authorfullhash}{363760c2f0efb1290d39c9c07551a497}
-      \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \strng{namehash}{9a42aa8371605aea475ee6ae7b978074}
+      \strng{fullhash}{9a42aa8371605aea475ee6ae7b978074}
+      \strng{bibnamehash}{9a42aa8371605aea475ee6ae7b978074}
+      \strng{authorbibnamehash}{9a42aa8371605aea475ee6ae7b978074}
+      \strng{authornamehash}{9a42aa8371605aea475ee6ae7b978074}
+      \strng{authorfullhash}{9a42aa8371605aea475ee6ae7b978074}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Computer}
-      \field{number}{5}
-      \field{title}{Malice domestic: The Cambridge analytica dystopia}
-      \field{volume}{51}
-      \field{year}{2018}
-      \field{pages}{84\bibrangedash 89}
-      \range{pages}{6}
-    \endentry
-    \entry{brown2001software}{inproceedings}{}
-      \name{author}{4}{}{%
-        {{hash=165a5da0696c74de50a07a9ec22071a4}{%
-           family={Brown},
-           familyi={B\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
-        {{hash=926e07a141f2de2376cb10d3756b799a}{%
-           family={Hankerson},
-           familyi={H\bibinitperiod},
-           given={Darrel},
-           giveni={D\bibinitperiod}}}%
-        {{hash=beedb3a4a6b091d59347ccabea308a03}{%
-           family={L{ó}pez},
-           familyi={L\bibinitperiod},
-           given={Julio},
-           giveni={J\bibinitperiod}}}%
-        {{hash=cb55c3f91b161f769bbc07a763c8edaf}{%
-           family={Menezes},
-           familyi={M\bibinitperiod},
-           given={Alfred},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{afa4440eafd2506aeade800578e9d787}
-      \strng{fullhash}{afa4440eafd2506aeade800578e9d787}
-      \strng{bibnamehash}{afa4440eafd2506aeade800578e9d787}
-      \strng{authorbibnamehash}{afa4440eafd2506aeade800578e9d787}
-      \strng{authornamehash}{afa4440eafd2506aeade800578e9d787}
-      \strng{authorfullhash}{afa4440eafd2506aeade800578e9d787}
-      \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Cryptographers’ Track at the RSA Conference}
-      \field{title}{Software implementation of the NIST elliptic curves over prime fields}
-      \field{year}{2001}
-      \field{pages}{250\bibrangedash 265}
-      \range{pages}{16}
-    \endentry
-    \entry{cooijmans2014analysis}{inproceedings}{}
-      \name{author}{3}{}{%
-        {{hash=36bbf7c92ef15c3fda3256c5543cb1f1}{%
-           family={Cooijmans},
-           familyi={C\bibinitperiod},
-           given={Tim},
-           giveni={T\bibinitperiod}}}%
-        {{hash=d143104abb71c9d588f149d00ac71929}{%
-           family={Ruiter},
-           familyi={R\bibinitperiod},
-           given={Joeri},
-           giveni={J\bibinitperiod},
-           prefix={de},
-           prefixi={d\bibinitperiod}}}%
-        {{hash=364d5fb828bd5cb251943d1828b895db}{%
-           family={Poll},
-           familyi={P\bibinitperiod},
-           given={Erik},
-           giveni={E\bibinitperiod}}}%
-      }
-      \strng{namehash}{91259f54d91e53e8c6aaeb819108bfc4}
-      \strng{fullhash}{91259f54d91e53e8c6aaeb819108bfc4}
-      \strng{bibnamehash}{91259f54d91e53e8c6aaeb819108bfc4}
-      \strng{authorbibnamehash}{91259f54d91e53e8c6aaeb819108bfc4}
-      \strng{authornamehash}{91259f54d91e53e8c6aaeb819108bfc4}
-      \strng{authorfullhash}{91259f54d91e53e8c6aaeb819108bfc4}
-      \field{sortinit}{C}
-      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the 4th ACM Workshop on Security and Privacy in Smartphones \& Mobile Devices}
-      \field{title}{Analysis of secure key storage solutions on android}
-      \field{year}{2014}
-      \field{pages}{11\bibrangedash 20}
-      \range{pages}{10}
-    \endentry
-    \entry{dalpiaz2018agile}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=3f54cb979b2acef159b6dc547fe7aa2f}{%
-           family={Dalpiaz},
-           familyi={D\bibinitperiod},
-           given={Fabiano},
-           giveni={F\bibinitperiod}}}%
-        {{hash=36f3e1603b7079434f398edd9a173762}{%
-           family={Brinkkemper},
-           familyi={B\bibinitperiod},
-           given={Sjaak},
-           giveni={S\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{ca858bef8e6560049358acb7af6524a9}
-      \strng{fullhash}{ca858bef8e6560049358acb7af6524a9}
-      \strng{bibnamehash}{ca858bef8e6560049358acb7af6524a9}
-      \strng{authorbibnamehash}{ca858bef8e6560049358acb7af6524a9}
-      \strng{authornamehash}{ca858bef8e6560049358acb7af6524a9}
-      \strng{authorfullhash}{ca858bef8e6560049358acb7af6524a9}
-      \field{sortinit}{D}
-      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2018 IEEE 26th International Requirements Engineering Conference (RE)}
-      \field{title}{Agile requirements engineering with user stories}
-      \field{year}{2018}
-      \field{pages}{506\bibrangedash 507}
-      \range{pages}{2}
-    \endentry
-    \entry{eales2005observer}{article}{}
-      \name{author}{2}{}{%
-        {{hash=fde2aa69e8910cd9130e27ab7b512468}{%
-           family={Eales},
-           familyi={E\bibinitperiod},
-           given={Andrew},
-           giveni={A\bibinitperiod}}}%
-        {{hash=fde2aa69e8910cd9130e27ab7b512468}{%
-           family={Eales},
-           familyi={E\bibinitperiod},
-           given={Andrew},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{d2361dc15ee4cd5613b1c6e607f70c9f}
-      \strng{fullhash}{d2361dc15ee4cd5613b1c6e607f70c9f}
-      \strng{bibnamehash}{d2361dc15ee4cd5613b1c6e607f70c9f}
-      \strng{authorbibnamehash}{d2361dc15ee4cd5613b1c6e607f70c9f}
-      \strng{authornamehash}{d2361dc15ee4cd5613b1c6e607f70c9f}
-      \strng{authorfullhash}{d2361dc15ee4cd5613b1c6e607f70c9f}
-      \field{sortinit}{E}
-      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Educating, Innovating \& Transforming: Educators in IT: Concise paper}
-      \field{title}{The observer pattern revisited}
+      \field{journaltitle}{Scientific American}
+      \field{number}{2}
+      \field{title}{Kryder’s law}
+      \field{volume}{293}
       \field{year}{2005}
+      \field{pages}{32\bibrangedash 33}
+      \range{pages}{2}
     \endentry
     \entry{farahat2012effective}{inproceedings}{}
       \name{author}{2}{}{%
@@ -307,8 +99,8 @@
       \strng{authorbibnamehash}{6ba4831a96414736218a9a90c0976a41}
       \strng{authornamehash}{6ba4831a96414736218a9a90c0976a41}
       \strng{authorfullhash}{6ba4831a96414736218a9a90c0976a41}
-      \field{sortinit}{F}
-      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 21st international conference on World Wide Web}
@@ -317,295 +109,97 @@
       \field{pages}{111\bibrangedash 120}
       \range{pages}{10}
     \endentry
-    \entry{fette2011websocket}{misc}{}
+    \entry{pantelis2013understanding}{inproceedings}{}
       \name{author}{2}{}{%
-        {{hash=cdf249d29ccc7edcf24f6bfef0893ebd}{%
-           family={Fette},
-           familyi={F\bibinitperiod},
-           given={Ian},
-           giveni={I\bibinitperiod}}}%
-        {{hash=8fa97ca9bca09f72482fe5f985ecef60}{%
-           family={Melnikov},
-           familyi={M\bibinitperiod},
-           given={Alexey},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {RFC 6455, December}%
-      }
-      \strng{namehash}{a413dbe318e95f69f8330db28642e805}
-      \strng{fullhash}{a413dbe318e95f69f8330db28642e805}
-      \strng{bibnamehash}{a413dbe318e95f69f8330db28642e805}
-      \strng{authorbibnamehash}{a413dbe318e95f69f8330db28642e805}
-      \strng{authornamehash}{a413dbe318e95f69f8330db28642e805}
-      \strng{authorfullhash}{a413dbe318e95f69f8330db28642e805}
-      \field{sortinit}{F}
-      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{The websocket protocol}
-      \field{year}{2011}
-    \endentry
-    \entry{martinezECIES}{article}{}
-      \name{author}{3}{}{%
-        {{hash=bcb3e7a065502a76c7c2a43daed01579}{%
-           family={Gayoso\bibnamedelima Martínez},
-           familyi={G\bibinitperiod\bibinitdelim M\bibinitperiod},
-           given={Víctor},
-           giveni={V\bibinitperiod}}}%
-        {{hash=1c363a26dabf722c13ddeef2cec45c1c}{%
-           family={Hernandez\bibnamedelima Encinas},
-           familyi={H\bibinitperiod\bibinitdelim E\bibinitperiod},
-           given={Luis},
+        {{hash=4f9f1368f42213bd5ff901b06600c9bb}{%
+           family={Pantelis},
+           familyi={P\bibinitperiod},
+           given={Koutroumpis},
+           giveni={K\bibinitperiod}}}%
+        {{hash=3cb24666b9d1cb2fde57cb1a18758ee8}{%
+           family={Aija},
+           familyi={A\bibinitperiod},
+           given={Leiponen},
            giveni={L\bibinitperiod}}}%
-        {{hash=2b00e775c0a3d6ee7f903222be0b40b9}{%
-           family={Queiruga-Dios},
-           familyi={Q\bibinithyphendelim D\bibinitperiod},
-           given={Araceli},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{c4071d96a2cf7c4368604e6e95968b83}
-      \strng{fullhash}{c4071d96a2cf7c4368604e6e95968b83}
-      \strng{bibnamehash}{c4071d96a2cf7c4368604e6e95968b83}
-      \strng{authorbibnamehash}{c4071d96a2cf7c4368604e6e95968b83}
-      \strng{authornamehash}{c4071d96a2cf7c4368604e6e95968b83}
-      \strng{authorfullhash}{c4071d96a2cf7c4368604e6e95968b83}
-      \field{sortinit}{G}
-      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Cryptologia}
-      \field{month}{05}
-      \field{title}{Security and Practical Considerations When Implementing the Elliptic Curve Integrated Encryption Scheme}
-      \field{volume}{39}
-      \field{year}{2015}
-      \field{pages}{1\bibrangedash 26}
-      \range{pages}{26}
-      \verb{doi}
-      \verb 10.1080/01611194.2014.988363
-      \endverb
-    \endentry
-    \entry{gobi2015comparative}{inproceedings}{}
-      \name{author}{3}{}{%
-        {{hash=bd384d282043f46c96b5685a72d89aca}{%
-           family={Gobi},
-           familyi={G\bibinitperiod},
-           given={M},
-           giveni={M\bibinitperiod}}}%
-        {{hash=08a98f395b2ee6488cd2aaee869174c5}{%
-           family={Sridevi},
-           familyi={S\bibinitperiod},
-           given={R},
-           giveni={R\bibinitperiod}}}%
-        {{hash=6bed203fb079313a005ab8bb885b9db1}{%
-           family={Rahini},
-           familyi={R\bibinitperiod},
-           given={R},
-           giveni={R\bibinitperiod}}}%
-      }
-      \strng{namehash}{ac7a5e3252dcdf9a3cf7205fca02a198}
-      \strng{fullhash}{ac7a5e3252dcdf9a3cf7205fca02a198}
-      \strng{bibnamehash}{ac7a5e3252dcdf9a3cf7205fca02a198}
-      \strng{authorbibnamehash}{ac7a5e3252dcdf9a3cf7205fca02a198}
-      \strng{authornamehash}{ac7a5e3252dcdf9a3cf7205fca02a198}
-      \strng{authorfullhash}{ac7a5e3252dcdf9a3cf7205fca02a198}
-      \field{sortinit}{G}
-      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of Conference on Advanced Networking and Applications}
-      \field{title}{A comparative study on the performance and the security of RSA and ECC algorithm}
-      \field{year}{2015}
-    \endentry
-    \entry{androiddevelopers}{misc}{}
-      \field{sortinit}{G}
-      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Android Developers}
-      \field{title}{Guide to app architecture - Android Developers}
-      \verb{urlraw}
-      \verb https://developer.android.com/jetpack/guide#recommended-app-arch
-      \endverb
-      \verb{url}
-      \verb https://developer.android.com/jetpack/guide#recommended-app-arch
-      \endverb
-    \endentry
-    \entry{harmes2008adapter}{article}{}
-      \name{author}{2}{}{%
-        {{hash=9c89eed13796a6c173a39339cff20a56}{%
-           family={Harmes},
-           familyi={H\bibinitperiod},
-           given={Ross},
-           giveni={R\bibinitperiod}}}%
-        {{hash=635ce4f1b8d713ec936a9ef96c60ff60}{%
-           family={Diaz},
-           familyi={D\bibinitperiod},
-           given={Dustin},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{09a131902c61f94f333abc6ad1b2a81f}
-      \strng{fullhash}{09a131902c61f94f333abc6ad1b2a81f}
-      \strng{bibnamehash}{09a131902c61f94f333abc6ad1b2a81f}
-      \strng{authorbibnamehash}{09a131902c61f94f333abc6ad1b2a81f}
-      \strng{authornamehash}{09a131902c61f94f333abc6ad1b2a81f}
-      \strng{authorfullhash}{09a131902c61f94f333abc6ad1b2a81f}
-      \field{sortinit}{H}
-      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Pro JavaScript Design Patterns}
-      \field{title}{The Adapter Pattern}
-      \field{year}{2008}
-      \field{pages}{149\bibrangedash 158}
-      \range{pages}{10}
-    \endentry
-    \entry{haughey2011moscow}{article}{}
-      \name{author}{1}{}{%
-        {{hash=d25ad72084091321139fceaca877ad27}{%
-           family={Haughey},
-           familyi={H\bibinitperiod},
-           given={Duncan},
-           giveni={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{d25ad72084091321139fceaca877ad27}
-      \strng{fullhash}{d25ad72084091321139fceaca877ad27}
-      \strng{bibnamehash}{d25ad72084091321139fceaca877ad27}
-      \strng{authorbibnamehash}{d25ad72084091321139fceaca877ad27}
-      \strng{authornamehash}{d25ad72084091321139fceaca877ad27}
-      \strng{authorfullhash}{d25ad72084091321139fceaca877ad27}
-      \field{sortinit}{H}
-      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Project Smart}
-      \field{title}{Moscow method}
-      \field{year}{2011}
-      \field{pages}{2011}
-      \range{pages}{1}
-    \endentry
-    \entry{herwig2015assessment}{inproceedings}{}
-      \name{author}{3}{}{%
-        {{hash=aa8a4c7dc35a2230190c48585a18a046}{%
-           family={Herwig},
-           familyi={H\bibinitperiod},
-           given={Volker},
-           giveni={V\bibinitperiod}}}%
-        {{hash=a0f5590f3c1b4fae6a2b8b6fecaae732}{%
-           family={Fischer},
-           familyi={F\bibinitperiod},
-           given={Ren{é}},
-           giveni={R\bibinitperiod}}}%
-        {{hash=08cf125105abb1846b6fa8059bd0c959}{%
-           family={Braun},
-           familyi={B\bibinitperiod},
-           given={Peter},
-           giveni={P\bibinitperiod}}}%
       }
       \list{organization}{1}{%
         {IEEE}%
       }
-      \strng{namehash}{e15ca084ac54c42d3058c992b0b4ce18}
-      \strng{fullhash}{e15ca084ac54c42d3058c992b0b4ce18}
-      \strng{bibnamehash}{e15ca084ac54c42d3058c992b0b4ce18}
-      \strng{authorbibnamehash}{e15ca084ac54c42d3058c992b0b4ce18}
-      \strng{authornamehash}{e15ca084ac54c42d3058c992b0b4ce18}
-      \strng{authorfullhash}{e15ca084ac54c42d3058c992b0b4ce18}
-      \field{sortinit}{H}
-      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \strng{namehash}{51989e074386b11430d0884ba7755d1f}
+      \strng{fullhash}{51989e074386b11430d0884ba7755d1f}
+      \strng{bibnamehash}{51989e074386b11430d0884ba7755d1f}
+      \strng{authorbibnamehash}{51989e074386b11430d0884ba7755d1f}
+      \strng{authornamehash}{51989e074386b11430d0884ba7755d1f}
+      \strng{authorfullhash}{51989e074386b11430d0884ba7755d1f}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{2015 IEEE 8th International Conference on Intelligent Data Acquisition and Advanced Computing Systems: Technology and Applications (IDAACS)}
-      \field{title}{Assessment of rest and websocket in regards to their energy consumption for mobile applications}
-      \field{volume}{1}
+      \field{booktitle}{2013 IEEE International Conference on Big Data}
+      \field{title}{Understanding the value of (big) data}
+      \field{year}{2013}
+      \field{pages}{38\bibrangedash 42}
+      \range{pages}{5}
+    \endentry
+    \entry{zawoad2015digital}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=2254fa811f946d914a8cbebf137225bc}{%
+           family={Zawoad},
+           familyi={Z\bibinitperiod},
+           given={Shams},
+           giveni={S\bibinitperiod}}}%
+        {{hash=283ab7917a9e25ffd6077f2064f2006a}{%
+           family={Hasan},
+           familyi={H\bibinitperiod},
+           given={Ragib},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{50bb114b097acd43c1b842c05d8b51c8}
+      \strng{fullhash}{50bb114b097acd43c1b842c05d8b51c8}
+      \strng{bibnamehash}{50bb114b097acd43c1b842c05d8b51c8}
+      \strng{authorbibnamehash}{50bb114b097acd43c1b842c05d8b51c8}
+      \strng{authornamehash}{50bb114b097acd43c1b842c05d8b51c8}
+      \strng{authorfullhash}{50bb114b097acd43c1b842c05d8b51c8}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2015 IEEE 17th International Conference on High Performance Computing and Communications, 2015 IEEE 7th International Symposium on Cyberspace Safety and Security, and 2015 IEEE 12th International Conference on Embedded Software and Systems}
+      \field{title}{Digital forensics in the age of big data: Challenges, approaches, and opportunities}
       \field{year}{2015}
-      \field{pages}{342\bibrangedash 347}
+      \field{pages}{1320\bibrangedash 1325}
       \range{pages}{6}
     \endentry
-    \entry{10.5555/320326}{book}{}
-      \name{author}{2}{}{%
-        {{hash=10383d05f32f2a21518b493a3c546e5c}{%
-           family={Hunt},
-           familyi={H\bibinitperiod},
-           given={Andrew},
-           giveni={A\bibinitperiod}}}%
-        {{hash=b5eb4ac16368112932ff36772cb0b0b5}{%
-           family={Thomas},
-           familyi={T\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {USA}%
+    \entry{simmons2017big}{article}{}
+      \name{author}{1}{}{%
+        {{hash=606fe28c5120c48dca547e20c94c1886}{%
+           family={Simmons},
+           familyi={S\bibinitperiod},
+           given={Ric},
+           giveni={R\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
-        {Addison-Wesley Longman Publishing Co., Inc.}%
+        {HeinOnline}%
       }
-      \strng{namehash}{6551e2d8a523620fdffb6fe4053ca3d5}
-      \strng{fullhash}{6551e2d8a523620fdffb6fe4053ca3d5}
-      \strng{bibnamehash}{6551e2d8a523620fdffb6fe4053ca3d5}
-      \strng{authorbibnamehash}{6551e2d8a523620fdffb6fe4053ca3d5}
-      \strng{authornamehash}{6551e2d8a523620fdffb6fe4053ca3d5}
-      \strng{authorfullhash}{6551e2d8a523620fdffb6fe4053ca3d5}
-      \field{sortinit}{H}
-      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \strng{namehash}{606fe28c5120c48dca547e20c94c1886}
+      \strng{fullhash}{606fe28c5120c48dca547e20c94c1886}
+      \strng{bibnamehash}{606fe28c5120c48dca547e20c94c1886}
+      \strng{authorbibnamehash}{606fe28c5120c48dca547e20c94c1886}
+      \strng{authornamehash}{606fe28c5120c48dca547e20c94c1886}
+      \strng{authorfullhash}{606fe28c5120c48dca547e20c94c1886}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{020161622X}
-      \field{title}{The Pragmatic Programmer: From Journeyman to Master}
-      \field{year}{2000}
-    \endentry
-    \entry{jakobsen2016cca}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=b2af6a784cf41b38b5ba152272f58a04}{%
-           family={Jakobsen},
-           familyi={J\bibinitperiod},
-           given={Jakob},
-           giveni={J\bibinitperiod}}}%
-        {{hash=f9318397ba1dcd187385957b13bc8bee}{%
-           family={Orlandi},
-           familyi={O\bibinitperiod},
-           given={Claudio},
-           giveni={C\bibinitperiod}}}%
-      }
-      \strng{namehash}{8577ecbb91ee6b5ed5d70a1fe1968c1f}
-      \strng{fullhash}{8577ecbb91ee6b5ed5d70a1fe1968c1f}
-      \strng{bibnamehash}{8577ecbb91ee6b5ed5d70a1fe1968c1f}
-      \strng{authorbibnamehash}{8577ecbb91ee6b5ed5d70a1fe1968c1f}
-      \strng{authornamehash}{8577ecbb91ee6b5ed5d70a1fe1968c1f}
-      \strng{authorfullhash}{8577ecbb91ee6b5ed5d70a1fe1968c1f}
-      \field{sortinit}{J}
-      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the 6th Workshop on Security and Privacy in Smartphones and Mobile Devices}
-      \field{title}{On the CCA (in) security of MTProto}
-      \field{year}{2016}
-      \field{pages}{113\bibrangedash 116}
-      \range{pages}{4}
-    \endentry
-    \entry{jansen2020security}{article}{}
-      \name{author}{1}{}{%
-        {{hash=f7a5dabf6470bba80fe2fa3788e90300}{%
-           family={Jansen},
-           familyi={J\bibinitperiod},
-           given={Matthew\bibnamedelima L},
-           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-      }
-      \strng{namehash}{f7a5dabf6470bba80fe2fa3788e90300}
-      \strng{fullhash}{f7a5dabf6470bba80fe2fa3788e90300}
-      \strng{bibnamehash}{f7a5dabf6470bba80fe2fa3788e90300}
-      \strng{authorbibnamehash}{f7a5dabf6470bba80fe2fa3788e90300}
-      \strng{authornamehash}{f7a5dabf6470bba80fe2fa3788e90300}
-      \strng{authorfullhash}{f7a5dabf6470bba80fe2fa3788e90300}
-      \field{sortinit}{J}
-      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{A Security Analysis of the Signal Protocol’s Group Messaging Capabilities in Comparison to Direct Messaging}
-      \field{year}{2020}
+      \field{journaltitle}{Ohio St. J. Crim. L.}
+      \field{title}{Big data and procedural justice: Legitimizing algorithms in the criminal justice system}
+      \field{volume}{15}
+      \field{year}{2017}
+      \field{pages}{573}
+      \range{pages}{1}
     \endentry
     \entry{kreiss2019arbiters}{article}{}
       \name{author}{2}{}{%
@@ -629,8 +223,8 @@
       \strng{authorbibnamehash}{6f1d480ef05df8ab697d0ccc7b19712a}
       \strng{authornamehash}{6f1d480ef05df8ab697d0ccc7b19712a}
       \strng{authorfullhash}{6f1d480ef05df8ab697d0ccc7b19712a}
-      \field{sortinit}{K}
-      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Political Communication}
@@ -641,92 +235,89 @@
       \field{pages}{499\bibrangedash 522}
       \range{pages}{24}
     \endentry
-    \entry{long2004data}{article}{}
-      \name{author}{3}{}{%
-        {{hash=caf3131a2d0f6de0bfd12b5c26aed9ee}{%
-           family={LONG},
-           familyi={L\bibinitperiod},
-           given={SY},
-           giveni={S\bibinitperiod}}}%
-        {{hash=5b7649d0e335bf875e8718e9a582d88f}{%
-           family={LIN},
-           familyi={L\bibinitperiod},
-           given={Han},
+    \entry{berghel2018malice}{article}{}
+      \name{author}{1}{}{%
+        {{hash=363760c2f0efb1290d39c9c07551a497}{%
+           family={Berghel},
+           familyi={B\bibinitperiod},
+           given={Hal},
            giveni={H\bibinitperiod}}}%
-        {{hash=66f7dc7c61ffb10717efb3e177325e83}{%
-           family={CHEN},
-           familyi={C\bibinitperiod},
-           given={XY},
-           giveni={X\bibinitperiod}}}%
-      }
-      \strng{namehash}{7110ffe60da6df312b40e6823eb20147}
-      \strng{fullhash}{7110ffe60da6df312b40e6823eb20147}
-      \strng{bibnamehash}{7110ffe60da6df312b40e6823eb20147}
-      \strng{authorbibnamehash}{7110ffe60da6df312b40e6823eb20147}
-      \strng{authornamehash}{7110ffe60da6df312b40e6823eb20147}
-      \strng{authorfullhash}{7110ffe60da6df312b40e6823eb20147}
-      \field{sortinit}{L}
-      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Computer and Modernization, pp5}
-      \field{title}{Data Access Object Pattern}
-      \field{year}{2004}
-    \endentry
-    \entry{lopez2000overview}{article}{}
-      \name{author}{2}{}{%
-        {{hash=704d489665ff4463add6ebfcc2706df1}{%
-           family={Lopez},
-           familyi={L\bibinitperiod},
-           given={Julio},
-           giveni={J\bibinitperiod}}}%
-        {{hash=fccb0f92618ef2a91e5c8accbd13e304}{%
-           family={Dahab},
-           familyi={D\bibinitperiod},
-           given={Ricardo},
-           giveni={R\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
-        {Citeseer}%
+        {IEEE}%
       }
-      \strng{namehash}{ada064f2fb3c1715430b64d308e4312b}
-      \strng{fullhash}{ada064f2fb3c1715430b64d308e4312b}
-      \strng{bibnamehash}{ada064f2fb3c1715430b64d308e4312b}
-      \strng{authorbibnamehash}{ada064f2fb3c1715430b64d308e4312b}
-      \strng{authornamehash}{ada064f2fb3c1715430b64d308e4312b}
-      \strng{authorfullhash}{ada064f2fb3c1715430b64d308e4312b}
-      \field{sortinit}{L}
-      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \strng{namehash}{363760c2f0efb1290d39c9c07551a497}
+      \strng{fullhash}{363760c2f0efb1290d39c9c07551a497}
+      \strng{bibnamehash}{363760c2f0efb1290d39c9c07551a497}
+      \strng{authorbibnamehash}{363760c2f0efb1290d39c9c07551a497}
+      \strng{authornamehash}{363760c2f0efb1290d39c9c07551a497}
+      \strng{authorfullhash}{363760c2f0efb1290d39c9c07551a497}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{An overview of elliptic curve cryptography}
-      \field{year}{2000}
+      \field{journaltitle}{Computer}
+      \field{number}{5}
+      \field{title}{Malice domestic: The Cambridge analytica dystopia}
+      \field{volume}{51}
+      \field{year}{2018}
+      \field{pages}{84\bibrangedash 89}
+      \range{pages}{6}
     \endentry
-    \entry{mallik2019man}{article}{}
+    \entry{stocker2019facebook}{inproceedings}{}
       \name{author}{1}{}{%
-        {{hash=3cfb7839cef5b830ba34b9bd1de35c37}{%
-           family={Mallik},
-           familyi={M\bibinitperiod},
-           given={Avijit},
-           giveni={A\bibinitperiod}}}%
+        {{hash=231bf78a3e1bd5c8bbdf1b4c0eb387c6}{%
+           family={St{ö}cker},
+           familyi={S\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
       }
-      \strng{namehash}{3cfb7839cef5b830ba34b9bd1de35c37}
-      \strng{fullhash}{3cfb7839cef5b830ba34b9bd1de35c37}
-      \strng{bibnamehash}{3cfb7839cef5b830ba34b9bd1de35c37}
-      \strng{authorbibnamehash}{3cfb7839cef5b830ba34b9bd1de35c37}
-      \strng{authornamehash}{3cfb7839cef5b830ba34b9bd1de35c37}
-      \strng{authorfullhash}{3cfb7839cef5b830ba34b9bd1de35c37}
-      \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{231bf78a3e1bd5c8bbdf1b4c0eb387c6}
+      \strng{fullhash}{231bf78a3e1bd5c8bbdf1b4c0eb387c6}
+      \strng{bibnamehash}{231bf78a3e1bd5c8bbdf1b4c0eb387c6}
+      \strng{authorbibnamehash}{231bf78a3e1bd5c8bbdf1b4c0eb387c6}
+      \strng{authornamehash}{231bf78a3e1bd5c8bbdf1b4c0eb387c6}
+      \strng{authorfullhash}{231bf78a3e1bd5c8bbdf1b4c0eb387c6}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Cyberspace: Jurnal Pendidikan Teknologi Informasi}
-      \field{number}{2}
-      \field{title}{Man-in-the-middle-attack: Understanding in simple words}
-      \field{volume}{2}
+      \field{booktitle}{Multidisciplinary International Symposium on Disinformation in Open Online Media}
+      \field{title}{How facebook and google accidentally created a perfect ecosystem for targeted disinformation}
       \field{year}{2019}
-      \field{pages}{109\bibrangedash 134}
-      \range{pages}{26}
+      \field{pages}{129\bibrangedash 149}
+      \range{pages}{21}
+    \endentry
+    \entry{sommer2022evidence}{article}{}
+      \name{author}{1}{}{%
+        {{hash=42a1c721771cad9dc0a7926fa808094d}{%
+           family={Sommer},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{42a1c721771cad9dc0a7926fa808094d}
+      \strng{fullhash}{42a1c721771cad9dc0a7926fa808094d}
+      \strng{bibnamehash}{42a1c721771cad9dc0a7926fa808094d}
+      \strng{authorbibnamehash}{42a1c721771cad9dc0a7926fa808094d}
+      \strng{authornamehash}{42a1c721771cad9dc0a7926fa808094d}
+      \strng{authorfullhash}{42a1c721771cad9dc0a7926fa808094d}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Forensic Science International: Digital Investigation}
+      \field{title}{Evidence from hacking: A few tiresome problems}
+      \field{volume}{40}
+      \field{year}{2022}
+      \field{pages}{301333}
+      \range{pages}{1}
     \endentry
     \entry{marczak2018hide}{report}{}
       \name{author}{5}{}{%
@@ -762,131 +353,13 @@
       \strng{authorbibnamehash}{6ffa9224641f48e87048b2f8e839655b}
       \strng{authornamehash}{6ffa9224641f48e87048b2f8e839655b}
       \strng{authorfullhash}{6ffa9224641f48e87048b2f8e839655b}
-      \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{HIDE AND SEEK: Tracking NSO Group’s Pegasus Spyware to operations in 45 countries}
       \field{type}{techreport}
       \field{year}{2018}
-    \endentry
-    \entry{martin2000design}{article}{}
-      \name{author}{1}{}{%
-        {{hash=6f41df64eb0dc4855be70172368604c2}{%
-           family={Martin},
-           familyi={M\bibinitperiod},
-           given={Robert\bibnamedelima C},
-           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-      }
-      \strng{namehash}{6f41df64eb0dc4855be70172368604c2}
-      \strng{fullhash}{6f41df64eb0dc4855be70172368604c2}
-      \strng{bibnamehash}{6f41df64eb0dc4855be70172368604c2}
-      \strng{authorbibnamehash}{6f41df64eb0dc4855be70172368604c2}
-      \strng{authornamehash}{6f41df64eb0dc4855be70172368604c2}
-      \strng{authorfullhash}{6f41df64eb0dc4855be70172368604c2}
-      \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Object Mentor}
-      \field{number}{34}
-      \field{title}{Design principles and design patterns}
-      \field{volume}{1}
-      \field{year}{2000}
-      \field{pages}{597}
-      \range{pages}{1}
-    \endentry
-    \entry{martinez2010comparison}{inproceedings}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{2}{}{%
-        {{hash=49b2ae938bea41380566af2799c2a09e}{%
-           family={Mart{ı́}nez},
-           familyi={M\bibinitperiod},
-           given={V\bibnamedelima Gayoso},
-           giveni={V\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-        {{hash=745af1838c62513df667b532cd6de99a}{%
-           family={Encinas},
-           familyi={E\bibinitperiod},
-           given={L\bibnamedelima Hern{á}ndez},
-           giveni={L\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{b002fe6a7d33323e8e975522d103fe8c}
-      \strng{fullhash}{b002fe6a7d33323e8e975522d103fe8c}
-      \strng{bibnamehash}{b002fe6a7d33323e8e975522d103fe8c}
-      \strng{authorbibnamehash}{b002fe6a7d33323e8e975522d103fe8c}
-      \strng{authornamehash}{b002fe6a7d33323e8e975522d103fe8c}
-      \strng{authorfullhash}{b002fe6a7d33323e8e975522d103fe8c}
-      \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2010 Sixth International Conference on Information Assurance and Security}
-      \field{title}{A comparison of the standardized versions of ECIES}
-      \field{year}{2010}
-      \field{pages}{1\bibrangedash 4}
-      \range{pages}{4}
-    \endentry
-    \entry{masse2011rest}{book}{}
-      \name{author}{1}{}{%
-        {{hash=d17b34343fbf45b0a0ec9962f1ac0431}{%
-           family={Masse},
-           familyi={M\bibinitperiod},
-           given={Mark},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {" O'Reilly Media, Inc."}%
-      }
-      \strng{namehash}{d17b34343fbf45b0a0ec9962f1ac0431}
-      \strng{fullhash}{d17b34343fbf45b0a0ec9962f1ac0431}
-      \strng{bibnamehash}{d17b34343fbf45b0a0ec9962f1ac0431}
-      \strng{authorbibnamehash}{d17b34343fbf45b0a0ec9962f1ac0431}
-      \strng{authornamehash}{d17b34343fbf45b0a0ec9962f1ac0431}
-      \strng{authorfullhash}{d17b34343fbf45b0a0ec9962f1ac0431}
-      \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{REST API design rulebook: designing consistent RESTful web service interfaces}
-      \field{year}{2011}
-    \endentry
-    \entry{maurer2000diffie}{article}{}
-      \name{author}{2}{}{%
-        {{hash=8eb7e08defcd0ce3048cad4d74711238}{%
-           family={Maurer},
-           familyi={M\bibinitperiod},
-           given={Ueli\bibnamedelima M},
-           giveni={U\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=0aca8ce3df36b80aaacca8e6686ec1f1}{%
-           family={Wolf},
-           familyi={W\bibinitperiod},
-           given={Stefan},
-           giveni={S\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{5806b90621ddbaf8335575b8aa3b378e}
-      \strng{fullhash}{5806b90621ddbaf8335575b8aa3b378e}
-      \strng{bibnamehash}{5806b90621ddbaf8335575b8aa3b378e}
-      \strng{authorbibnamehash}{5806b90621ddbaf8335575b8aa3b378e}
-      \strng{authornamehash}{5806b90621ddbaf8335575b8aa3b378e}
-      \strng{authorfullhash}{5806b90621ddbaf8335575b8aa3b378e}
-      \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Designs, Codes and Cryptography}
-      \field{number}{2}
-      \field{title}{The Diffie--Hellman protocol}
-      \field{volume}{19}
-      \field{year}{2000}
-      \field{pages}{147\bibrangedash 171}
-      \range{pages}{25}
     \endentry
     \entry{mazzetti2019new}{article}{}
       \name{author}{4}{}{%
@@ -917,8 +390,8 @@
       \strng{authorbibnamehash}{a07e08aa64db354e6eb1c338ec8d2b75}
       \strng{authornamehash}{a07e08aa64db354e6eb1c338ec8d2b75}
       \strng{authorfullhash}{a07e08aa64db354e6eb1c338ec8d2b75}
-      \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The New York Times}
@@ -928,37 +401,300 @@
       \field{pages}{2019}
       \range{pages}{1}
     \endentry
-    \entry{pantelis2013understanding}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=4f9f1368f42213bd5ff901b06600c9bb}{%
-           family={Pantelis},
-           familyi={P\bibinitperiod},
-           given={Koutroumpis},
-           giveni={K\bibinitperiod}}}%
-        {{hash=3cb24666b9d1cb2fde57cb1a18758ee8}{%
-           family={Aija},
+    \entry{alwen2019double}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=3ee993388b23738b0ebba708ee0c9fdf}{%
+           family={Alwen},
            familyi={A\bibinitperiod},
-           given={Leiponen},
-           giveni={L\bibinitperiod}}}%
+           given={Jo{ë}l},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4b608b6ed2b83da239ee2fdd3cb7c124}{%
+           family={Coretti},
+           familyi={C\bibinitperiod},
+           given={Sandro},
+           giveni={S\bibinitperiod}}}%
+        {{hash=21ac2ee1e3dbf5809549b834bf94ba2e}{%
+           family={Dodis},
+           familyi={D\bibinitperiod},
+           given={Yevgeniy},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{42474b56ac813c2792a971b6a2f8bd3a}
+      \strng{fullhash}{42474b56ac813c2792a971b6a2f8bd3a}
+      \strng{bibnamehash}{42474b56ac813c2792a971b6a2f8bd3a}
+      \strng{authorbibnamehash}{42474b56ac813c2792a971b6a2f8bd3a}
+      \strng{authornamehash}{42474b56ac813c2792a971b6a2f8bd3a}
+      \strng{authorfullhash}{42474b56ac813c2792a971b6a2f8bd3a}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Annual International Conference on the Theory and Applications of Cryptographic Techniques}
+      \field{title}{The double ratchet: security notions, proofs, and modularization for the signal protocol}
+      \field{year}{2019}
+      \field{pages}{129\bibrangedash 158}
+      \range{pages}{30}
+    \endentry
+    \entry{jakobsen2016cca}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=b2af6a784cf41b38b5ba152272f58a04}{%
+           family={Jakobsen},
+           familyi={J\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f9318397ba1dcd187385957b13bc8bee}{%
+           family={Orlandi},
+           familyi={O\bibinitperiod},
+           given={Claudio},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{8577ecbb91ee6b5ed5d70a1fe1968c1f}
+      \strng{fullhash}{8577ecbb91ee6b5ed5d70a1fe1968c1f}
+      \strng{bibnamehash}{8577ecbb91ee6b5ed5d70a1fe1968c1f}
+      \strng{authorbibnamehash}{8577ecbb91ee6b5ed5d70a1fe1968c1f}
+      \strng{authornamehash}{8577ecbb91ee6b5ed5d70a1fe1968c1f}
+      \strng{authorfullhash}{8577ecbb91ee6b5ed5d70a1fe1968c1f}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 6th Workshop on Security and Privacy in Smartphones and Mobile Devices}
+      \field{title}{On the CCA (in) security of MTProto}
+      \field{year}{2016}
+      \field{pages}{113\bibrangedash 116}
+      \range{pages}{4}
+    \endentry
+    \entry{jansen2020security}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f7a5dabf6470bba80fe2fa3788e90300}{%
+           family={Jansen},
+           familyi={J\bibinitperiod},
+           given={Matthew\bibnamedelima L},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{f7a5dabf6470bba80fe2fa3788e90300}
+      \strng{fullhash}{f7a5dabf6470bba80fe2fa3788e90300}
+      \strng{bibnamehash}{f7a5dabf6470bba80fe2fa3788e90300}
+      \strng{authorbibnamehash}{f7a5dabf6470bba80fe2fa3788e90300}
+      \strng{authornamehash}{f7a5dabf6470bba80fe2fa3788e90300}
+      \strng{authorfullhash}{f7a5dabf6470bba80fe2fa3788e90300}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A Security Analysis of the Signal Protocol’s Group Messaging Capabilities in Comparison to Direct Messaging}
+      \field{year}{2020}
+    \endentry
+    \entry{cooper1999inmates}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=d78505b492960cdf2af17b725dcb25e2}{%
+           family={Cooper},
+           familyi={C\bibinitperiod},
+           given={Alan},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{d78505b492960cdf2af17b725dcb25e2}
+      \strng{fullhash}{d78505b492960cdf2af17b725dcb25e2}
+      \strng{bibnamehash}{d78505b492960cdf2af17b725dcb25e2}
+      \strng{authorbibnamehash}{d78505b492960cdf2af17b725dcb25e2}
+      \strng{authornamehash}{d78505b492960cdf2af17b725dcb25e2}
+      \strng{authorfullhash}{d78505b492960cdf2af17b725dcb25e2}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Software-Ergonomie’99}
+      \field{title}{The inmates are running the asylum}
+      \field{year}{1999}
+      \field{pages}{17\bibrangedash 17}
+      \range{pages}{1}
+    \endentry
+    \entry{miaskiewicz2011personas}{article}{}
+      \name{author}{2}{}{%
+        {{hash=80a2e8022c97744a6eef530a6a7dfc3e}{%
+           family={Miaskiewicz},
+           familyi={M\bibinitperiod},
+           given={Tomasz},
+           giveni={T\bibinitperiod}}}%
+        {{hash=940917de8dd08630edb033164151f241}{%
+           family={Kozar},
+           familyi={K\bibinitperiod},
+           given={Kenneth\bibnamedelima A},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{99ef40928d0603220463dc8f103a3702}
+      \strng{fullhash}{99ef40928d0603220463dc8f103a3702}
+      \strng{bibnamehash}{99ef40928d0603220463dc8f103a3702}
+      \strng{authorbibnamehash}{99ef40928d0603220463dc8f103a3702}
+      \strng{authornamehash}{99ef40928d0603220463dc8f103a3702}
+      \strng{authorfullhash}{99ef40928d0603220463dc8f103a3702}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Design studies}
+      \field{number}{5}
+      \field{title}{Personas and user-centered design: How can personas benefit product design processes?}
+      \field{volume}{32}
+      \field{year}{2011}
+      \field{pages}{417\bibrangedash 430}
+      \range{pages}{14}
+    \endentry
+    \entry{haughey2011moscow}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d25ad72084091321139fceaca877ad27}{%
+           family={Haughey},
+           familyi={H\bibinitperiod},
+           given={Duncan},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{d25ad72084091321139fceaca877ad27}
+      \strng{fullhash}{d25ad72084091321139fceaca877ad27}
+      \strng{bibnamehash}{d25ad72084091321139fceaca877ad27}
+      \strng{authorbibnamehash}{d25ad72084091321139fceaca877ad27}
+      \strng{authornamehash}{d25ad72084091321139fceaca877ad27}
+      \strng{authorfullhash}{d25ad72084091321139fceaca877ad27}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Project Smart}
+      \field{title}{Moscow method}
+      \field{year}{2011}
+      \field{pages}{2011}
+      \range{pages}{1}
+    \endentry
+    \entry{dalpiaz2018agile}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=3f54cb979b2acef159b6dc547fe7aa2f}{%
+           family={Dalpiaz},
+           familyi={D\bibinitperiod},
+           given={Fabiano},
+           giveni={F\bibinitperiod}}}%
+        {{hash=36f3e1603b7079434f398edd9a173762}{%
+           family={Brinkkemper},
+           familyi={B\bibinitperiod},
+           given={Sjaak},
+           giveni={S\bibinitperiod}}}%
       }
       \list{organization}{1}{%
         {IEEE}%
       }
-      \strng{namehash}{51989e074386b11430d0884ba7755d1f}
-      \strng{fullhash}{51989e074386b11430d0884ba7755d1f}
-      \strng{bibnamehash}{51989e074386b11430d0884ba7755d1f}
-      \strng{authorbibnamehash}{51989e074386b11430d0884ba7755d1f}
-      \strng{authornamehash}{51989e074386b11430d0884ba7755d1f}
-      \strng{authorfullhash}{51989e074386b11430d0884ba7755d1f}
-      \field{sortinit}{P}
-      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \strng{namehash}{ca858bef8e6560049358acb7af6524a9}
+      \strng{fullhash}{ca858bef8e6560049358acb7af6524a9}
+      \strng{bibnamehash}{ca858bef8e6560049358acb7af6524a9}
+      \strng{authorbibnamehash}{ca858bef8e6560049358acb7af6524a9}
+      \strng{authornamehash}{ca858bef8e6560049358acb7af6524a9}
+      \strng{authorfullhash}{ca858bef8e6560049358acb7af6524a9}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{2013 IEEE International Conference on Big Data}
-      \field{title}{Understanding the value of (big) data}
-      \field{year}{2013}
-      \field{pages}{38\bibrangedash 42}
-      \range{pages}{5}
+      \field{booktitle}{2018 IEEE 26th International Requirements Engineering Conference (RE)}
+      \field{title}{Agile requirements engineering with user stories}
+      \field{year}{2018}
+      \field{pages}{506\bibrangedash 507}
+      \range{pages}{2}
+    \endentry
+    \entry{masse2011rest}{book}{}
+      \name{author}{1}{}{%
+        {{hash=d17b34343fbf45b0a0ec9962f1ac0431}{%
+           family={Masse},
+           familyi={M\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {" O'Reilly Media, Inc."}%
+      }
+      \strng{namehash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{fullhash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{bibnamehash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{authorbibnamehash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{authornamehash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{authorfullhash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{REST API design rulebook: designing consistent RESTful web service interfaces}
+      \field{year}{2011}
+    \endentry
+    \entry{fette2011websocket}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=cdf249d29ccc7edcf24f6bfef0893ebd}{%
+           family={Fette},
+           familyi={F\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=8fa97ca9bca09f72482fe5f985ecef60}{%
+           family={Melnikov},
+           familyi={M\bibinitperiod},
+           given={Alexey},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {RFC 6455, December}%
+      }
+      \strng{namehash}{a413dbe318e95f69f8330db28642e805}
+      \strng{fullhash}{a413dbe318e95f69f8330db28642e805}
+      \strng{bibnamehash}{a413dbe318e95f69f8330db28642e805}
+      \strng{authorbibnamehash}{a413dbe318e95f69f8330db28642e805}
+      \strng{authornamehash}{a413dbe318e95f69f8330db28642e805}
+      \strng{authorfullhash}{a413dbe318e95f69f8330db28642e805}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The websocket protocol}
+      \field{year}{2011}
+    \endentry
+    \entry{herwig2015assessment}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=aa8a4c7dc35a2230190c48585a18a046}{%
+           family={Herwig},
+           familyi={H\bibinitperiod},
+           given={Volker},
+           giveni={V\bibinitperiod}}}%
+        {{hash=a0f5590f3c1b4fae6a2b8b6fecaae732}{%
+           family={Fischer},
+           familyi={F\bibinitperiod},
+           given={Ren{é}},
+           giveni={R\bibinitperiod}}}%
+        {{hash=08cf125105abb1846b6fa8059bd0c959}{%
+           family={Braun},
+           familyi={B\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{e15ca084ac54c42d3058c992b0b4ce18}
+      \strng{fullhash}{e15ca084ac54c42d3058c992b0b4ce18}
+      \strng{bibnamehash}{e15ca084ac54c42d3058c992b0b4ce18}
+      \strng{authorbibnamehash}{e15ca084ac54c42d3058c992b0b4ce18}
+      \strng{authornamehash}{e15ca084ac54c42d3058c992b0b4ce18}
+      \strng{authorfullhash}{e15ca084ac54c42d3058c992b0b4ce18}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2015 IEEE 8th International Conference on Intelligent Data Acquisition and Advanced Computing Systems: Technology and Applications (IDAACS)}
+      \field{title}{Assessment of rest and websocket in regards to their energy consumption for mobile applications}
+      \field{volume}{1}
+      \field{year}{2015}
+      \field{pages}{342\bibrangedash 347}
+      \range{pages}{6}
     \endentry
     \entry{rai2013socket}{book}{}
       \name{author}{1}{}{%
@@ -977,12 +713,72 @@
       \strng{authorbibnamehash}{170acb849133d585a1116cf67ae07cd3}
       \strng{authornamehash}{170acb849133d585a1116cf67ae07cd3}
       \strng{authorfullhash}{170acb849133d585a1116cf67ae07cd3}
-      \field{sortinit}{R}
-      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Socket. IO Real-time Web Application Development}
       \field{year}{2013}
+    \endentry
+    \entry{mallik2019man}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3cfb7839cef5b830ba34b9bd1de35c37}{%
+           family={Mallik},
+           familyi={M\bibinitperiod},
+           given={Avijit},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3cfb7839cef5b830ba34b9bd1de35c37}
+      \strng{fullhash}{3cfb7839cef5b830ba34b9bd1de35c37}
+      \strng{bibnamehash}{3cfb7839cef5b830ba34b9bd1de35c37}
+      \strng{authorbibnamehash}{3cfb7839cef5b830ba34b9bd1de35c37}
+      \strng{authornamehash}{3cfb7839cef5b830ba34b9bd1de35c37}
+      \strng{authorfullhash}{3cfb7839cef5b830ba34b9bd1de35c37}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cyberspace: Jurnal Pendidikan Teknologi Informasi}
+      \field{number}{2}
+      \field{title}{Man-in-the-middle-attack: Understanding in simple words}
+      \field{volume}{2}
+      \field{year}{2019}
+      \field{pages}{109\bibrangedash 134}
+      \range{pages}{26}
+    \endentry
+    \entry{apvrille2005secure}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f3e8371f4599bc6dc64b48bfa7c3a86d}{%
+           family={Apvrille},
+           familyi={A\bibinitperiod},
+           given={Axelle},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7dc5310188aa3dd5fb90d51a6dede10b}{%
+           family={Pourzandi},
+           familyi={P\bibinitperiod},
+           given={Makan},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{b1dd4a8355b244884e4d4a3755f5e1d0}
+      \strng{fullhash}{b1dd4a8355b244884e4d4a3755f5e1d0}
+      \strng{bibnamehash}{b1dd4a8355b244884e4d4a3755f5e1d0}
+      \strng{authorbibnamehash}{b1dd4a8355b244884e4d4a3755f5e1d0}
+      \strng{authornamehash}{b1dd4a8355b244884e4d4a3755f5e1d0}
+      \strng{authorfullhash}{b1dd4a8355b244884e4d4a3755f5e1d0}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Security \& Privacy}
+      \field{number}{4}
+      \field{title}{Secure software development by example}
+      \field{volume}{3}
+      \field{year}{2005}
+      \field{pages}{10\bibrangedash 17}
+      \range{pages}{8}
     \endentry
     \entry{rivest2019method}{book}{}
       \name{author}{3}{}{%
@@ -1011,40 +807,349 @@
       \strng{authorbibnamehash}{3d2958630e7a6838415b82e965af14e7}
       \strng{authornamehash}{3d2958630e7a6838415b82e965af14e7}
       \strng{authorfullhash}{3d2958630e7a6838415b82e965af14e7}
-      \field{sortinit}{R}
-      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{A method for obtaining digital signatures and public key cryptosystems}
       \field{year}{1982}
     \endentry
-    \entry{sarcar2016builder}{incollection}{}
-      \name{author}{1}{}{%
-        {{hash=552993a89df02e5fdbd40620222bb862}{%
-           family={Sarcar},
+    \entry{lopez2000overview}{article}{}
+      \name{author}{2}{}{%
+        {{hash=704d489665ff4463add6ebfcc2706df1}{%
+           family={Lopez},
+           familyi={L\bibinitperiod},
+           given={Julio},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fccb0f92618ef2a91e5c8accbd13e304}{%
+           family={Dahab},
+           familyi={D\bibinitperiod},
+           given={Ricardo},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{ada064f2fb3c1715430b64d308e4312b}
+      \strng{fullhash}{ada064f2fb3c1715430b64d308e4312b}
+      \strng{bibnamehash}{ada064f2fb3c1715430b64d308e4312b}
+      \strng{authorbibnamehash}{ada064f2fb3c1715430b64d308e4312b}
+      \strng{authornamehash}{ada064f2fb3c1715430b64d308e4312b}
+      \strng{authorfullhash}{ada064f2fb3c1715430b64d308e4312b}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{An overview of elliptic curve cryptography}
+      \field{year}{2000}
+    \endentry
+    \entry{gobi2015comparative}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=bd384d282043f46c96b5685a72d89aca}{%
+           family={Gobi},
+           familyi={G\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=08a98f395b2ee6488cd2aaee869174c5}{%
+           family={Sridevi},
            familyi={S\bibinitperiod},
-           given={Vaskaran},
-           giveni={V\bibinitperiod}}}%
+           given={R},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6bed203fb079313a005ab8bb885b9db1}{%
+           family={Rahini},
+           familyi={R\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{ac7a5e3252dcdf9a3cf7205fca02a198}
+      \strng{fullhash}{ac7a5e3252dcdf9a3cf7205fca02a198}
+      \strng{bibnamehash}{ac7a5e3252dcdf9a3cf7205fca02a198}
+      \strng{authorbibnamehash}{ac7a5e3252dcdf9a3cf7205fca02a198}
+      \strng{authornamehash}{ac7a5e3252dcdf9a3cf7205fca02a198}
+      \strng{authorfullhash}{ac7a5e3252dcdf9a3cf7205fca02a198}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of Conference on Advanced Networking and Applications}
+      \field{title}{A comparative study on the performance and the security of RSA and ECC algorithm}
+      \field{year}{2015}
+    \endentry
+    \entry{delfs2007symmetric}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=5e1aca644f4ed5617921d64d9e71c348}{%
+           family={Delfs},
+           familyi={D\bibinitperiod},
+           given={Hans},
+           giveni={H\bibinitperiod}}}%
+        {{hash=3b59f0e63f078d48b1e050c572b5d7fe}{%
+           family={Knebl},
+           familyi={K\bibinitperiod},
+           given={Helmut},
+           giveni={H\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Springer}%
       }
-      \strng{namehash}{552993a89df02e5fdbd40620222bb862}
-      \strng{fullhash}{552993a89df02e5fdbd40620222bb862}
-      \strng{bibnamehash}{552993a89df02e5fdbd40620222bb862}
-      \strng{authorbibnamehash}{552993a89df02e5fdbd40620222bb862}
-      \strng{authornamehash}{552993a89df02e5fdbd40620222bb862}
-      \strng{authorfullhash}{552993a89df02e5fdbd40620222bb862}
-      \field{extraname}{1}
-      \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \strng{namehash}{eceeebcab2822ae214bcda04520d1810}
+      \strng{fullhash}{eceeebcab2822ae214bcda04520d1810}
+      \strng{bibnamehash}{eceeebcab2822ae214bcda04520d1810}
+      \strng{authorbibnamehash}{eceeebcab2822ae214bcda04520d1810}
+      \strng{authornamehash}{eceeebcab2822ae214bcda04520d1810}
+      \strng{authorfullhash}{eceeebcab2822ae214bcda04520d1810}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Java Design Patterns}
-      \field{title}{Builder Patterns}
-      \field{year}{2016}
-      \field{pages}{89\bibrangedash 95}
-      \range{pages}{7}
+      \field{booktitle}{Introduction to Cryptography}
+      \field{title}{Symmetric-key encryption}
+      \field{year}{2007}
+      \field{pages}{11\bibrangedash 31}
+      \range{pages}{21}
+    \endentry
+    \entry{martinez2010comparison}{inproceedings}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{2}{}{%
+        {{hash=49b2ae938bea41380566af2799c2a09e}{%
+           family={Mart{ı́}nez},
+           familyi={M\bibinitperiod},
+           given={V\bibnamedelima Gayoso},
+           giveni={V\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=745af1838c62513df667b532cd6de99a}{%
+           family={Encinas},
+           familyi={E\bibinitperiod},
+           given={L\bibnamedelima Hern{á}ndez},
+           giveni={L\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{b002fe6a7d33323e8e975522d103fe8c}
+      \strng{fullhash}{b002fe6a7d33323e8e975522d103fe8c}
+      \strng{bibnamehash}{b002fe6a7d33323e8e975522d103fe8c}
+      \strng{authorbibnamehash}{b002fe6a7d33323e8e975522d103fe8c}
+      \strng{authornamehash}{b002fe6a7d33323e8e975522d103fe8c}
+      \strng{authorfullhash}{b002fe6a7d33323e8e975522d103fe8c}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2010 Sixth International Conference on Information Assurance and Security}
+      \field{title}{A comparison of the standardized versions of ECIES}
+      \field{year}{2010}
+      \field{pages}{1\bibrangedash 4}
+      \range{pages}{4}
+    \endentry
+    \entry{martinezECIES}{article}{}
+      \name{author}{3}{}{%
+        {{hash=bcb3e7a065502a76c7c2a43daed01579}{%
+           family={Gayoso\bibnamedelima Martínez},
+           familyi={G\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Víctor},
+           giveni={V\bibinitperiod}}}%
+        {{hash=1c363a26dabf722c13ddeef2cec45c1c}{%
+           family={Hernandez\bibnamedelima Encinas},
+           familyi={H\bibinitperiod\bibinitdelim E\bibinitperiod},
+           given={Luis},
+           giveni={L\bibinitperiod}}}%
+        {{hash=2b00e775c0a3d6ee7f903222be0b40b9}{%
+           family={Queiruga-Dios},
+           familyi={Q\bibinithyphendelim D\bibinitperiod},
+           given={Araceli},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c4071d96a2cf7c4368604e6e95968b83}
+      \strng{fullhash}{c4071d96a2cf7c4368604e6e95968b83}
+      \strng{bibnamehash}{c4071d96a2cf7c4368604e6e95968b83}
+      \strng{authorbibnamehash}{c4071d96a2cf7c4368604e6e95968b83}
+      \strng{authornamehash}{c4071d96a2cf7c4368604e6e95968b83}
+      \strng{authorfullhash}{c4071d96a2cf7c4368604e6e95968b83}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cryptologia}
+      \field{month}{05}
+      \field{title}{Security and Practical Considerations When Implementing the Elliptic Curve Integrated Encryption Scheme}
+      \field{volume}{39}
+      \field{year}{2015}
+      \field{pages}{1\bibrangedash 26}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1080/01611194.2014.988363
+      \endverb
+    \endentry
+    \entry{maurer2000diffie}{article}{}
+      \name{author}{2}{}{%
+        {{hash=8eb7e08defcd0ce3048cad4d74711238}{%
+           family={Maurer},
+           familyi={M\bibinitperiod},
+           given={Ueli\bibnamedelima M},
+           giveni={U\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=0aca8ce3df36b80aaacca8e6686ec1f1}{%
+           family={Wolf},
+           familyi={W\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{5806b90621ddbaf8335575b8aa3b378e}
+      \strng{fullhash}{5806b90621ddbaf8335575b8aa3b378e}
+      \strng{bibnamehash}{5806b90621ddbaf8335575b8aa3b378e}
+      \strng{authorbibnamehash}{5806b90621ddbaf8335575b8aa3b378e}
+      \strng{authornamehash}{5806b90621ddbaf8335575b8aa3b378e}
+      \strng{authorfullhash}{5806b90621ddbaf8335575b8aa3b378e}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Designs, Codes and Cryptography}
+      \field{number}{2}
+      \field{title}{The Diffie--Hellman protocol}
+      \field{volume}{19}
+      \field{year}{2000}
+      \field{pages}{147\bibrangedash 171}
+      \range{pages}{25}
+    \endentry
+    \entry{brown2001software}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=165a5da0696c74de50a07a9ec22071a4}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=926e07a141f2de2376cb10d3756b799a}{%
+           family={Hankerson},
+           familyi={H\bibinitperiod},
+           given={Darrel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=beedb3a4a6b091d59347ccabea308a03}{%
+           family={L{ó}pez},
+           familyi={L\bibinitperiod},
+           given={Julio},
+           giveni={J\bibinitperiod}}}%
+        {{hash=cb55c3f91b161f769bbc07a763c8edaf}{%
+           family={Menezes},
+           familyi={M\bibinitperiod},
+           given={Alfred},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{afa4440eafd2506aeade800578e9d787}
+      \strng{fullhash}{afa4440eafd2506aeade800578e9d787}
+      \strng{bibnamehash}{afa4440eafd2506aeade800578e9d787}
+      \strng{authorbibnamehash}{afa4440eafd2506aeade800578e9d787}
+      \strng{authornamehash}{afa4440eafd2506aeade800578e9d787}
+      \strng{authorfullhash}{afa4440eafd2506aeade800578e9d787}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Cryptographers’ Track at the RSA Conference}
+      \field{title}{Software implementation of the NIST elliptic curves over prime fields}
+      \field{year}{2001}
+      \field{pages}{250\bibrangedash 265}
+      \range{pages}{16}
+    \endentry
+    \entry{cooijmans2014analysis}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=36bbf7c92ef15c3fda3256c5543cb1f1}{%
+           family={Cooijmans},
+           familyi={C\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+        {{hash=d143104abb71c9d588f149d00ac71929}{%
+           family={Ruiter},
+           familyi={R\bibinitperiod},
+           given={Joeri},
+           giveni={J\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=364d5fb828bd5cb251943d1828b895db}{%
+           family={Poll},
+           familyi={P\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{91259f54d91e53e8c6aaeb819108bfc4}
+      \strng{fullhash}{91259f54d91e53e8c6aaeb819108bfc4}
+      \strng{bibnamehash}{91259f54d91e53e8c6aaeb819108bfc4}
+      \strng{authorbibnamehash}{91259f54d91e53e8c6aaeb819108bfc4}
+      \strng{authornamehash}{91259f54d91e53e8c6aaeb819108bfc4}
+      \strng{authorfullhash}{91259f54d91e53e8c6aaeb819108bfc4}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 4th ACM Workshop on Security and Privacy in Smartphones \& Mobile Devices}
+      \field{title}{Analysis of secure key storage solutions on android}
+      \field{year}{2014}
+      \field{pages}{11\bibrangedash 20}
+      \range{pages}{10}
+    \endentry
+    \entry{10.5555/320326}{book}{}
+      \name{author}{2}{}{%
+        {{hash=10383d05f32f2a21518b493a3c546e5c}{%
+           family={Hunt},
+           familyi={H\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b5eb4ac16368112932ff36772cb0b0b5}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Longman Publishing Co., Inc.}%
+      }
+      \strng{namehash}{6551e2d8a523620fdffb6fe4053ca3d5}
+      \strng{fullhash}{6551e2d8a523620fdffb6fe4053ca3d5}
+      \strng{bibnamehash}{6551e2d8a523620fdffb6fe4053ca3d5}
+      \strng{authorbibnamehash}{6551e2d8a523620fdffb6fe4053ca3d5}
+      \strng{authornamehash}{6551e2d8a523620fdffb6fe4053ca3d5}
+      \strng{authorfullhash}{6551e2d8a523620fdffb6fe4053ca3d5}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{020161622X}
+      \field{title}{The Pragmatic Programmer: From Journeyman to Master}
+      \field{year}{2000}
+    \endentry
+    \entry{martin2000design}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6f41df64eb0dc4855be70172368604c2}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={Robert\bibnamedelima C},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{fullhash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{bibnamehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authorbibnamehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authornamehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authorfullhash}{6f41df64eb0dc4855be70172368604c2}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Object Mentor}
+      \field{number}{34}
+      \field{title}{Design principles and design patterns}
+      \field{volume}{1}
+      \field{year}{2000}
+      \field{pages}{597}
+      \range{pages}{1}
     \endentry
     \entry{sarcar2020command}{incollection}{}
       \name{author}{1}{}{%
@@ -1063,9 +1168,9 @@
       \strng{authorbibnamehash}{552993a89df02e5fdbd40620222bb862}
       \strng{authornamehash}{552993a89df02e5fdbd40620222bb862}
       \strng{authorfullhash}{552993a89df02e5fdbd40620222bb862}
-      \field{extraname}{2}
-      \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Design Patterns in C\#}
@@ -1074,61 +1179,124 @@
       \field{pages}{315\bibrangedash 335}
       \range{pages}{21}
     \endentry
-    \entry{simmons2017big}{article}{}
-      \name{author}{1}{}{%
-        {{hash=606fe28c5120c48dca547e20c94c1886}{%
-           family={Simmons},
-           familyi={S\bibinitperiod},
-           given={Ric},
-           giveni={R\bibinitperiod}}}%
+    \entry{eales2005observer}{article}{}
+      \name{author}{2}{}{%
+        {{hash=fde2aa69e8910cd9130e27ab7b512468}{%
+           family={Eales},
+           familyi={E\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fde2aa69e8910cd9130e27ab7b512468}{%
+           family={Eales},
+           familyi={E\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {HeinOnline}%
-      }
-      \strng{namehash}{606fe28c5120c48dca547e20c94c1886}
-      \strng{fullhash}{606fe28c5120c48dca547e20c94c1886}
-      \strng{bibnamehash}{606fe28c5120c48dca547e20c94c1886}
-      \strng{authorbibnamehash}{606fe28c5120c48dca547e20c94c1886}
-      \strng{authornamehash}{606fe28c5120c48dca547e20c94c1886}
-      \strng{authorfullhash}{606fe28c5120c48dca547e20c94c1886}
-      \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \strng{namehash}{d2361dc15ee4cd5613b1c6e607f70c9f}
+      \strng{fullhash}{d2361dc15ee4cd5613b1c6e607f70c9f}
+      \strng{bibnamehash}{d2361dc15ee4cd5613b1c6e607f70c9f}
+      \strng{authorbibnamehash}{d2361dc15ee4cd5613b1c6e607f70c9f}
+      \strng{authornamehash}{d2361dc15ee4cd5613b1c6e607f70c9f}
+      \strng{authorfullhash}{d2361dc15ee4cd5613b1c6e607f70c9f}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Ohio St. J. Crim. L.}
-      \field{title}{Big data and procedural justice: Legitimizing algorithms in the criminal justice system}
-      \field{volume}{15}
-      \field{year}{2017}
-      \field{pages}{573}
-      \range{pages}{1}
+      \field{journaltitle}{Educating, Innovating \& Transforming: Educators in IT: Concise paper}
+      \field{title}{The observer pattern revisited}
+      \field{year}{2005}
     \endentry
-    \entry{sommer2022evidence}{article}{}
-      \name{author}{1}{}{%
-        {{hash=42a1c721771cad9dc0a7926fa808094d}{%
-           family={Sommer},
-           familyi={S\bibinitperiod},
-           given={Peter},
-           giveni={P\bibinitperiod}}}%
+    \entry{harmes2008adapter}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9c89eed13796a6c173a39339cff20a56}{%
+           family={Harmes},
+           familyi={H\bibinitperiod},
+           given={Ross},
+           giveni={R\bibinitperiod}}}%
+        {{hash=635ce4f1b8d713ec936a9ef96c60ff60}{%
+           family={Diaz},
+           familyi={D\bibinitperiod},
+           given={Dustin},
+           giveni={D\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
-        {Elsevier}%
+        {Springer}%
       }
-      \strng{namehash}{42a1c721771cad9dc0a7926fa808094d}
-      \strng{fullhash}{42a1c721771cad9dc0a7926fa808094d}
-      \strng{bibnamehash}{42a1c721771cad9dc0a7926fa808094d}
-      \strng{authorbibnamehash}{42a1c721771cad9dc0a7926fa808094d}
-      \strng{authornamehash}{42a1c721771cad9dc0a7926fa808094d}
-      \strng{authorfullhash}{42a1c721771cad9dc0a7926fa808094d}
-      \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \strng{namehash}{09a131902c61f94f333abc6ad1b2a81f}
+      \strng{fullhash}{09a131902c61f94f333abc6ad1b2a81f}
+      \strng{bibnamehash}{09a131902c61f94f333abc6ad1b2a81f}
+      \strng{authorbibnamehash}{09a131902c61f94f333abc6ad1b2a81f}
+      \strng{authornamehash}{09a131902c61f94f333abc6ad1b2a81f}
+      \strng{authorfullhash}{09a131902c61f94f333abc6ad1b2a81f}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Forensic Science International: Digital Investigation}
-      \field{title}{Evidence from hacking: A few tiresome problems}
-      \field{volume}{40}
-      \field{year}{2022}
-      \field{pages}{301333}
-      \range{pages}{1}
+      \field{journaltitle}{Pro JavaScript Design Patterns}
+      \field{title}{The Adapter Pattern}
+      \field{year}{2008}
+      \field{pages}{149\bibrangedash 158}
+      \range{pages}{10}
+    \endentry
+    \entry{sarcar2016builder}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=552993a89df02e5fdbd40620222bb862}{%
+           family={Sarcar},
+           familyi={S\bibinitperiod},
+           given={Vaskaran},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{552993a89df02e5fdbd40620222bb862}
+      \strng{fullhash}{552993a89df02e5fdbd40620222bb862}
+      \strng{bibnamehash}{552993a89df02e5fdbd40620222bb862}
+      \strng{authorbibnamehash}{552993a89df02e5fdbd40620222bb862}
+      \strng{authornamehash}{552993a89df02e5fdbd40620222bb862}
+      \strng{authorfullhash}{552993a89df02e5fdbd40620222bb862}
+      \field{extraname}{2}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Java Design Patterns}
+      \field{title}{Builder Patterns}
+      \field{year}{2016}
+      \field{pages}{89\bibrangedash 95}
+      \range{pages}{7}
+    \endentry
+    \entry{long2004data}{article}{}
+      \name{author}{3}{}{%
+        {{hash=caf3131a2d0f6de0bfd12b5c26aed9ee}{%
+           family={LONG},
+           familyi={L\bibinitperiod},
+           given={SY},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5b7649d0e335bf875e8718e9a582d88f}{%
+           family={LIN},
+           familyi={L\bibinitperiod},
+           given={Han},
+           giveni={H\bibinitperiod}}}%
+        {{hash=66f7dc7c61ffb10717efb3e177325e83}{%
+           family={CHEN},
+           familyi={C\bibinitperiod},
+           given={XY},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{7110ffe60da6df312b40e6823eb20147}
+      \strng{fullhash}{7110ffe60da6df312b40e6823eb20147}
+      \strng{bibnamehash}{7110ffe60da6df312b40e6823eb20147}
+      \strng{authorbibnamehash}{7110ffe60da6df312b40e6823eb20147}
+      \strng{authornamehash}{7110ffe60da6df312b40e6823eb20147}
+      \strng{authorfullhash}{7110ffe60da6df312b40e6823eb20147}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer and Modernization, pp5}
+      \field{title}{Data Access Object Pattern}
+      \field{year}{2004}
     \endentry
     \entry{stencel2008implementation}{inproceedings}{}
       \name{author}{2}{}{%
@@ -1152,8 +1320,8 @@
       \strng{authorbibnamehash}{319a8759b406739fcc3ec2a615121088}
       \strng{authornamehash}{319a8759b406739fcc3ec2a615121088}
       \strng{authorfullhash}{319a8759b406739fcc3ec2a615121088}
-      \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{OTM Confederated International Conferences" On the Move to Meaningful Internet Systems"}
@@ -1162,92 +1330,85 @@
       \field{pages}{396\bibrangedash 406}
       \range{pages}{11}
     \endentry
-    \entry{stocker2019facebook}{inproceedings}{}
-      \name{author}{1}{}{%
-        {{hash=231bf78a3e1bd5c8bbdf1b4c0eb387c6}{%
-           family={St{ö}cker},
-           familyi={S\bibinitperiod},
-           given={Christian},
-           giveni={C\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{231bf78a3e1bd5c8bbdf1b4c0eb387c6}
-      \strng{fullhash}{231bf78a3e1bd5c8bbdf1b4c0eb387c6}
-      \strng{bibnamehash}{231bf78a3e1bd5c8bbdf1b4c0eb387c6}
-      \strng{authorbibnamehash}{231bf78a3e1bd5c8bbdf1b4c0eb387c6}
-      \strng{authornamehash}{231bf78a3e1bd5c8bbdf1b4c0eb387c6}
-      \strng{authorfullhash}{231bf78a3e1bd5c8bbdf1b4c0eb387c6}
-      \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
-      \field{labelnamesource}{author}
+    \entry{androiddevelopers}{misc}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Multidisciplinary International Symposium on Disinformation in Open Online Media}
-      \field{title}{How facebook and google accidentally created a perfect ecosystem for targeted disinformation}
-      \field{year}{2019}
-      \field{pages}{129\bibrangedash 149}
-      \range{pages}{21}
+      \field{journaltitle}{Android Developers}
+      \field{title}{Guide to app architecture - Android Developers}
+      \verb{urlraw}
+      \verb https://developer.android.com/jetpack/guide#recommended-app-arch
+      \endverb
+      \verb{url}
+      \verb https://developer.android.com/jetpack/guide#recommended-app-arch
+      \endverb
     \endentry
-    \entry{walter2005kryder}{article}{}
-      \name{author}{1}{}{%
-        {{hash=9a42aa8371605aea475ee6ae7b978074}{%
-           family={Walter},
-           familyi={W\bibinitperiod},
-           given={Chip},
-           giveni={C\bibinitperiod}}}%
+    \entry{humble2010continuous}{book}{}
+      \name{author}{2}{}{%
+        {{hash=9e89d796d06f74d6551850b1c3bff900}{%
+           family={Humble},
+           familyi={H\bibinitperiod},
+           given={Jez},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e88f486e16133b897ffb346a75f56d96}{%
+           family={Farley},
+           familyi={F\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
-        {Scientific American, a division of Nature America, Inc.}%
+        {Pearson Education}%
       }
-      \strng{namehash}{9a42aa8371605aea475ee6ae7b978074}
-      \strng{fullhash}{9a42aa8371605aea475ee6ae7b978074}
-      \strng{bibnamehash}{9a42aa8371605aea475ee6ae7b978074}
-      \strng{authorbibnamehash}{9a42aa8371605aea475ee6ae7b978074}
-      \strng{authornamehash}{9a42aa8371605aea475ee6ae7b978074}
-      \strng{authorfullhash}{9a42aa8371605aea475ee6ae7b978074}
-      \field{sortinit}{W}
-      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \strng{namehash}{06b8a2e32b3cda03592e143a7f761e36}
+      \strng{fullhash}{06b8a2e32b3cda03592e143a7f761e36}
+      \strng{bibnamehash}{06b8a2e32b3cda03592e143a7f761e36}
+      \strng{authorbibnamehash}{06b8a2e32b3cda03592e143a7f761e36}
+      \strng{authornamehash}{06b8a2e32b3cda03592e143a7f761e36}
+      \strng{authorfullhash}{06b8a2e32b3cda03592e143a7f761e36}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Scientific American}
-      \field{number}{2}
-      \field{title}{Kryder’s law}
-      \field{volume}{293}
-      \field{year}{2005}
-      \field{pages}{32\bibrangedash 33}
-      \range{pages}{2}
+      \field{title}{Continuous delivery: reliable software releases through build, test, and deployment automation}
+      \field{year}{2010}
     \endentry
-    \entry{zawoad2015digital}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=2254fa811f946d914a8cbebf137225bc}{%
-           family={Zawoad},
-           familyi={Z\bibinitperiod},
-           given={Shams},
+    \entry{dwaraki2015gitflow}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=f27b36092533da9a9e3980cd6f28c16b}{%
+           family={Dwaraki},
+           familyi={D\bibinitperiod},
+           given={Abhishek},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1597232108c31b712adecc9bfbdbea48}{%
+           family={Seetharaman},
+           familyi={S\bibinitperiod},
+           given={Srini},
            giveni={S\bibinitperiod}}}%
-        {{hash=283ab7917a9e25ffd6077f2064f2006a}{%
-           family={Hasan},
-           familyi={H\bibinitperiod},
-           given={Ragib},
-           giveni={R\bibinitperiod}}}%
+        {{hash=db2849a13c5d7b828fd9e0bde6113c5e}{%
+           family={Natarajan},
+           familyi={N\bibinitperiod},
+           given={Sriram},
+           giveni={S\bibinitperiod}}}%
+        {{hash=fe0950e9447778084138799d7dad794e}{%
+           family={Wolf},
+           familyi={W\bibinitperiod},
+           given={Tilman},
+           giveni={T\bibinitperiod}}}%
       }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{50bb114b097acd43c1b842c05d8b51c8}
-      \strng{fullhash}{50bb114b097acd43c1b842c05d8b51c8}
-      \strng{bibnamehash}{50bb114b097acd43c1b842c05d8b51c8}
-      \strng{authorbibnamehash}{50bb114b097acd43c1b842c05d8b51c8}
-      \strng{authornamehash}{50bb114b097acd43c1b842c05d8b51c8}
-      \strng{authorfullhash}{50bb114b097acd43c1b842c05d8b51c8}
-      \field{sortinit}{Z}
-      \field{sortinithash}{8f7b480688e809b50b6f6577b16f3db5}
+      \strng{namehash}{9a2f93c3b52dcf224d4021d79c630430}
+      \strng{fullhash}{9a2f93c3b52dcf224d4021d79c630430}
+      \strng{bibnamehash}{9a2f93c3b52dcf224d4021d79c630430}
+      \strng{authorbibnamehash}{9a2f93c3b52dcf224d4021d79c630430}
+      \strng{authornamehash}{9a2f93c3b52dcf224d4021d79c630430}
+      \strng{authorfullhash}{9a2f93c3b52dcf224d4021d79c630430}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{2015 IEEE 17th International Conference on High Performance Computing and Communications, 2015 IEEE 7th International Symposium on Cyberspace Safety and Security, and 2015 IEEE 12th International Conference on Embedded Software and Systems}
-      \field{title}{Digital forensics in the age of big data: Challenges, approaches, and opportunities}
+      \field{booktitle}{Proceedings of the 1st ACM SIGCOMM Symposium on Software Defined Networking Research}
+      \field{title}{GitFlow: Flow revision management for software-defined networks}
       \field{year}{2015}
-      \field{pages}{1320\bibrangedash 1325}
+      \field{pages}{1\bibrangedash 6}
       \range{pages}{6}
     \endentry
   \enddatalist

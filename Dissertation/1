@@ -41,12 +41,7 @@ style=trad-abbrv, sorting=none]{biblatex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-	This dissertation describes the design and development process of a secure messaging Android client (and corresponding server). 
-
-	The three key technical aims were the use of pseudonymous identities, self-destructing messages and the implementation of a hybrid end-to-end encryption approach using asymmetric encryption for trust establishment and shared secrets which are used to create symmetric keys used for message encryption.
-
-	The client application was developed using the Kotlin programming language and the server was implemented in Python.
-
+abstract goes here
 \end{abstract}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -426,139 +421,27 @@ The host of choice for the upstream repository on this project was GitHub, and t
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Evaluation \& Testing}\label{testing}
 \section{Testing}
-An important component of software engineering is a continuous testing process. Testing gives the developer an opportunity to ensure the application performs as intended (Quality assurance), and can provide important insights into security, performance under load and improvement possibilities. The development of this project presented some unique testing challenges partly due to its complex architecture and partly due to the limitations of the development environment.
+An important component of software engineering is a continuous testing process. Testing gives the developer an opportunity to ensure the application performs as intended (Quality assurance), and can provide important insights into security, performance under load and improvement possibilities. The development of this project presented some unique testing challenges partly due to its complex architecture and partly due to the limitations of the development environment. 
 
+As mentioned in chapter 3, it was initially fairly simple to test functionality of the sender client \rightarrow server \rightarrow recipient client interactions. As the application grew in size, this became more difficult. This was handled in two ways, the first (wireless ADB debugging) is discussed in detail in the Development and debugging process in section 3.9.1. The second method utilised was a minimal second client class written in python. This lightweight client provided most of the communication functionality of the Kotlin android client, without the performance overhead of emulation, rendering a UI or other client features.   
 
-\subsection{Functional and load testing during development}
-As mentioned in chapter 3, it was initially fairly simple to test functionality of all $\hbox{sender client} \rightarrow \hbox{server} \rightarrow  \hbox{recipient client}$ interactions. As the application grew in size and complexity, this became more difficult. This was handled in two ways, the first (wireless ADB debugging) is discussed in detail in the Development and debugging process section (3.9.1). 
-
-The second method utilised was a minimal test client class written in python. This lightweight client provided most of the communication functionality of the Kotlin android client, without the performance overhead of emulation, rendering a UI or other client features. This meant in practice that in addition to testing communication functionality, it was possible to test the performance of the Socket.io connection under heavy load. On the development machine alone, it was relatively simple to run the socket.io server locally and connect over 100 test clients simultaneous constantly broadcasting messages with no performance issues.
-
-Due to the complexity of the encryption implementation, it was unfeasible to implement the client-side encryption system on the lightweight python client. This is discussed in the next section.
-
-\subsection{Limitations of testing approach}
-The security features of the system, and particularly the encryption approach, were not tested other than by checking logs to ensure messages were unreadable at the server layer. Further investigation of the cryptography approach included within the application would likely require testers specialising in information security.
-
-Due to the architecture of the application, developing unit test suites was impractical, as very few of the behaviours desired from the application were self-contained. End-to-end or integration testing would have been a better approach, but due to time limitations and complexity these were not pursued.  
-
-An example of the difficulty of testing this application could be seen during the development of the encryption functionality. After many wasted hours struggling to understand why the base64 string returned from the server was not being decrypted correctly, it was determined that a trailing newline was being appended to all messages received from the server. This meant that the encrypted string representation of the plaintext was unreadable to the decryption cipher.
-
-\subsection{System testing}
-Before generating the final evaluation version of the application to share with users, the following tests were performed manually within a preconfigured Python shell instance (unless otherwise stated) to verify that all of the functionality requirements from section 2.5 were met. In addition, all functionality was manually tested using the actual client application.
-\begin{longtable}{ |p{4.5cm}|p{6cm}|p{2cm}|}
-	\hline
-	Requirement & Test & Result\\
-	\hline
-	Sending messages to server & Send a message to server  & Passed \\
-	\hline
-	Routing to appropriate client & Emit send\_to\_user event to server with JSON object containing message and recipient client & Passed \\
-	\hline
-	Create username & 1. Emit newUsername event to server with username string to verify event triggers. 2. Emit existingUserCheck event to client with "true" parameter & 1. Passed 2. Passed \\
-	\hline
-	View other connected users & 1. Emit getUsers event to server to verify event triggers. 2. Emit users event to client to verify event triggers.  & 1. Passed 2. Passed\\
-	\hline
-	Disappearing messages & Set client self destruct duration to 1 minute. Emit send\_to\_user event to server, ensure display on client chatWindow activity and wait 1 minute. & Passed \\
-	\hline
-	Encrypted messages & Send message from client to client using application and verify that server does not receive plaintext.  & Passed\\
-	\hline
-	Decrypt messages & Same as above, but also verify that recipient client is able to read the message & Passed \\
-	\hline
-	Persistence of data & Start client, connect and set username and fully close application. Restart and ensure that username and destruct duration prompts do not appear. & Partial fail. Username prompt displays very briefly before moving to contacts page.\\
-	\hline
-	Push notifications & Emit send\_to\_user event to server and verify that relevant Kotlin client receives push notification & Passed \\
-	\hline
-	Click notification to get to chat window & As above, but Kotlin client short-presses the notification which should open a chat window with the sender. & Passed\\
-	\hline
-	Updating contacts on new connections & Emit getUsers event, then connect with another client, then emit another getUsers event and check new user is included. & Passed\\
-	\hline
-	Server cannot read contents & Same as "Encrypted Messages" & Passed\\
-	\hline
-	Update stored public key on reconnect & Emit getPubKey event, then emit update\_pub\_key event to server, then emit another getPubKey event and verify public key has changed.  & Passed\\
-	\hline
-\end{longtable}
-
-A more comprehensive automated testing approach is desirable and is a key avenue for future work.
+\subsection{Limitations}
+Security features - hard to test accurately.
 
 \section{User evaluations}
-No matter how comprehensively an automated testing plan is, it is essentially impossible to protect against every potential edge case. Developers are always likely to experience tunnel vision in some regard, overlooking specific user behaviours outwith their own perspective. For this reason, it is important to supplement automated testing with user testing to generate unique potential behaviours that could cause unintended consequences.
-
 \subsection{Methodology}
-The user testing approach used for this application was to generate a .APK file containing the application using Android Studio which was then distributed to testers as appropriate. Very small scale (n=3) user alpha testing was initially carried out when the application was in a working state, but still being developed (specifically before the introduction of the encryption features). This guided the development process by capturing key sticking points for users which were then prioritised as development goals. Specifically, the contacts page initially featured a manual refresh button to check for new users. The alpha testers questioned the validity of this approach, resulting in the use of a daemon process to send getUsers events to the server on a regular time interval which provided the illusion of automatically updating the contacts page on new user connections.
-
-Formal user testing followed the implementation of the encryption algorithms. This involved supervised installation and use of the application to achieve a number of tasks shown below. Testing took place both in-person and via video calls. In all cases, a new server instance was started on the Azure virtual machine host. The terminal window showing live server logs was shared with participants to allow them to see the output produced by their actions. 
-\begin{enumerate}
-	\item Start application
-	\item Choose a self-destruct duration
-	\item Choose a pseudonymous username and connect to server
-	\item Receive a message from at least one other user
-	\item Receive a notification and click it to open a chat window with said user.
-	\item Verify that message deletion occurs according to chosen duration.
-	\item Send a message to another user.
-	\item View server logs to verify what the message data looks like on the server.
-	\item Fully close and restart the application
-	\item Verify that functionality remains intact and that username and delete duration prompts do not appear.
-	\item Verify that messages can still be sent and received after restart.
-\end{enumerate}
-
-Testers were then invited to complete an evaluation form on Google Forms which contained a combination of demographic, exploratory and feedback questions. The form can be viewed at the following link.
-
-		\begin{verbatim}https://forms.gle/xLbLWWnRK1Hh3J7M6
-		\end{verbatim}
-The signed and completed ethics checklist corresponding with this evaluation can be found in the appendices.
-
 \subsection{Demographics}
-Eight testers were able to complete the evaluation. Unfortunately, three additional candidates were unable to complete the testing process due to the application targeting a newer Android version than their device supported, resulting in the application being unable to install.
-
-The testers ranged between ages 18 and 45. Half of the successful testers were between the ages of 18 and 25. All testers self-reported technological ability as ``Above average'' or ``Average'' for their age group. The majority of users felt strongly about the need for data privacy.
-
-Interestingly, despite this, the vast majority of users stated that they regularly used chat applications with fairly poor data privacy (87.5\% used Whatsapp, whereas only 12.5\% used Signal). This is a strong indication that many users feel usability and network effects are larger pull factors than data security. 
-
-Users suggested many possible entities they wished to protect their data from, including employers, friends, domestic and foreign governments, advertising companies, hackers and those who wished to screenshot their messages.
-
-Similarly, all users were asked to devise potential scenarios where a person might need secure chat messaging. Answers ranged from protecting private conversations from those that aren't the intended recipient, avoiding targeted advertising, espionage, criminal activity, sharing credentials (e.g. bank details), infidelity, risque photography and confidential work-related data.
-
 \subsection{Issues highlighted}
-The user testing process was invaluable as it provided a great insight into features that were desired as well as unanticipated bugs and suggested improvements to existing functionality.
-
-Several users mentioned that they would have liked the message deletion duration to be defined by the sender. This is more akin to the way it is implemented in Signal, where the sender can define exactly when the message will be deleted from the recipient's device. This would not be particularly difficult to implement, as it could simply be added to the metadata of the message. Potential issues with this approach could be differences in system time across devices (i.e. a potential attacker could change their system time backwards to ensure they could access messages indefinitely).
-
-Furthermore, users highlighted that the implementation of self-destructing messages did not consider the ``read'' status of the message. In other words, the deletion timer would start at the moment of receipt, rather than when the message is actually viewed. This point is actually fairly difficult to implement, depending on how we define the reading of a message. Whatsapp, for example, has ``read receipts'' which are only triggered when the application is focused on the chat window where the message is received. This means that a user can treat a message as unread while knowing the content of the message via push notifications. This is a significantly complex issue and merits further work.
-
-On the topic of push notifications, one user determined that the push notifications he received did not expire, even when clicked. This meant that even though the message is deleted from the database, the content is still viewable. This is a major security issue, as if the device is compromised, message history may be visible to the attacker. Luckily, it is not actually particularly complex to fix - the android SDK allows for programmatic expiration of messages via the NotificationManager.cancel method, using the specific notification id as a parameter.
-
-There were also some minor UI bugs discovered on a particular user's device which had different screen dimensions than other testing devices. They concerned the centering of text on the deletion duration screen and would not be a particularly difficult issue to fix.
-
-Another issue which several users described was the back button overriding the flow of the application. This meant that users were able to see parts of the application that they shouldn't have been able to (e.g. username set screen) by pressing back after login. This is reasonably simply solved by manipulating what is known as the "back stack" within the Android SDK, which contains previously visited views.
-
-Despite some issues and suggestions, overall, users all gave highly positive feedback and were able to complete all allocated tasks without major loss of functionality. As such, the development process achieved all the desired outcomes and can be judged a successful endeavour.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Conclusion}\label{conclusion}
 \section{Project status}
-The aim of this project was to develop a secure messaging client for Android devices which implemented state-of-the-art encryption, self-destructing messages and pseudonymous identity, sending messages via a central server. 
-
-It can be broadly stated that all of these requirements were achieved. Indeed, as shown in section 4.1.3, all of the requirements shown in the user stories from section 2.5 were achieved (with the notable exception of the username screen briefly flashing up on reconnects). In addition, all of the ``Must have'' and ``Should have'' requrements were fulfilled from the MoSCoW table in section 2.4.1. 
-
-User evaluations were also highly positive and provided some excellent avenues for future development as highlighted in the next section. While there are remaining issues with the application and it needs some degree of polish before wider adoption, it can be seen as a success.
-
 
 \section{Future work}
-Further work on this project falls into two distinct groups: improvements / reworking of existing features and development of fundamentally new functionality. Trivially fixable bugs or simpler feature requests previously mentioned will not be discussed here. 
-
-As highlighted in Chapter 4, further work should certainly focus on the redesign of the self-destructing messaging feature. Adding a means of assessing ``read'' status before the deletion countdown starts would be a great start. Additionally, adding the capacity for senders to ensure messages expire on recipient devices (i.e. sender-defined deletion) is an important step forward and should probably have been the initial approach. If these two features can be implemented, the user could feel significantly more secure and in control of their data. 
-
-This naturally leads to the issue of improving the client-side security of the application. Most of the work in this project has focused on the desire to protect messages from being readable by anyone except the intended recipient in the transit phase, but not enough work has been spent on securing the message once it reaches the target device. Encrypting the SQLite local database would be a simple step to reduce the potential damage an attacker could cause, even with root access to the device.
-
-On the server side, there are some major design changes that would improve the user experience significantly. Implementing message queuing and receipt callbacks would be a major improvement, as they would allow messages to be sent to an offline user easily. It is worth mentioning that this may conflict with sender-defined self destructing messages, if combined with the read receipt approach from above. In other words, if a sender sends a message to a recipient whose device becomes compromised while they are offline for a significant period (e.g. if they are detained by law enforcement or government authorities), the messages would appear the second they reconnect to the server, which could potentially incriminate either the sender or recipient. This could potentially be handled by allowing the server to delete messages after a given timeframe if the sender allows it. 
-
-Another key area that would be good to focus on is the introduction of group chats. During the literature review for this project, the concept of client-side fanout was particularly appealing as a way of implementing end-to-end encryption within group chats. The combination of an architectural elegance and security is a deeply appealing prospect to work on.
-
-In terms of testing, implementing end-to-end testing and integration tests for the application is a key area for further work. This allows for automatic verification of program behaviours and will make it easy to see the impacts of changes quickly without manual investigation. On reflection, not implementing this early in the development process was a major error as it likely resulted in many hours of wasted time on repetitive tasks. 
-
-\section{Final thoughts}
-The project created many opportunities to learn new skills, gain understanding and solve highly interesting problems. 
-
-It was also an opportunity to understand just how complex some of the challenges involved in development of messaging applications are, despite seeming superficially simple. 
+Client-side security overhaul
+some means of "reading" messages
+Sender-defined self-destruct on messages
+queued messages
+group chats with client-side fanout
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Appendices}

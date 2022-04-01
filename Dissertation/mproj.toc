@@ -44,34 +44,46 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.9.1}Client}{15}{subsection.3.9.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Development and debugging process}{16}{subsubsection*.2}%
+\contentsline {subsubsection}{Development and debugging process}{16}{subsubsection*.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Key Dependencies}{16}{subsubsection*.3}%
+\contentsline {subsubsection}{Key Dependencies}{16}{subsubsection*.6}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.9.2}Server}{17}{subsection.3.9.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Key Dependencies}{17}{subsubsection*.4}%
+\contentsline {subsubsection}{Key Dependencies}{17}{subsubsection*.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Deployment}{17}{subsubsection*.5}%
+\contentsline {subsubsection}{Deployment}{17}{subsubsection*.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.9.3}Final report}{17}{subsection.3.9.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.9.4}Version Control}{17}{subsection.3.9.4}%
+\contentsline {subsection}{\numberline {3.9.3}Version Control / Branching Strategy}{17}{subsection.3.9.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Evaluation \& Testing}{18}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}User evaluations}{18}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Testing}{18}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Methodology}{18}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.1}Functional and load testing during development}{18}{subsection.4.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Demographics}{18}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.2}Limitations of testing approach}{18}{subsection.4.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.3}Issues highlighted}{18}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.3}System testing}{19}{subsection.4.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Conclusion}{19}{chapter.5}%
+\contentsline {section}{\numberline {4.2}User evaluations}{20}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}First appendix}{20}{appendix.A}%
+\contentsline {subsection}{\numberline {4.2.1}Methodology}{20}{subsection.4.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Section of first appendix}{20}{section.A.1}%
+\contentsline {subsection}{\numberline {4.2.2}Demographics}{21}{subsection.4.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Second appendix}{21}{appendix.B}%
+\contentsline {subsection}{\numberline {4.2.3}Issues highlighted}{22}{subsection.4.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Conclusion}{23}{chapter.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Project status}{23}{section.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Future work}{23}{section.5.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Final thoughts}{24}{section.5.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Appendices}{25}{chapter.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Wireframes}{25}{section.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Ethics form}{25}{section.6.2}%
