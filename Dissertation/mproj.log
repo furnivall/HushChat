@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.21)  1 APR 2022 07:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.21)  1 APR 2022 07:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -25,6 +25,10 @@ File: size11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/fundus-calligra/calligra.sty
+Package: calligra 2012/04/10 v1.9 LaTeX package calligra
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \ttl@box=\box45
@@ -145,7 +149,8 @@ Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )) (/usr/local/texlive/2020/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count188
- (/usr/local/texlive/2020/texmf-dist/tex/latex/logreq/logreq.def
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 )) (/usr/local/texlive/2020/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
@@ -208,8 +213,7 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \c@mincompwidth=\count298
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/blx-dm.def
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/blx-dm.def
 File: blx-dm.def 2019/12/01 v3.14 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
@@ -442,7 +446,8 @@ Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 ) (/usr/local/texlive/2020/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-) (/usr/local/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count389
@@ -458,8 +463,7 @@ LaTeX Info: Redefining \url on input line 5159.
 \XeTeXLinkMargin=\dimen163
  (/usr/local/texlive/2020/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
-(/usr/local/texlive/2020/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count391
@@ -536,9 +540,9 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Trying to load font information for OT1+pnc on input line 32.
- (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1pnc.fd
-File: ot1pnc.fd 2001/06/04 font definitions for OT1/pnc.
+LaTeX Font Info:    Trying to load font information for T1+pnc on input line 32.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/t1pnc.fd
+File: t1pnc.fd 2001/06/04 font definitions for T1/pnc.
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -660,6 +664,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 54.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 54.
+LaTeX Font Info:    Font shape `T1/calligra/m/n' will be
+(Font)              scaled to size 15.76802pt on input line 54.
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -682,222 +688,222 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-[]\OT1/pnc/m/n/10.95 Signal Foun-da-tion
+[]\T1/pnc/m/n/10.95 Signal Foun-da-tion
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-[]\OT1/pnc/m/n/10.95 Facebook Cor-po-ra-
+[]\T1/pnc/m/n/10.95 Facebook Cor-po-ra-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-[]\OT1/pnc/m/n/10.95 End-to-end
+[]\T1/pnc/m/n/10.95 End-to-end
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 cy-cling sym-met-ric
+\T1/pnc/m/n/10.95 cy-cling sym-met-ric
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 ses-sion keys and
+\T1/pnc/m/n/10.95 ses-sion keys and
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 Hellman (ECDH)
+\T1/pnc/m/n/10.95 Hellman (ECDH)
  []
 
 
 Underfull \hbox (badness 2644) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 key-pairs - this ap-
+\T1/pnc/m/n/10.95 key-pairs - this ap-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-[]\OT1/pnc/m/n/10.95 Proprietary im-ple-
+[]\T1/pnc/m/n/10.95 Proprietary im-ple-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 men-ta-tion of the
+\T1/pnc/m/n/10.95 men-ta-tion of the
  []
 
 
 Underfull \hbox (badness 4036) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 ap-ply to backed-up
+\T1/pnc/m/n/10.95 ap-ply to backed-up
  []
 
 
 Underfull \hbox (badness 2460) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 mes-sages stored on
+\T1/pnc/m/n/10.95 mes-sages stored on
  []
 
 
 Underfull \hbox (badness 1354) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 on mo-bile de-vices -
+\T1/pnc/m/n/10.95 on mo-bile de-vices -
  []
 
 
 Underfull \hbox (badness 3407) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 MT-Proto 2.0 pro-to-
+\T1/pnc/m/n/10.95 MT-Proto 2.0 pro-to-
  []
 
 
 Underfull \hbox (badness 1721) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 col[[]14[]]. For group
+\T1/pnc/m/n/10.95 col[[]14[]]. For group
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-[]\OT1/pnc/m/n/10.95 Fully open source
+[]\T1/pnc/m/n/10.95 Fully open source
  []
 
 
 Underfull \hbox (badness 2213) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 for both client and
+\T1/pnc/m/n/10.95 for both client and
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 server (with the
+\T1/pnc/m/n/10.95 server (with the
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 side anti-spam
+\T1/pnc/m/n/10.95 side anti-spam
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-[]\OT1/pnc/m/n/10.95 Entirely closed
+[]\T1/pnc/m/n/10.95 Entirely closed
  []
 
 
 Underfull \hbox (badness 6364) in paragraph at lines 144--144
-[]\OT1/pnc/m/n/10.95 Open source client
+[]\T1/pnc/m/n/10.95 Open source client
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-[]\OT1/pnc/m/n/10.95 Self-
+[]\T1/pnc/m/n/10.95 Self-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 destructing
+\T1/pnc/m/n/10.95 destructing
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-[]\OT1/pnc/m/n/10.95 Controlled by the
+[]\T1/pnc/m/n/10.95 Controlled by the
  []
 
 
 Underfull \hbox (badness 3601) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 from the re-cip-i-ents
+\T1/pnc/m/n/10.95 from the re-cip-i-ents
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 sender's set-tings).
+\T1/pnc/m/n/10.95 sender's set-tings).
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 Man-age-able via
+\T1/pnc/m/n/10.95 Man-age-able via
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-[]\OT1/pnc/m/n/10.95 Sender-controlled,
+[]\T1/pnc/m/n/10.95 Sender-controlled,
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 can be man-aged
+\T1/pnc/m/n/10.95 can be man-aged
  []
 
 
 Underfull \hbox (badness 7344) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 in-di-vid-u-ally or via
+\T1/pnc/m/n/10.95 in-di-vid-u-ally or via
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 de-faults. Fixed
+\T1/pnc/m/n/10.95 de-faults. Fixed
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-[]\OT1/pnc/m/n/10.95 Sender-controlled,
+[]\T1/pnc/m/n/10.95 Sender-controlled,
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 can be man-aged
+\T1/pnc/m/n/10.95 can be man-aged
  []
 
 
 Underfull \hbox (badness 7344) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 in-di-vid-u-ally or via
+\T1/pnc/m/n/10.95 in-di-vid-u-ally or via
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 side fanout''[[]15[]],
+\T1/pnc/m/n/10.95 side fanout''[[]15[]],
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-[]\OT1/pnc/m/n/10.95 Same as Sig-nal
+[]\T1/pnc/m/n/10.95 Same as Sig-nal
  []
 
 
 Underfull \hbox (badness 1708) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 (un-ver-i-fi-able due to
+\T1/pnc/m/n/10.95 (un-ver-i-fi-able due to
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-[]\OT1/pnc/m/n/10.95 Encrypted be-tween
+[]\T1/pnc/m/n/10.95 Encrypted be-tween
  []
 
 
 Overfull \hbox (4.7072pt too wide) in paragraph at lines 144--144
-[]\OT1/pnc/m/n/10.95 Pseudonymous
+[]\T1/pnc/m/n/10.95 Pseudonymous
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-[]\OT1/pnc/m/n/10.95 Only stores phone
+[]\T1/pnc/m/n/10.95 Only stores phone
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-[]\OT1/pnc/m/n/10.95 Historical mes-sage
+[]\T1/pnc/m/n/10.95 Historical mes-sage
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 meta-data, phone
+\T1/pnc/m/n/10.95 meta-data, phone
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 con-tacts, de-vice
+\T1/pnc/m/n/10.95 con-tacts, de-vice
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 read re-ceipts, full
+\T1/pnc/m/n/10.95 read re-ceipts, full
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
-\OT1/pnc/m/n/10.95 con-tacts, his-tor-i-cal
+\T1/pnc/m/n/10.95 con-tacts, his-tor-i-cal
  []
 
 [3
@@ -926,7 +932,7 @@ Chapter 3.
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\\' on input line 251.
 
-<images/high-level-architecture.png, id=320, 653.44125pt x 214.8025pt>
+<images/high-level-architecture.png, id=321, 653.44125pt x 214.8025pt>
 File: images/high-level-architecture.png Graphic file (type png)
 <use images/high-level-architecture.png>
 Package pdftex.def Info: images/high-level-architecture.png  used on input line 262.
@@ -934,68 +940,68 @@ Package pdftex.def Info: images/high-level-architecture.png  used on input line 
 [9
 
  <./images/high-level-architecture.png>]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 271.
- (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 271.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ) [10] [11]
 Overfull \hbox (0.2475pt too wide) in paragraph at lines 306--307
-\OT1/pnc/m/n/10.95 trusted chan-nel. The sys-tem was de-signed to en-sure that al-ter-na-tive asym-
+\T1/pnc/m/n/10.95 trusted chan-nel. The sys-tem was de-signed to en-sure that al-ter-na-tive asym-
  []
 
-<images/reconnection-flow.png, id=371, 573.14125pt x 251.94125pt>
+<images/reconnection-flow.png, id=372, 573.14125pt x 251.94125pt>
 File: images/reconnection-flow.png Graphic file (type png)
 <use images/reconnection-flow.png>
 Package pdftex.def Info: images/reconnection-flow.png  used on input line 322.
 (pdftex.def)             Requested size: 343.8874pt x 151.16591pt.
 [12]
-<images/message-flow.png, id=379, 762.85pt x 495.8525pt>
+<images/message-flow.png, id=380, 762.85pt x 495.8525pt>
 File: images/message-flow.png Graphic file (type png)
 <use images/message-flow.png>
 Package pdftex.def Info: images/message-flow.png  used on input line 338.
 (pdftex.def)             Requested size: 381.42407pt x 247.92564pt.
  [13 <./images/reconnection-flow.png>]
 Overfull \hbox (9.81104pt too wide) in paragraph at lines 345--346
-[]\OT1/pnc/m/n/10.95 In ad-di-tion, wher-ever pos-si-ble, ad-her-ence to the ``Don't re-peat your-self'' (DRY)[[]35[]],
+[]\T1/pnc/m/n/10.95 In ad-di-tion, wher-ever pos-si-ble, ad-her-ence to the ``Don't re-peat your-self'' (DRY)[[]35[]],
  []
 
 
 Underfull \hbox (badness 2875) in paragraph at lines 353--353
-[]\OT1/pnc/m/n/10.95 Encapsulation of a re-
+[]\T1/pnc/m/n/10.95 Encapsulation of a re-
  []
 
 
 Underfull \hbox (badness 5316) in paragraph at lines 353--354
-\OT1/pnc/m/n/10.95 jects in both client and
+\T1/pnc/m/n/10.95 jects in both client and
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 355--356
-[]\OT1/pnc/m/n/10.95 LiveData queries up-dat-
+[]\T1/pnc/m/n/10.95 LiveData queries up-dat-
  []
 
 
 Underfull \hbox (badness 1342) in paragraph at lines 357--358
-[]\OT1/pnc/m/n/10.95 ContactsAdapter for Re-cy-
+[]\T1/pnc/m/n/10.95 ContactsAdapter for Re-cy-
  []
 
 
 Underfull \hbox (badness 2418) in paragraph at lines 357--358
-\OT1/pnc/m/n/10.95 clerView and Mes-sage-Lis-
+\T1/pnc/m/n/10.95 clerView and Mes-sage-Lis-
  []
 
 
 Underfull \hbox (badness 6300) in paragraph at lines 361--361
-\OT1/pnc/m/n/10.95 vide ab-stract in-ter-face
+\T1/pnc/m/n/10.95 vide ab-stract in-ter-face
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 363--364
-[]\OT1/pnc/m/n/10.95 SocketHandler.kt in the
+[]\T1/pnc/m/n/10.95 SocketHandler.kt in the
  []
 
 
 Underfull \hbox (badness 1067) in paragraph at lines 363--364
-\OT1/pnc/m/n/10.95 client is an ex-am-ple of a
+\T1/pnc/m/n/10.95 client is an ex-am-ple of a
  []
 
 
@@ -1009,92 +1015,92 @@ Chapter 4.
 
 ]
 Overfull \hbox (7.26869pt too wide) in paragraph at lines 447--448
-\OT1/pnc/m/n/10.95 users, the fol-low-ing tests were per-formed man-u-ally within a pre-con-fig-ured Python
+\T1/pnc/m/n/10.95 users, the fol-low-ing tests were per-formed man-u-ally within a pre-con-fig-ured Python
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 452--452
-[]|\OT1/pnc/m/n/10.95 Sending mes-sages to
+[]|\T1/pnc/m/n/10.95 Sending mes-sages to
  []
 
 
 Underfull \hbox (badness 4013) in paragraph at lines 454--454
-[]|\OT1/pnc/m/n/10.95 Routing to ap-pro-pri-ate
+[]|\T1/pnc/m/n/10.95 Routing to ap-pro-pri-ate
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 458--458
-[]|\OT1/pnc/m/n/10.95 View other con-nected
+[]|\T1/pnc/m/n/10.95 View other con-nected
  []
 
 
 Underfull \hbox (badness 1789) in paragraph at lines 458--458
-\OT1/pnc/m/n/10.95 users event to client to ver-ify
+\T1/pnc/m/n/10.95 users event to client to ver-ify
  []
 
 
 Underfull \hbox (badness 1024) in paragraph at lines 460--460
-\OT1/pnc/m/n/10.95 event to server, en-sure dis-play
+\T1/pnc/m/n/10.95 event to server, en-sure dis-play
  []
 
 
 Underfull \hbox (badness 3579) in paragraph at lines 466--466
-\OT1/pnc/m/n/10.95 name and fully close ap-pli-ca-
+\T1/pnc/m/n/10.95 name and fully close ap-pli-ca-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 466--467
-[]|\OT1/pnc/m/n/10.95 Partial
+[]|\T1/pnc/m/n/10.95 Partial
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 466--467
-\OT1/pnc/m/n/10.95 name
+\T1/pnc/m/n/10.95 name
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 466--467
-\OT1/pnc/m/n/10.95 prompt
+\T1/pnc/m/n/10.95 prompt
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 466--467
-\OT1/pnc/m/n/10.95 dis-plays
+\T1/pnc/m/n/10.95 dis-plays
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 466--467
-\OT1/pnc/m/n/10.95 be-fore
+\T1/pnc/m/n/10.95 be-fore
  []
 
 
 Underfull \hbox (badness 5741) in paragraph at lines 466--467
-\OT1/pnc/m/n/10.95 mov-ing to
+\T1/pnc/m/n/10.95 mov-ing to
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 466--467
-\OT1/pnc/m/n/10.95 con-tacts
+\T1/pnc/m/n/10.95 con-tacts
  []
 
 
 Underfull \hbox (badness 5175) in paragraph at lines 470--470
-\OT1/pnc/m/n/10.95 presses the no-ti-fi-ca-tion which
+\T1/pnc/m/n/10.95 presses the no-ti-fi-ca-tion which
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 472--472
-[]|\OT1/pnc/m/n/10.95 Updating con-tacts on
+[]|\T1/pnc/m/n/10.95 Updating con-tacts on
  []
 
 
 Underfull \hbox (badness 1874) in paragraph at lines 472--472
-\OT1/pnc/m/n/10.95 nect with an-other client, then
+\T1/pnc/m/n/10.95 nect with an-other client, then
  []
 
 
 Underfull \hbox (badness 5175) in paragraph at lines 476--476
-\OT1/pnc/m/n/10.95 then emit an-other get-Pub-Key
+\T1/pnc/m/n/10.95 then emit an-other get-Pub-Key
  []
 
 
@@ -1103,7 +1109,7 @@ Underfull \vbox (badness 10000) detected at line 478
 
 [19] [20] [21]
 Overfull \hbox (0.87344pt too wide) in paragraph at lines 525--526
-[]\OT1/pnc/m/n/10.95 Furthermore, users high-lighted that the im-ple-men-ta-tion of self-destructing mes-
+[]\T1/pnc/m/n/10.95 Furthermore, users high-lighted that the im-ple-men-ta-tion of self-destructing mes-
  []
 
 [22]
@@ -1112,17 +1118,17 @@ Chapter 5.
 
 ] [24]
 Chapter 6.
-<images/Chat page.png, id=482, 714.67pt x 1455.4375pt>
+<images/Chat page.png, id=483, 714.67pt x 1455.4375pt>
 File: images/Chat page.png Graphic file (type png)
 <use images/Chat page.png>
 Package pdftex.def Info: images/Chat page.png  used on input line 572.
 (pdftex.def)             Requested size: 201.0475pt x 409.42963pt.
-<images/Contacts page.png, id=483, 714.67pt x 1455.4375pt>
+<images/Contacts page.png, id=484, 714.67pt x 1455.4375pt>
 File: images/Contacts page.png Graphic file (type png)
 <use images/Contacts page.png>
 Package pdftex.def Info: images/Contacts page.png  used on input line 578.
 (pdftex.def)             Requested size: 201.0475pt x 409.42963pt.
-<images/sp-ethics-form.png, id=484, 1317.92375pt x 904.37875pt>
+<images/sp-ethics-form.png, id=485, 1317.92375pt x 904.37875pt>
 File: images/sp-ethics-form.png Graphic file (type png)
 <use images/sp-ethics-form.png>
 Package pdftex.def Info: images/sp-ethics-form.png  used on input line 587.
@@ -1134,19 +1140,19 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
  <./images/Chat page.png> <./images/Contacts page.png>] [26 <./images/sp-ethics-form.png>]
 Overfull \hbox (2.50433pt too wide) in paragraph at lines 596--596
-\OT1/pnc/m/it/9 put-ing and Com-mu-ni-ca-tions, 2015 IEEE 7th In-ter-na-tional Sym-po-sium on Cy-berspace Safety
+\T1/pnc/m/it/9 put-ing and Com-mu-ni-ca-tions, 2015 IEEE 7th In-ter-na-tional Sym-po-sium on Cy-berspace Safety
  []
 
 
 Overfull \hbox (0.13142pt too wide) in paragraph at lines 596--596
-\OT1/pnc/m/it/9 IEEE 26th In-ter-na-tional Re-quire-ments En-gi-neer-ing Con-fer-ence (RE)\OT1/pnc/m/n/9 , pages 506{507. IEEE,
+\T1/pnc/m/it/9 IEEE 26th In-ter-na-tional Re-quire-ments En-gi-neer-ing Con-fer-ence (RE)\T1/pnc/m/n/9 , pages 506^^U507. IEEE,
  []
 
 [27
 
 ]
 Overfull \hbox (9.08327pt too wide) in paragraph at lines 596--596
-[]\OT1/pnc/m/n/9 H. Delfs and H. Knebl. Symmetric-key en-cryp-tion. In \OT1/pnc/m/it/9 In-tro-duc-tion to Cryp-tog-ra-phy\OT1/pnc/m/n/9 , pages 11{
+[]\T1/pnc/m/n/9 H. Delfs and H. Knebl. Symmetric-key en-cryp-tion. In \T1/pnc/m/it/9 In-tro-duc-tion to Cryp-tog-ra-phy\T1/pnc/m/n/9 , pages 11^^U
  []
 
 
@@ -1168,21 +1174,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 595.
 
 Overfull \hbox (2.44254pt too wide) in paragraph at lines 596--596
-[]\OT1/pnc/m/n/9 A. Hunt and D. Thomas. \OT1/pnc/m/it/9 The Prag-matic Pro-gram-mer: From Jour-ney-man to Mas-ter\OT1/pnc/m/n/9 . Addison-
+[]\T1/pnc/m/n/9 A. Hunt and D. Thomas. \T1/pnc/m/it/9 The Prag-matic Pro-gram-mer: From Jour-ney-man to Mas-ter\T1/pnc/m/n/9 . Addison-
  []
-
-
-./mproj.tex:596: LaTeX Error: Command \k unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.596 \end
-          {document}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 596.
 [28]
@@ -1197,18 +1190,18 @@ Package logreq Info: Writing requests to 'mproj.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16425 strings out of 480608
- 285023 string characters out of 5903630
- 958920 words of memory out of 5000000
- 31919 multiletter control sequences out of 15000+600000
- 556666 words of font info for 75 fonts, out of 8000000 for 9000
+ 16619 strings out of 480608
+ 286615 string characters out of 5903630
+ 959164 words of memory out of 5000000
+ 32104 multiletter control sequences out of 15000+600000
+ 570553 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,9n,45p,956b,1344s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on mproj.pdf (34 pages, 954013 bytes).
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/calligra-type1/callig15.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
+Output written on mproj.pdf (34 pages, 968009 bytes).
 PDF statistics:
- 566 PDF objects out of 1000 (max. 8388607)
- 506 compressed objects within 6 object streams
+ 570 PDF objects out of 1000 (max. 8388607)
+ 509 compressed objects within 6 object streams
  154 named destinations out of 1000 (max. 500000)
  356 words of extra memory for PDF output out of 10000 (max. 10000000)
 

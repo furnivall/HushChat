@@ -19,6 +19,8 @@
 \LoadClass[11pt,a4paper]{report}
 
 % Changes from MMG to bring the template in line with the MSWord equivalent. Changed the section title spacing and font to match.
+\usepackage{calligra}
+\usepackage[T1]{fontenc}
 \usepackage{titlesec}
 \titlespacing\chapter{0pt}{0pt plus 2pt minus 2pt}{24pt plus 2pt minus 2pt}
 \titlespacing\section{0pt}{0pt plus 2pt minus 2pt}{0pt plus 2pt minus 2pt}
@@ -101,7 +103,7 @@ this declaration, but doing so would help future students.}
 \begin{tabular}{@{}llll}
       &                     &            &                     \\
       &                     &            &                     \\
-Name: & \rule{4.0cm}{0.5mm} & Signature: & \rule{4.5cm}{0.5mm} \\
+	Name: & Daniel Furnivall  & Signature: & {\fontfamily{calligra}\selectfont Daniel Furnivall} \\
       &                     &            &                     \\
       &                     &            &                     \\
 \end{tabular}
